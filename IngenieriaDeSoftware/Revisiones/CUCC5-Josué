@@ -1,0 +1,158 @@
+
+\documentclass[10pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+
+\usepackage{array}
+
+\providecommand{\tabularnewline}{\\}
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+
+
+
+\section{Módulo de control de Calidad}
+Errores Detectados: 20
+\tabularnewline
+Resumen: Se entiende bien pero hay que revisar ortografía: 'cieto'.
+
+
+\subsection{CUCC5: Evaluar Productos Almacenados}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & CUCC5: Evaluar Productos Almacenados\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizador por:  & Adriana Navarro Magaña\tabularnewline
+\hline 
+Revisado por:  & Josué Fernando Ramos Gutiérrez\tabularnewline
+\hline 
+Próposito:  & El propósito es claro.
+\tabularnewline
+\hline 
+Entradas:  & Considero que es necesario especificar cuales datos son los requeridos por el sistema. 
+\tabularnewline
+\hline 
+Salidas:  & Anotaciones de las salidas 
+\begin{itemize}
+\item Sugiero puntualizar sólo el resultado de la trayectoria principal, ya que si se pretenden mencionar todas las excepciones posibles faltaría la trayectoria C y sus mensajes.
+\end{itemize}
+\tabularnewline
+\hline 
+Pre-Condiciones  & Anotaciones de las precondiciones 
+\begin{itemize}
+\item Sugiero una redacción como la siguiente 'Al menos un lote debe estar en almacén de productos teminados.'
+\item Si en el resumen del CU. se habla de un cierto tiempo en bodega, creo que sería bueno especificar ese lapso de tiempo.
+\item Revisar ortografía: 'teminados'
+\item Considero que una pre-condición faltante es la autenticación del gerente de CC en el sistema"
+\end{itemize}
+\tabularnewline
+\hline 
+Pos-Condiciones  & Anotaciones de las poscondiciones 
+\begin{itemize}
+\item No hay pos-condciones
+    \item Una podría ser: 'La calidad de un cierto lote será verificada'
+\end{itemize}
+\tabularnewline
+\hline 
+Errores:  & No se especifican los errores posibles al interactuar con el caso de uso.
+
+\tabularnewline
+\hline 
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\newpage{}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+Observaciones trayectoria principal. 
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & ¿Dónde se encuentra el botón evaluar?, no se especifica la pantalla.\tabularnewline
+2.  & No se especifica el nombre ni la numeración de la pantalla mencionada.\tabularnewline
+3.  & Si los datos de los lotes ya los tienen almacenados en la BD, sugeriría que en lugar de proporcionarlos de nuevo, se hiciera una consulta, de tal manera que sólo sea necesario ingresar los 3 parámetros de la regla de negocio. De esta manera se reducirían los problemas relacionados con la incongruencia de los datos.
+\tabularnewline
+5.  & La trayectoria A no es correcta aquí, la redacción podría ser como la siguiente: 'El sistema detecta que los datos ingresados son correctos', de esa manera se puede poner la trayectoria B como alternativa. \tabularnewline
+6.  & La trayectoria A no es correcta aquí, sugiero una redacción como la siguiente: 'El sistema encuentra válido el lote según la regla de negocio BRCC02', para de esa manera poner como trayectoria alternativa la C.\tabularnewline
+7.  & Creo que éste paso va después del 8.\tabularnewline
+\end{longtable}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: Condición establecida correctamente.
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+A3.  & Creo que la redacción correcta sería 'El sistema oculta la pantalla actual'. Además falta especificar el identificador de la pantalla 'Control de Calidad'.\tabularnewline
+
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\textit{Trayectoria Alternativa B}
+
+Condición: Condición establecida correctamente.
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+B1.  & Al inicio creo que falta el paso donde se especifica que el usuario inspector de calidad no llenó todos los campos obligatorios.\tabularnewline
+B3.  & Sugiero que se especifique nuevamente la trayectoria alternativa B en éste paso.\tabularnewline
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\textit{Trayectoria Alternativa C}
+
+Condición: No es clara, hay que revisar redacción.
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+C1.  & Al inicio creo que falta el paso donde se especifica que el sistema encuentra no válido al menos un paramtro de la regla de negocio.\tabularnewline
+C2.  & ¿No hay opción de rechazar?, si no hay opción de rechazar creo que el proceso sería automático y al terminar sólo se enviaría un mensaje de notificación al usuario.\tabularnewline
+
+
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\textit{Regla de negocio: BRCC02}
+
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & ¿A que se refiere la integridad de los productos terminados?. Creo que sería bueno especificar un catálogo de posibles fallas en los productos.\tabularnewline
+
+
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\newpage{} 
+\end{document}

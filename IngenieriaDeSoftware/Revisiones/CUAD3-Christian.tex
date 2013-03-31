@@ -1,0 +1,126 @@
+
+\documentclass[10pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+
+\usepackage{array}
+
+\providecommand{\tabularnewline}{\\}
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+
+\section{Revisión de Trayectorias}
+
+Resumen: El resumen es sencillo y describe el funcionamiento del CU.
+
+
+\subsection{CUAD3: Entrar al sistema}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & Entrar al sistema\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizador por:  & Irvin Ortiz Ochoa\tabularnewline
+\hline 
+Revisado por:  & Consuelo Mayén Christian Armando\tabularnewline
+\hline 
+Próposito:  & El propósito está claro, aunque creo que debería explicarlo un poco más.\tabularnewline
+\hline 
+Entradas:  & Anotaciones de las entradas 
+\begin{itemize}
+\item Puesto que son entradas sencillas, están bien explicadas.
+\end{itemize}
+\tabularnewline
+\hline 
+Salidas:  & Anotaciones de las salidas 
+\begin{itemize}
+\item Puede decirse que "Menu de Sesión iniciada" no es una salida, sino un resultado del inicio de sesión. 
+\end{itemize}
+\tabularnewline
+\hline 
+Pre-Condiciones  & Anotaciones de las precondiciones 
+\begin{itemize}
+\item Pues no hay precondiciones, pero tal vez la precondición sería que se entre al sistema.\end{itemize}
+\tabularnewline
+\hline 
+Pos-Condiciones  & Anotaciones de las poscondiciones 
+\begin{itemize}
+\item No tienen definida ninguna poscondición. \end{itemize}
+\tabularnewline
+\hline 
+Errores:  & Anotaciones de los errores 
+\begin{itemize}
+\item No tienen definido ningún error. \end{itemize}
+\tabularnewline
+\hline 
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+Observaciones trayectoria principal. 
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & No hay más anotación que decir que en el número 6 donde se validan los datos
+ingresados, deberia ir más arriba (Entre 3 y 4), pues de nada sirve que valide los datos
+si ya el usuario ingresó al sistema.
+\end{longtable}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: No tiene condición, tal vez denerían ingresar una, porque no se sabe cuándo se entra a esa trayectoria.
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & Deberían darle más oportunidades al usuario de equivocarse con su contraseña,
+pues como veo, ahí dice que al primer error llama a CU de "Recordar contraseña".\tabularnewline
+2.  & El mensaje de error deberia ser otro. El mensaje de "Dato obligatorio vacío no va al caso"\tabularnewline
+
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\textit{Trayectoria Alternativa B}
+
+Condición: No tiene condición, tal vez denerían ingresar una, porque no se sabe cuándo se entra a esa trayectoria.
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & No hay anotaciones para ésta trayectoria.\tabularnewline
+
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\newpage{} 
+\end{document}

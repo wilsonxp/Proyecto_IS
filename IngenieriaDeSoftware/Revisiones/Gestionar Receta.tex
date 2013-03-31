@@ -1,0 +1,379 @@
+
+\documentclass[10pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+
+\usepackage{array}
+
+\providecommand{\tabularnewline}{\\}
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+\section{Modulo de Producción}
+
+
+\subsection{CUPR1: Gestionar Receta de Galletas}
+
+Resumen: la redaccion con la palabra CONTROL no es correcta, ya que da a entender que validara que personas tendran acceso al modulo.
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & Gestionar Receta de Galletas\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizador por:  & Cristian Hipolito Tenorio\tabularnewline
+\hline 
+Revisado por:  & Eduardo Ventura Cruz\tabularnewline
+\hline 
+Próposito:  & 
+¿elimina, actualiza o realiza ambas?\tabularnewline
+\hline 
+Entradas:  &   
+\begin{itemize}
+\item los menus no son entradas 
+\end{itemize}
+\tabularnewline
+\hline 
+Salidas:  & 
+\begin{itemize}
+\item Sin observaciones. 
+\end{itemize}
+\tabularnewline
+\hline 
+Pre-Condiciones:  &  
+\begin{itemize}
+\item Los usuarios del modulo deben estar autentificados\end{itemize}
+\tabularnewline
+\hline 
+Pos-Condiciones:  & \begin{itemize}
+\item no hay poscondiciones? \end{itemize}
+\tabularnewline
+\hline 
+Errores:  &  
+\begin{itemize}
+\item El error no se utiliza en la trayectoria\end{itemize}
+\tabularnewline
+\hline 
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+ 
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & No hay pantallas correspondientes.\tabularnewline
+2.  & La pantalla no coincide\tabularnewline
+\end{longtable}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: No se definen las condiciones por las cuales se llega a las trayectorias alternativas.
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1. & No hay pantalla  \tabularnewline
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+Total de observaciones de este CU:8
+
+\newpage{}
+\subsection{CUPR1.1: Crear Nueva Receta}
+
+Resumen: Sin observaciones.
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & CUPR1.1 Crear nueva receta\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizador por:  & Cristian Hipolito Tenorio\tabularnewline
+\hline 
+Revisado por:  & Eduardo Ventura Cruz\tabularnewline
+\hline 
+Próposito:  & 
+Sin observaciones\tabularnewline
+\hline 
+Entradas:  &   
+\begin{itemize}
+\item Falta especificar las entradas de los datos. 
+\end{itemize}
+\tabularnewline
+\hline 
+Salidas:  & 
+\begin{itemize}
+\item Sin observaciones
+\end{itemize}
+\tabularnewline
+\hline 
+Pre-Condiciones:  &  
+\begin{itemize}
+\item Los usuarios del modulo deben estar autentificados
+\item ¿Es necesario que existe la materia prima en producción?
+\end{itemize}
+\tabularnewline
+\hline 
+Pos-Condiciones:  &  
+\begin{itemize}
+\item ¿No hay poscondiciones?\end{itemize}
+\tabularnewline
+\hline 
+Errores:  & Anotaciones de los errores 
+\begin{itemize}
+\item El error no se utiliza en la trayectoria\end{itemize}
+\tabularnewline
+\hline 
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+ 
+\begin{longtable}{rp{8cm}}
+No.  & Observaciones\tabularnewline
+1.  & No se especifica la nomenclatura de las pantallas.\tabularnewline
+2.  & NO hay pantallas.\tabularnewline
+
+\end{longtable}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: No se definen las condiciones por las cuales se llega a las trayectorias alternativas.
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1. & Esa es la condicion de la trayectoria. \tabularnewline
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+\textit{Trayectoria Alternativa B}
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1. & ¿solo valida campos vacios?   \tabularnewline
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+Total de observaciones de este CU:9
+\newpage{} 
+ 
+\subsection{CUPR1.2: Modificar Receta}
+
+Resumen: No es necesario especificar el usuario.
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & CUPR1.2 Modificar Receta\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizador por:  & Cristian Hipolito Tenorio\tabularnewline
+\hline 
+Revisado por:  & Eduardo Ventura Cruz\tabularnewline
+\hline 
+Próposito:  & 
+Sin observaciones\tabularnewline
+\hline 
+Entradas:  &   
+\begin{itemize}
+\item Falta especificar las entradas de los datos. 
+\end{itemize}
+\tabularnewline
+\hline 
+Salidas:  & 
+\begin{itemize}
+\item Sin observaciones
+\end{itemize}
+\tabularnewline
+\hline 
+Pre-Condiciones:  &  
+\begin{itemize}
+\item Los usuario del modulo deben estar auntentificados
+\end{itemize}
+\tabularnewline
+\hline 
+Pos-Condiciones:  &  
+\begin{itemize}
+\item ¿No hay poscondiciones?\end{itemize}
+\tabularnewline
+\hline 
+Errores:  & 
+\begin{itemize}
+\item No se especifica en que parte se utiliza el error\end{itemize}
+\tabularnewline
+\hline 
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+ 
+\begin{longtable}{rp{8cm}}
+No.  & Observaciones\tabularnewline
+1.  & No se especifica la nomenclatura de las pantallas.\tabularnewline
+2.  & NO hay pantallas.\tabularnewline
+5.  & ¿Solo valida campos vacios? .\tabularnewline
+
+\end{longtable}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: No se definen las condiciones por las cuales se llega a las trayectorias alternativas.
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1. & Esa es la condicion de la trayectoria.  \tabularnewline
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+\textit{Trayectoria Alternativa B}
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1. & ¿solo valida campos vacios?   \tabularnewline
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+Total de observaciones de este CU:8
+
+
+\newpage{} 
+ 
+\subsection{CUPR1.3: Eliminar Receta}
+
+Resumen: No es necesario especificar el usuario.
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & CUPR1.3 Eliminar Receta\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizador por:  & Cristian Hipolito Tenorio\tabularnewline
+\hline 
+Revisado por:  & Eduardo Ventura Cruz\tabularnewline
+\hline 
+Próposito:  & 
+Sin observaciones\tabularnewline
+\hline 
+Entradas:  &   
+\begin{itemize}
+\item Los menus no son entradas. 
+\end{itemize}
+\tabularnewline
+\hline 
+Salidas:  & 
+\begin{itemize}
+\item Sin observaciones
+\end{itemize}
+\tabularnewline
+\hline 
+Pre-Condiciones:  &  
+\begin{itemize}
+\item Los usuario del modulo deben estar auntentificados
+\end{itemize}
+\tabularnewline
+\hline 
+Pos-Condiciones:  &  
+\begin{itemize}
+\item ¿No hay poscondiciones?\end{itemize}
+\tabularnewline
+\hline 
+Errores:  & 
+\begin{itemize}
+\item No se especifican los errores utilizados en la trayectoria\end{itemize}
+\tabularnewline
+\hline 
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+ 
+\begin{longtable}{rp{8cm}}
+No.  & Observaciones\tabularnewline
+1.  & No se especifica la nomenclatura de las pantallas.\tabularnewline
+2.  & NO hay pantallas.\tabularnewline
+\end{longtable}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: No se definen las condiciones por las cuales se llega a las trayectorias alternativas.
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1. & Esa es la condicion de la trayectoria. \tabularnewline
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+Total de observaciones de este CU:8
+
+
+\end{document}

@@ -1,0 +1,231 @@
+\documentclass[10pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\makeatletter
+
+\providecommand{\tabularnewline}{\\}
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\makeatother
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+
+
+	\section{Documentación de Casos de Uso}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% Consultar pedidos en espera
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+		\subsection{CUP6: Crear Reporte de Producción.}
+
+		\textbf{\large Resumen}{\large }\\
+		{Este caso de uso tiene como objetivo permitir al usuario del área de Producción generar reportes personalizados de los Lotes producidos  y de la Materia Prima utilizada en la elaboración de los mismos. La personalización incluye la posibilidad de indicar el lapso de tiempo que abarcará el reporte y la forma en que se ordenará la información dentro del mismo. }\\
+		{\large \par}
+
+		% = = = = = = = = = = = = = = = = = = = = = = = = =
+		%	INICIO DE TABLA
+		% = = = = = = = = = = = = = = = = = = = = = = = = = 
+		\begin{table}[!ht]
+		\begin{centering}
+		\begin{tabular}{|c||c|l|}
+		\hline 
+		\multicolumn{2}{|c|}{Caso de Uso:} & CUP6 Crear Reporte de Producción   \tabularnewline
+		\hline 
+		\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Actor} & Usuario de Producción\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{12cm}|}{Permitir al usuario crear reportes personalizados referentes al área de Producción}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{12cm}|}{
+		Para generar un reporte, el usuario deberá:\newline		
+	- Seleccionar con el mouse el tipo de reporte\newline
+	- Seleccionar con el mouse por medio de un Datepicker la fecha desde la cual empezará el 		 reporte\newline
+	- Seleccionar con el mouse por medio de un Datepicker la fecha hasta la cual abarcará el reporte\newline
+	- Seleccionar con el mouse la forma en que se ordenarán los datos del reporte
+}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{12cm}|}{
+
+    - Se mostrará en pantalla el mensaje MSG1: Mensaje de Confirmación.\newline
+	- Además, se mostrará el reporte correspondiente en formato PDF según la estructura
+	especificada en la regla de negocio BR5: Formato de Reportes.
+}\tabularnewline
+\hline 
+		\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{12cm}|}{
+
+    - Deben existir lotes registrados en la base de datos.\newline
+	- El usuario debe haber iniciado sesión previamente como usuario de Producción.
+}\tabularnewline				
+		\hline 
+		\multicolumn{2}{|c|}{Post-condiciones} & Se limpia el formulario para permitir la generación de un nuevo reporte.\tabularnewline
+\hline 
+		\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{12cm}|}{
+
+    - El sistema muestra en pantalla los mensajes de error MSG11 o MSG12 referentes a errores
+    en las fechas cuando el usuario ingrese datos erróneos en los campos de fecha.\newline
+	- El sistema muestra en pantalla el mensaje de error MSG3: Datos no encontrados, cuando al acceder a la base de datos, ésta se encuentre vacía o no contenga los datos requeridos por el usuario.\newline
+	- El sistema muestra en pantalla el mensaje de error MSG4: Error al conectar con la base de datos, cuando al solicitar información de la base de datos, el sistema no pueda establecer conexión con ésta.\newline
+	- El sistema muestra en pantalla el mensaje de error MSG8: Campos obligatorios, cuando al dar clic en el botón [Generar reporte] no se haya llenado alguno de los campos.
+}\tabularnewline						
+		
+		\hline 		
+		\multicolumn{2}{|c|}{Autor} & Durán Pineda Mario Ángel\tabularnewline
+		\hline 
+		\end{tabular}
+		\par\end{centering}
+		
+	
+	\label{tab:CasosdeUso:nombredecasodeuso} 
+	\end{table}
+
+
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+	%	FIN DE TABLA
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+	%	INICIO DE TRAYECTORIA
+	% = = = = = = = = = = = = = = = = = = = = = = = = = 
+	\newpage
+	\textbf{\large Trayectorias del CU\\}{\large \par}
+	\textit{\large Trayectoria Principal}{\large{} }{\large \par}
+	\begin{tabular}{ccl}
+	 &  & \tabularnewline
+	1. & \includegraphics{actor} & El usuario selecciona la opción Crear Reporte dando clic al botón [Crear Reporte] \tabularnewline
+	& &  de la pantalla PP1: Menú Principal de Producción.\tabularnewline
+\tabularnewline
+
+	2. & \includegraphics{sistema} &  El sistema despliega la pantalla PP9: Crear Reporte de Producción.\tabularnewline
+	
+	3. & \includegraphics{actor} & El usuario selecciona la opción de reporte 'Reporte de Lotes'. [Trayectoria A] \tabularnewline 
+
+	4. & \includegraphics{sistema} & El sistema carga las opciones con las que se puede ordenar un 'Reporte de Lotes', \tabularnewline
+	& & como se muestra en la pantalla PP9.1: Opciones del Reporte de Lotes \tabularnewline
+	
+	5. & \includegraphics{actor} & El usuario ingresa la fecha a partir de la cual abarcará el reporte y la fecha de término \tabularnewline
+	&  & del mismo.\tabularnewline
+	
+	6. & \includegraphics{actor} & El usuario selecciona la forma en que estará ordenado su reporte (Por Fecha de \tabularnewline
+	& & producción, Línea de Producción o Producto). \tabularnewline
+	
+	7. & \includegraphics{actor} & El usuario da clic en el botón [Generar Reporte]. \tabularnewline 
+	
+	8. & \includegraphics{sistema} & El sistema valida los datos ingresados por el usuario. [Trayectoria B] [Trayectoria E]\tabularnewline
+	
+	9. & \includegraphics{sistema} & El sistema accede a la base de datos y recibe la información solicitada.   \tabularnewline
+	& & [Trayectoria C] [Trayectoria D] \tabularnewline
+	
+	10. & \includegraphics{sistema} & El sistema genera el reporte correspondiente y lo muestra en pantalla al usuario. \tabularnewline
+	
+	
+	\tabularnewline
+	 &  & - - - - Fin del caso de uso\tabularnewline \\
+	\end{tabular}
+
+\newpage
+	\textit{\large \\Trayectoria Alternativa A: Reporte de Materia Prima.}
+	
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	
+	A.1 & \includegraphics{actor} & El usuario selecciona la opción de reporte 'Reporte de Materia Prima'.\tabularnewline
+		
+	A.2 & \includegraphics{sistema} & El sistema carga las opciones con las que se puede ordenar un 'Reporte de Materia Prima', \tabularnewline
+	& & como se muestra en la pantalla PP9.2: Opciones del Reporte de Materia Prima. \tabularnewline
+	
+	A.3 & \includegraphics{actor} & El usuario ingresa la fecha a partir de la cual abarcará el reporte y la fecha de \tabularnewline
+& &	término del mismo.\tabularnewline
+
+    A.4 & \includegraphics{actor} & El usuario selecciona la forma en que estará ordenado su reporte (Por Materia Prima,  	\tabularnewline
+	& &  por Proveedor o por Línea de Producción).\tabularnewline\tabularnewline
+	
+	A.5 & & Regresar a la trayectoria principal en el punto 7.\tabularnewline
+
+	
+	\tabularnewline\tabularnewline	
+	\end{tabular}
+
+\textit{\large \\Trayectoria Alternativa B: Datos ingresados incorrectos.}
+
+\begin{tabular}{ccl}
+	& & \tabularnewline
+	
+	B.1 & \includegraphics{sistema} & El sistema detecta incongruencias en las fechas indicadas para el reporte\tabularnewline
+		
+	B.2 & \includegraphics{sistema} & El sistema despliega en pantalla el mensaje MSG11 o MSG12 relacionados \tabularnewline
+	& & con los errores de fechas según el error encontrado. 	\tabularnewline	
+	
+	B.3 & \includegraphics{actor} & El usuario ingresa nuevamente la fecha a partir de la cual abarcará el reporte   \tabularnewline
+& &	y la fecha de término del mismo.\tabularnewline    \tabularnewline    
+	
+	B.4 & & Regresar a la trayectoria principal en el punto 7.\tabularnewline
+	
+	\tabularnewline\tabularnewline	
+	\end{tabular}
+
+
+\textit{\large \\Trayectoria Alternativa C: Error de conexión a la base de datos.}
+
+\begin{tabular}{ccl}
+	& & \tabularnewline
+	
+	C.1 & \includegraphics{sistema} & El sistema detecta un error al establecer la conexión con la base de datos.\tabularnewline
+		
+	C.2 & \includegraphics{sistema} & El sistema despliega en pantalla el mensaje MSG4: Error al conectar con la base de datos \tabularnewline \tabularnewline
+		
+	C.3 & & Regresar a la trayectoria principal en el punto 2.\tabularnewline
+	
+	\tabularnewline\tabularnewline	
+	\end{tabular}
+
+
+\textit{\large \\Trayectoria Alternativa D: Datos solicitados no encontrados.}
+
+\begin{tabular}{ccl}
+	& & \tabularnewline
+	
+	D.1 & \includegraphics{sistema} & El sistema recibe un conjunto de datos vacío por parte de la base de datos.\tabularnewline
+		
+	D.2 & \includegraphics{sistema} & El sistema despliega en pantalla el mensaje MSG3: Datos no encontrados \tabularnewline
+	
+	D.3 & \includegraphics{actor} & El usuario ingresa nuevos parámetros para su reporte\tabularnewline    
+	\tabularnewline    
+	
+	D.4 & & Regresar a la trayectoria principal en el punto 7.\tabularnewline
+	
+	\tabularnewline\tabularnewline	
+	\end{tabular}
+
+\textit{\large \\Trayectoria Alternativa E: Campos obligatorios sin llenar.}
+	
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+			
+	E.1 & \includegraphics{sistema} & El sistema detecta que existen campos obligatorios sin llenar\tabularnewline
+	
+	E.2 & \includegraphics{sistema} & El sistema despliega el mensaje de error MSG8: Campos obligatorios sin llenar, e \tabularnewline
+	& & indica al usuario los campos que faltan por llenar. \tabularnewline
+
+    E.3 & \includegraphics{actor} & El usuario llena los campos que estaban vacíos.\tabularnewline
+	\tabularnewline
+	
+	E.4 & &	Regresa a la trayectoria principal en el punto 7.\tabularnewline
+
+	
+	\tabularnewline\tabularnewline	
+	\end{tabular}
+
+\end{document}

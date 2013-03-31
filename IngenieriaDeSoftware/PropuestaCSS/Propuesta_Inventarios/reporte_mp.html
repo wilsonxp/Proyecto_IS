@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title> Genera Reporte Materia Prima </title>
+        <link rel="stylesheet" href="stylesheet.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet'>
+    </head>
+    
+    <body> 
+        <div id="contenido"> 
+            <header>
+                <hgroup>
+                    <h1>Lasgalletitas.com
+                        <br>
+                        <br>
+                        Inventarios
+                    </h1>
+                </hgroup>
+            </header>
+            
+            <section>
+
+                <div id="button">
+                  <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Gestíón Materias Primas</a>
+                    </li>
+
+                    <li><a href="#">Gestión Lotes</a></li>
+                    <li><a href="#">Reportes</a>
+
+                    <ul class="sub-level">
+                        <li class = "Button"><a href="reporte_mp.html">Generar Reporte Materias Primas</a></li>
+                        <li class = "Button"><a href="#">Generar Reporte de Productos</a></li>
+                    </ul>
+
+                    </li>
+                    <li><a href="#">Cerrar Sesion</a></li>
+
+                  </ul>
+                </div>
+
+            	<div id="textoPr">
+                	<hgroup> 
+                    	<h1>Genera Reporte</h1> 
+                    </hgroup>
+                    <form>
+                    	<label for="nombre">Nombre: </label>
+                        <input type="text" id="nombre" placeholder="Escribe nombre" required>
+                        <label for="correo">Proveedor: </label >
+                        <input type="text" id="proveedor" placeholder="Escribe proveedor" required>
+                        <label for="edad">Cantidad: </label>
+                        <input type="number" id="canditad" min="0" max="10000" required>
+                        <label for="edad">Precio: </label>
+                        <input type="number" id="precio" min="0" max="1000000" required>
+                        <label for="fecha">Fecha de Llegada: </label>
+                        <input type="date" id="fecha_llegada" required>
+                        <label for="fecha">Fecha de Caducidad: </label>
+                        <input type="date" id="fecha_caducidad" required>
+
+                        <input type="submit" value="Enviar datos" id="btnSubmit">
+                    </form>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

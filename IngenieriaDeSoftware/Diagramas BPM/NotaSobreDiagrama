@@ -1,0 +1,4 @@
+Cambios
+
+* Lista de compras es lo mismo que generar lista dentro de inventario, solo le mande una flecha a generar lista
+* Despues de actualizar inventario se finaliza la tarea

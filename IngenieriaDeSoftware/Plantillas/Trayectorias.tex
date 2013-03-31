@@ -1,0 +1,552 @@
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[10pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\makeatother
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+
+\section{Documentación de Casos de Uso}
+
+
+\subsection{CUG1.0: Gestionar Notificaciones}
+
+\textbf{\large Resumen}{\large }\\
+{\large{} Este Caso de uso tiene como objetivo permitir al usuario
+enviar, recibir y eliminar notificaciones a otras áreas de la empresa.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUG1.0: Gestionar Notificaciones\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Arcos Reyes Larissa}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Todos los usuarios del sistema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{a}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{a}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{a}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{a}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{a}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Primario | Secundario | etc.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en el funcionamiento etc.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 1.0: Gestionar Notificaciones}
+
+
+\label{tab:CasosdeUso:nombredecasodeuso} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el icono {[}notificaciones{]} en la pantalla PG1}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Carga los datos de las notificaciones correspondientes al usuario
+{[}Trayectoria Alternativa A{]}}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PG2}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: No se pudieron cargar los datos de las notificaciones anteriores
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG4 'No se pudo establecer conexión
+con la base de datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PG1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\subsection{CUG4.0: Gestionar Ventas}
+
+\textbf{\large Resumen}{\large }\\
+{\large{} Este Caso de uso tiene como objetivo permitir al usuario
+registrar, modificar, buscar y cancelar ventas.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+%
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUG4.0: Gestionar Ventas\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Cabrera Alvarez Estefany Viridiana}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Usuario de Ventas, Administrador}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Acceder a opciones de crear, modificar,consultar o buscar venta.
+}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Interfaz Correspondiente a gestionar Ventas}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{El usuario de ventas debe estar autentificado}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{La base de datos debe estar disponible}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG4 Error al conectar con la base de datos.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Primario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en el funcionamiento etc.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 4.0: Gestionar Ventas}
+\label{tab:CasosdeUso:nombredecasodeuso} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el botón {[}Ventas{]} en la pantalla PV1}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Carga los datos de las ventas registradas en la Base de datos. 		
+{[}Trayectoria Alternativa A{]}}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PV2}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: No se pudieron cargar los datos de las Ventas anteriores
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG4 'No se pudo establecer conexión
+con la base de datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PV1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\newpage{}
+%====================
+%Nuevo caso de uso
+%====================
+
+\subsubsection{CUS4.1:Agregar Venta}
+
+\textbf{\large Resumen}{\large }\\
+{\large{} Este Caso de uso tiene como objetivo permitir al usuario
+registrar, modificar, buscar y cancelar ventas.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+%
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUG4.1: Agregar Venta\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Cabrera Alvarez Estefany Viridiana}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Usuario de Ventas, Administrador}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Registrar una venta en el sistema}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Ninguna**}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{**}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{El usuario de ventas debe estar autentificado, El cliente no debe existir}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{**}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG2 Mensaje de error, MSG4 Error al conectar con la base de datos.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en el funcionamiento etc.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 4.0: Gestionar Ventas}
+\label{tab:CasosdeUso:nombredecasodeuso} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el ícono {[}Alta Venta{]} en la pantalla PV2}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PV3 con el formulario a llenar.}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Llena los datos del formulario}\tabularnewline
+4.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Da clic en el botón de aceptar{[}Trayectoria Alternativa A{]}}\tabularnewline
+5.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Verifica si los campos se llenaron correctamente{[}Trayectoria Alternativa B{]}}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: No se pudieron cargar los datos de las Ventas anteriores
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG4 'No se pudo establecer conexión
+con la base de datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PV1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\newpage{}
+
+
+\section{Mensajes}
+
+
+\subsection{MSG1 Mensaje de confirmación.}
+
+\noindent Tipo: Notificación.
+
+\noindent Estatus: Propuesta.
+
+\noindent Objetivo: Indicar al usuario que la acción solicitada fue
+realizada exitosamente.
+
+\noindent Redacción: ARTICULO | ENTIDAD | VALOR ha sido OPERACIÓN
+exitosamente.
+
+\noindent Parámetros: El mensaje se muestra con base en lo siguiente
+: 
+\begin{description}
+\item [{ARTICULO:}] Tiene la función de limitar la extensión de la entidad. 
+\item [{ENTIDAD:}] Producto | Ingrediente | Proveedor | Cliente | Empleado
+| Reporte 
+\item [{VALOR:}] \noindent Valor de la entidad a la cual se le realiza
+una operación. 
+\item [{OPERACIÓN}] \noindent Agregar | Eliminar | Modificar | Generar 
+\item [{Ejemplo:}] \noindent El producto <<Arcoiris>> ha sido eliminado
+exitosamente. 
+\end{description}
+
+\subsection{MSG2 Mensaje de error.}
+
+\noindent Tipo: Notificación.
+
+\noindent Estatus: Propuesta.
+
+\noindent Objetivo: Indicar al usuario que ocurrio un error y no se
+pudo realizar la acción solicitada.
+
+\noindent Redacción: Error al intentar OPERACIÓN ARTICULO | ENTIDAD
+| VALOR
+
+\noindent Parámetros: El mensaje se muestra con base en lo siguiente
+: 
+\begin{description}
+\item [{ARTICULO:}] Tiene la función de limitar la extensión de la entidad. 
+\item [{ENTIDAD:}] Producto | Ingrediente | Proveedor | Cliente | Empleado
+| Reporte 
+\item [{VALOR:}] \noindent Valor de la entidad a la cual se le realiza
+una operación. 
+\item [{OPERACIÓN}] \noindent Agregar | Eliminar | Modificar | Generar 
+\item [{Ejemplo:}] \noindent Error al intentar modificar el producto <<Arcoiris>>. 
+\end{description}
+
+\subsection{MSG3 Datos no encontrados.}
+
+\noindent Tipo: Notificación.
+
+\noindent Estatus: Propuesta.
+
+\noindent Objetivo: Indicar al usuario que los datos solicitados no
+arrojarón resultados.
+
+\noindent Redacción: ARTICULO ENTIDAD VALOR no muestra ningún resultado.
+
+\noindent Parámetros: El mensaje se muestra con base en lo siguiente
+: 
+\begin{description}
+\item [{ARTICULO:}] Tiene la función de limitar la extensión de la entidad. 
+\item [{ENTIDAD:}] Producto | Ingrediente | Proveedor | Cliente | Empleado
+| Venta | Compra 
+\item [{VALOR:}] \noindent Valor de la entidad. 
+\item [{Ejemplo:}] \noindent Las ventas del 03/Mar/2011 al 03/Abril/2011
+no muestran ningún resultado. 
+\end{description}
+
+\subsection{MSG4 Error al conectar con la base de datos.}
+
+\noindent Tipo: Notificación.
+
+\noindent Estatus: Propuesta.
+
+\noindent Objetivo: Indicar al usuario que no se obtuvo conexión con
+la base de datos.
+
+\noindent Redacción: No se pudo establecer conexión con la base de
+datos.
+
+
+\subsection{MSG5 Error al iniciar sesión.}
+
+\noindent Tipo: Notificación.
+
+\noindent Estatus: Propuesta.
+
+\noindent Objetivo: Notificar al usuario un error al iniciar sesión.
+
+\noindent Redacción: ARTICULO ENTIDAD VALOR incorrecto.
+
+\noindent Parámetros: El mensaje se muestra con base en lo siguiente
+: 
+\begin{description}
+\item [{ARTICULO:}] Tiene la función de limitar la extensión de la entidad. 
+\item [{ENTIDAD:}] Usuario | Contraseña 
+\item [{VALOR:}] \noindent Valor de la entidad. 
+\item [{Ejemplo:}] \noindent La contraseña es incorrecta. 
+\end{description}
+
+\subsection{MSG6 Ingredientes insuficientes.}
+
+\noindent Tipo: Notificación.
+
+\noindent Estatus: Propuesta.
+
+\noindent Objetivo: Notificar al usuario un error al iniciar sesión.
+
+\noindent Redacción: ARTICULO cantidad ENTIDAD VALOR solicitada es
+insuficiente.
+
+\noindent Parámetros: El mensaje se muestra con base a la BR1 atendiendo
+a lo siguiente : 
+\begin{description}
+\item [{ARTICULO:}] Tiene la función de limitar la extensión de la entidad. 
+\item [{ENTIDAD:}] Limita la unidad de medición. 
+\item [{VALOR:}] \noindent insuficiente 
+\item [{Ejemplo:}] \noindent La cantidad de litros de leche solicitada
+es insuficiente. 
+\end{description}
+
+\subsection{MSG7 Formato incorrecto de los datos.}
+
+\noindent Tipo: Notificación.
+
+\noindent Estatus: Propuesta.
+
+\noindent Objetivo: Notificar al usuario un error al iniciar sesión.
+
+\noindent Redacción: ARTICULO ENTIDAD sólo acepta TIPO.
+
+\noindent Parámetros: El mensaje se muestra con base a la BR1 atendiendo
+a lo siguiente : 
+\begin{description}
+\item [{ARTICULO:}] Tiene la función de limitar la extensión de la entidad. 
+\item [{ENTIDAD:}] Nombre del campo incorrecto. 
+\item [{TIPO:}] \noindent Tipo de datos indicado en el diccionario de datos
+para cada entidad. 
+\item [{Ejemplo:}] \noindent El precio sólo acepta números. 
+\end{description}
+
+\section{Reglas de Negocio}
+
+
+\subsection{BR1 Elaboración de lotes}
+
+\noindent Tipo: Restricción.
+
+\noindent Nivel: Obligatorio. Debe cumplirse siempre.
+
+\noindent Versión: 1.0
+
+\noindent Estado: Propuesta.
+
+\noindent Descripción: Para poder elaborar un producto las cantidades
+de cada ingrediente indicadas en la receta deben existir en el almacen
+y deben provenir de un mismo proveedor,esto con el fin de facilitar
+el control de calidad.
+
+\noindent Ejemplo:
+
+\noindent %
+\begin{tabular}{|c|}
+\hline 
+\multicolumn{1}{|c|}{Se necesitan 10 litros de leche}\tabularnewline
+\hline 
+\end{tabular}%
+\begin{tabular}{|c|}
+\hline 
+\multicolumn{1}{|c|}{Se tienen 8 litros del proveedor A y 2 litros del proveedor B}\tabularnewline
+\hline 
+\end{tabular}
+
+\noindent El producto no podría elaborarse porque no existe la cantidad
+de materia prima suficiente proveniente de un mismo proveedor.
+
+
+\subsection{BR2 Forma de pago}
+
+\noindent Tipo: Definición
+
+\noindent Nivel: Obligatorio
+
+\noindent Versión:1.0
+
+\noindent Estado: Propuesta
+
+\noindent Descripción: Se debe indicar en toda venta realizada la
+forma de pago, y en caso de ser necesario, los ultimos cuatro dgitos
+del numero de cuenta/ tarjeta por cuestiones fiscales.
+
+
+\subsection{BR3 Límite de almacén}
+
+\noindent Tipo: Restrictiva.
+
+\noindent Nivel: Obligatorio
+
+\noindent Versión:1.0
+
+\noindent Estado: Propuesta
+
+\noindent Descripción: La cantidad de galletas que se pueden almacenar
+en el almacen estan limitas a 100,000 cajas. Si se llega a esta límite
+debe detenerse la producción.
+
+
+\subsection{BR4 Cliente prioritario}
+
+\noindent Tipo: Definición.
+
+\noindent Nivel: Obligatorio
+
+\noindent Versión:1.0
+
+\noindent Estado: Propuesta
+
+\noindent Descripción: Si un pedido tiene el caracter de compensación
+de producto (por alguna falla reportada por el cliente o problema
+que se presente durante o despues de su elaboración), este debe tener
+prioridad para su entrega, sobre cualquier otra entrega a efectuarse.
+
+
+\subsection{BR5 Formato de los reportes}
+
+\noindent Tipo: Definición.
+
+\noindent Nivel: Obligatorio
+
+\noindent Versión:1.0
+
+\noindent Estado: Propuesta
+
+\noindent Descripción: Todo reporte debe indicar con el membrete de
+la empresa, deberá indicar el área de la que proviene, fecha de elaboración
+, periodo que abarca y nombre de quien lo elaboró.
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DEL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\end{document}

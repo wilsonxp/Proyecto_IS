@@ -1,0 +1,466 @@
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[10pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\makeatother
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+
+\section{Módulo Control de Calidad}
+
+\label{sec:MCC}
+
+
+\subsection{CUPCC1.0 : Visualizar problemas }
+
+\textbf{\large Resumen}\\
+ {\large {}En este caso de uso el actor podrá conocer los problemas
+que se han detectado tanto en las materias primas, como en los productos.
+Posteriormente, si asi lo desea, podrá generar un reporte.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUCC 1.0: Visualizar problemas\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Pérez Alvarez Juan Carlos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Personal de CC}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Visualizar los problemas que se han detectado.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{
+-Status: Todos los reportes, Pendiente o Solucionado \newline
+-Intervalo de tiemp: Todos los reportes o definido por una fecha de inicio y una fecha de fin \newline
+-Etapa en el proceso de producción.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Listado con los reportes, de acuerdo a los criterios especificados}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{Estar identificado como un usuario del area de control de calidad.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Post-condiciones} & \multicolumn{1}{p{10cm}||}{El actor visualiza los problemas reportados}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{
+MSG3 'Datos no encontrados'\newline
+MSG4 'Error al conectar con la base de datos'\newline
+MSG11 'La fecha de inicio es posterior a la fecha de fin'\newline
+MSG12 'La fecha indicada es posterior a la fecha del dia de hoy'}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Primario}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 1.0: Visualizar problemas}
+
+
+\label{tab:CasosdeUso:nombredecasodeuso} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Oprime en la opción {[}Visualizar problemas{]} en la pantalla PCC1}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PCC2 con el formulario correspondiente.}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Selecciona el criterio de filtrado de acuerdo a la Etapa de Proceso: {[}Materia prima{]}, {[}Linea de Producción{]} ó {[}Producto{]}}\tabularnewline
+4.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Selecciona la opción {[}Todos los reportes{]} en el apartado de {[}Fecha{]}{[}Trayectoria Alternativa B{]}}\tabularnewline
+5.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Selecciona la opción {[}Todos los reportes{]} en el apartado de {[}Status{]}{[}Trayectoria Alternativa C{]}}\tabularnewline
+6.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Oprime el botón {[}Visualizar reportes{]}{[}Trayectoria Alternativa A{]}}\tabularnewline
+7.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{La pantalla muestra un listado con la información correspondiente en la sección correspondiente.{[}Trayectoria Alternativa D{]}{[}Trayectoria Alternativa G{]} }\tabularnewline
+8.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Selecciona la opción {[}Ver Reporte{]} de un elemento de la lista
+de problemas desplegada }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\newpage{}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: El actor oprime el botón de cancelar
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Oprime el botón de {[}Cancelar{]}}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PCC1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+\newline
+\textit{Trayectoria Alternativa B}
+
+Condición: El actor eligió la opción {[}Periodo de tiempo{]}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Desbloquea los campos {[}Fecha de inicio{]} y {[}Fecha de fin{]}
+{[}Trayectoria Alternativa E{]} {[}Trayectoria Alternativa F{]}}\tabularnewline
+2.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Ingresa los valores de {[}Fecha de inicio{]} y {[}Fecha de fin{]} }\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Continua con el paso 5 de la Trayectoria principal}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+\newline
+\textit{Trayectoria Alternativa C}
+
+Condición: El actor eligió la opción {[}Status{]}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Desbloquea el campo {[}Status{]}}\tabularnewline
+2.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Selecciona una opción para el campo {[}Status{]} }\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Continua con el paso 6 de la Trayectoria principal}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+\newline
+\textit{Trayectoria Alternativa D}
+
+Condición: No hay reportes por mostrar
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG3 'Datos no encontrados'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Continua con el paso 3 de la Trayectoria principal }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+\newline
+\textit{Trayectoria Alternativa E}
+
+Condición: La fecha de inicio es posterior a la fecha de fin
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG11 'La fecha de inicio es posterior
+a la fecha de fin'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Continua con el paso 2 de la Trayectoria alternativa B }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+\newline
+\textit{Trayectoria Alternativa F}
+
+Condición: La fecha de inicio o la fecha de fin son posteriores a
+la fecha actual
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG12 'La fecha indicada es posterior
+a la fecha del dia de hoy'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Continua con el paso 2 de la Trayectoria alternativa B }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+\newline
+\textit{Trayectoria Alternativa G}
+
+Condición: Error de conexión a base de datos
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG4 'Error al conectar con la base de datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Continua con el paso 2 de la Trayectoria alternativa B }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+
+\newpage{}
+
+
+\subsubsection{CUPCC1.1: Ver detalles del problema}
+
+\textbf{\large Resumen}\\
+ {\large {}En este caso de uso el actor puede visualizar los detalles
+de un problema relacionado con Control de Calidad reportado en el sistema}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CU CC 1.1: Ver detalles del problema\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Pérez Alvarez Juan Carlos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Personal de CC}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Visualizar detalles de un problema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Información acerca del problema}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{
+-Estar identificado como un usuario del area de control de calidad.\newline
+-Haber seleccionado una opción de la PCC2.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Post-condiciones} & \multicolumn{1}{p{10cm}||}{El actor visualiza los detalles del problema}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG4 'Error al conectar con la base de datos'}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{CU CC 17.1}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 17.2: Ver detalles del problema}
+
+
+\label{tab:CasosdeUso:nombredecasodeuso} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Oprime en la opción {[}Ver reporte{]} en la pantalla PCC2}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Carga la información del problema seleccionado.{[}Trayectoria Alternativa C{]}}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Oprime el botón de {[}Atrás{]} {[}Trayectoria Alternativa A{]}{[}Trayectoria Alternativa B{]}}\tabularnewline
+4.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PCC3}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\newpage{}\textit{Trayectoria Alternativa A}
+
+Condición: El actor oprime el botón de Imprimir
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Oprime el botón de {[}Imprimir{]}}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega abre el archivo en formato PDF}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Continua con el paso 3 de la Trayectoria principal}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+\newline
+\textit{Trayectoria Alternativa B}
+
+Condición: El actor oprime el botón de Levantar Reporte
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Oprime el botón de {[}Levantar Reporte{]}}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PG3 'Enviar notificación'}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Interactua con el caso de uso CUG1.1 'Enviar notificación'}\tabularnewline
+4.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Continua con el paso 3 de la Trayectoria principal}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+\newline
+\textit{Trayectoria Alternativa C}
+
+Condición: Error de conexión a base de datos
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG4 'Error al conectar con la base de datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Continua con el paso 2 de la Trayectoria alternativa B }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+\newpage{}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	
+%		INICIO CASO DE USO 18.1
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+
+\subsection{CUCC 2.0: Rastrear producto}
+
+\textbf{\large Resumen}\\
+ {\large {}En este caso de uso el actor puede localizar un producto,
+a través del lote de materia prima, o por el lote de producto, para conocer su ubicación actual}\\
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CU CC 18.1: Rastrear producto\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Pérez Alvarez Juan Carlos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Personal de CC}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Localizar la ubicación actual de un producto.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Se solicitara al usuario el tipo de Número de lote y el Número de lote de materia prima, o el Número de lote de producto}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Informe de la ubicación del producto}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{Estar identificado como un usuario del area de control de calidad.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Post-condiciones} & \multicolumn{1}{p{10cm}||}{El actor visualiza la ubicación del producto}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{
+MSG10 'Registro inexistente'\newline
+MSG4 'Error al conectar con la base de datos'\newline
+MSG7 'Formato incorrecto de los datos'
+}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Primario}\tabularnewline
+\end{tabular}
+\par\end{centering}
+\caption{Caso de Uso 18.1: Rastrear producto}
+
+
+\label{tab:CasosdeUso:nombredecasodeuso} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Oprime en la opción {[}Seguimiento del producto{]} en la pantalla PCC1}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PCC4 con el formulario.}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Selecciona el criterio de búsqueda: Rastrear por número de lote de
+materia prima, o por número de lote de producto}\tabularnewline
+4.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Ingresa el número de lote en el campo {[}Número de lote{]}}\tabularnewline
+5.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Oprime el botón {[}Rastrear producto{]} {[}Trayectoria Alternativa
+A{]}}\tabularnewline
+6.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra en la pantalla PCC4 la información correspondiente. {[}Trayectoria Alternativa B{]}{[}Trayectoria Alternativa C{]}{[}Trayectoria Alternativa D{]}}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+\newline
+\newpage{}\textit{Trayectoria Alternativa A}
+
+Condición: El actor oprime el botón de cancelar
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Oprime el botón de {[}Cancelar{]}}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PCC1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+\newline
+\textit{Trayectoria Alternativa B}
+
+Condición: El número de lote no existe
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG10 'Registro inexistente'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Continua con el paso 3 de la Trayectoria principal}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+\newline
+\textit{Trayectoria Alternativa C}
+
+Condición: Error de conexión a base de datos
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG4 'Error al conectar con la base de datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Continua con el paso 2 de la Trayectoria alternativa B }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+\newline
+\textit{Trayectoria Alternativa D}
+
+Condición: El formato de número de lote no es correcto de acuerdo a la Regla de Negocio {[}BRP5 Formato de lote de producto{]}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG7 'Formato incorrecto de los datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Continua con el paso 2 de la Trayectoria alternativa B }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DEL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\end{document}

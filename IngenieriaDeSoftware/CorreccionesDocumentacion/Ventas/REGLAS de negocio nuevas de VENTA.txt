@@ -1,0 +1,18 @@
+16.7. BRV1 Modificacion Ventas
+Regla: BRV1 Modifcación de Venta
+Tipo: Restriccion
+Nivel: Obligatorio. Debe cumplirse siempre.
+Version: 1.0
+Estado: Propuesta
+Descripcion: Cuando una venta sea modificada, junto con sus articulos el idventa no se puede modificar:
+*Folio
+*Fecha de elaboracion
+*Idcliente
+
+BRV2 RFC Clientes
+Regla: BRV2 Composicion del RFC de un cliente
+Tipo: Restriccion
+Nivel: Obligatorio. Debe cumplirse siempre.
+Version: 1.0
+Estado: Propuesta
+Descripcion: El RFC debe de estar compuesto por 4 letras y 6 numeros 

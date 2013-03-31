@@ -1,0 +1,581 @@
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[10pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\makeatother
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+\begin{Large} NOTA: Pase algunas de las reglas que ya había y documente
+algunos mensajes, obvio faltan varios
+
+\end{Large}
+
+
+\section{Mensajes}
+
+
+\subsection{MSG1 Mensaje de confirmación.}
+
+\noindent Tipo: Notificación.
+
+\noindent Estatus: Propuesta.
+
+\noindent Objetivo: Indicar al usuario que la acción solicitada fue
+realizada exitosamente.
+
+\noindent Redacción: ARTICULO | ENTIDAD | VALOR ha sido OPERACIÓN
+exitosamente.
+
+\noindent Parámetros: El mensaje se muestra con base en lo siguiente
+:
+\begin{description}
+\item [{ARTICULO:}] \noindent Tiene la función de limitar la extensión
+de la entidad.
+\item [{ENTIDAD:}] \noindent Producto | Ingrediente | Proveedor | Cliente
+| Empleado | Reporte
+\item [{VALOR:}] \noindent Valor de la entidad a la cual se le realiza
+una operación. 
+\item [{OPERACIÓN}] \noindent Agregar | Eliminar | Modificar | Generar
+\item [{Ejemplo:}] El producto <<Arcoiris>> ha sido eliminado exitosamente.
+\end{description}
+
+\subsection{MSG2 Mensaje de error.}
+
+\noindent Tipo: Notificación.
+
+\noindent Estatus: Propuesta.
+
+\noindent Objetivo: Indicar al usuario que ocurrio un error y no se
+pudo realizar la acción solicitada.
+
+\noindent Redacción: Error al intentar OPERACIÓN ARTICULO | ENTIDAD
+| VALOR 
+
+\noindent Parámetros: El mensaje se muestra con base en lo siguiente
+:
+\begin{description}
+\item [{ARTICULO:}] \noindent Tiene la función de limitar la extensión
+de la entidad.
+\item [{ENTIDAD:}] \noindent Producto | Ingrediente | Proveedor | Cliente
+| Empleado | Reporte
+\item [{VALOR:}] \noindent Valor de la entidad a la cual se le realiza
+una operación. 
+\item [{OPERACIÓN}] \noindent Agregar | Eliminar | Modificar | Generar
+\item [{Ejemplo:}] Error al intentar modificar el producto <<Arcoiris>>.
+\end{description}
+
+\subsection{MSG3 Datos no encontrados.}
+
+\noindent Tipo: Notificación.
+
+\noindent Estatus: Propuesta.
+
+\noindent Objetivo: Indicar al usuario que los datos solicitados no
+arrojarón resultados.
+
+\noindent Redacción: ARTICULO ENTIDAD VALOR no muestra ningún resultado. 
+
+\noindent Parámetros: El mensaje se muestra con base en lo siguiente
+:
+\begin{description}
+\item [{ARTICULO:}] \noindent Tiene la función de limitar la extensión
+de la entidad.
+\item [{ENTIDAD:}] \noindent Producto | Ingrediente | Proveedor | Cliente
+| Empleado | Venta | Compra
+\item [{VALOR:}] \noindent Valor de la entidad. 
+\item [{Ejemplo:}] Las ventas del 03/Mar/2011 al 03/Abril/2011 no muestran
+ningún resultado.
+\end{description}
+
+\subsection{MSG4 Error al conectar con la base de datos.}
+
+\noindent Tipo: Notificación.
+
+\noindent Estatus: Propuesta.
+
+\noindent Objetivo: Indicar al usuario que no se obtuvo conexión con
+la base de datos.
+
+\noindent Redacción: No se pudo establecer conexión con la base de
+datos.
+
+
+\subsection{MSG5 Error al iniciar sesión.}
+
+\noindent Tipo: Notificación.
+
+\noindent Estatus: Propuesta.
+
+\noindent Objetivo: Notificar al usuario un error al iniciar sesión.
+
+\noindent Redacción: El usuario o la contraseña son incorrectos. 
+
+\subsection{MSG6 Ingredientes insuficientes.}
+
+\noindent Tipo: Notificación.
+
+\noindent Estatus: Propuesta.
+
+\noindent Objetivo: Notificar al usuario que no existen los ingredientes
+para la elaboración de un producto.
+
+\noindent Redacción: ARTICULO cantidad ENTIDAD VALOR solicitada es
+insuficiente. 
+
+\noindent Parámetros: El mensaje se muestra con base a la BR1 atendiendo
+a lo siguiente :
+\begin{description}
+\item [{ARTICULO:}] \noindent Tiene la función de limitar la extensión
+de la entidad.
+\item [{ENTIDAD:}] \noindent Limita la unidad de medición.
+\item [{VALOR:}] \noindent insuficiente
+\item [{Ejemplo:}] La cantidad de litros de leche solicitada es insuficiente.
+\end{description}
+
+\subsection{MSG7 Formato incorrecto de los datos.}
+
+\noindent Tipo: Notificación.
+
+\noindent Estatus: Propuesta.
+
+\noindent Objetivo: Notificar al usuario un de formato en los datos
+ingresados.
+
+\noindent Redacción: ARTICULO ENTIDAD sólo acepta TIPO. 
+
+\noindent Parámetros: El mensaje se muestra con base a la BR1 atendiendo
+a lo siguiente :
+\begin{description}
+\item [{ARTICULO:}] \noindent Tiene la función de limitar la extensión
+de la entidad.
+\item [{ENTIDAD:}] \noindent Nombre del campo incorrecto.
+\item [{TIPO:}] \noindent Tipo de datos indicado en el diccionario de datos
+para cada entidad.
+\item [{Ejemplo:}] \noindent El precio sólo acepta números.
+\end{description}
+
+\subsection{MSG8 Campos obligatorios}
+
+\noindent Tipo: Notificación.
+
+\noindent Estatus: Propuesta.
+
+\noindent Objetivo: Notificar al usuario que no ingreso un campo obligatorio.
+
+\noindent Redacción: ARTICULO ENTIDAD es un campo obligatorio. 
+
+\noindent Parámetros: El mensaje se muestra atendiendo a lo siguiente
+:
+\begin{description}
+\item [{ARTICULO:}] \noindent Tiene la función de limitar la extensión
+de la entidad.
+\item [{ENTIDAD:}] \noindent Nombre del campo obligatorio.
+\item [{Ejemplo:}] \noindent El campo Nombre es un campo obligatorio.
+\end{description}
+
+\subsection{MSG9 Confirmar acción}
+
+\noindent Tipo: Notificación.
+
+\noindent Estatus: Propuesta.
+
+\noindent Objetivo: Solicitar al usuario la conirmación de una acción.
+
+\noindent Redacción: ¿Desea ACCIÓN ARTICULO ENTIDAD?
+
+\noindent Parámetros: El mensaje se muestra atendiendo a lo siguiente
+:
+\begin{description}
+\item [{ACCIÓN:}] \noindent Indica la acción a confirmar.
+\item [{ARTICULO:}] \noindent Tiene la función de limitar la extensión
+de la entidad.
+\item [{ENTIDAD:}] \noindent Nombre del campo obligatorio.
+\item [{Ejemplo:}] \noindent ¿Desea eliminar el producto?
+\item 
+\end{description}
+
+\subsection{MSG10 Registro inexistente.}
+
+\noindent Tipo: Notificación.
+
+\noindent Estatus: Propuesta.
+
+\noindent Objetivo: Indicar al usuario que el registro solicitado no existe.
+
+\noindent Redacción: ARTICULO ENTIDAD VALOR no existe. 
+
+\noindent Parámetros: El mensaje se muestra con base en lo siguiente
+:
+\begin{description}
+\item [{ARTICULO:}] \noindent Tiene la función de limitar la extensión
+de la entidad.
+\item [{ENTIDAD:}] \noindent Producto | Ingrediente | Proveedor | Cliente
+| Empleado | Número de lote
+\item [{VALOR:}] \noindent Valor de la entidad. 
+\item [{Ejemplo:}] El número de lote L00000  no existe.
+\end{description}
+
+
+\subsection{MSG11 La fecha de inicio es posterior a la fecha de fin}
+
+\noindent Tipo: Notificación.
+
+\noindent Estatus: Propuesta.
+
+\noindent Objetivo: Indicar al usuario que la fecha de inicio es posterior a la fecha de fin.
+
+\noindent Redacción: La fecha de inicio es posterior a la fecha de fin. 
+
+
+\subsection{MSG12 La fecha indicada es posterior a la fecha del dia de hoy}
+
+\noindent Tipo: Notificación.
+
+\noindent Estatus: Propuesta.
+
+\noindent Objetivo: Indicar al usuario que la fecha indicada es posterior a la fecha del dia de hoy.
+
+\noindent Redacción: La fecha indicada es posterior a la fecha del dia de hoy. 
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% MENSAJES
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+	\newpage
+	\section{Mensajes del modulo de Producción}
+	\subsection{MSGP1 Disponibilidad en el Almacén.}
+	\begin{flushleft}
+	Tipo: Notificación.
+	\par\end{flushleft}
+	\begin{flushleft}
+	Estatus: Propuesto.
+	\par\end{flushleft}
+	\begin{flushleft}
+	Objetivo: Indicar al usuario si se cuenta o no con espacio disponible en el almacén.
+	\par\end{flushleft}
+	\begin{flushleft}
+	Redacción: ARTICULO ENTIDAD  VALOR disponibilidad para agregar productos.
+	\par\end{flushleft}
+	\begin{flushleft}
+	Parámetros: El mensaje se muestra con base en los siguientes parámetros:
+	\par\end{flushleft}
+	\begin{description}
+	\item [{ARTICULO}] Tiene la función de limitar la extensión de la entidad.
+	\item [{ENTIDAD}] Almacén
+	\item [{VALOR}] Valor de la entidad a la cual se le realiza una operación.
+	\end{description}
+	\begin{flushleft}
+	Ejemplo: El Almacén tiene disponibilidad para agregar productos, El Almacén NO tiene disponibilidad para agregar productos.
+	\par\end{flushleft}
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% MENSAJE 2
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+	\subsection{MSGP2 Información de Almacén no disponible.}	
+	\begin{flushleft}
+	Tipo: Notificación.
+	\par\end{flushleft}
+	\begin{flushleft}
+	Estatus: Propuesto.
+	\par\end{flushleft}
+	\begin{flushleft}
+	Objetivo: Indicar al usuario que no se tiene registró acerca de la disponibilidad del almacén
+	\par\end{flushleft}
+	\begin{flushleft}
+	Redacción: Información ARTICULO ENTIDAD VALOR
+	\par\end{flushleft}
+	\begin{flushleft}
+	Parámetros: El mensaje se muestra con base en los siguientes parámetros:
+	\par\end{flushleft}
+	\begin{description}
+	\item [{ARTICULO}] Tiene la función de limitar la extensión de la entidad.
+	\item [{ENTIDAD}] Almacén
+	\item [{VALOR}] Valor de la entidad a la cual se le realiza una operación.
+	\end{description}
+	\begin{flushleft}
+	Ejemplo: Información de Almacén no disponible
+	\par\end{flushleft}
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% MENSAJE 3
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+	\subsection{MSGP3 No existen pedidos pendientes.}	
+	\begin{flushleft}
+	Tipo: Notificación.
+	\par\end{flushleft}
+	\begin{flushleft}
+	Estatus: Propuesto.
+	\par\end{flushleft}
+	\begin{flushleft}
+	Objetivo: Indicar al usuario que no se tiene registró de pedidos pendientes.
+	\par\end{flushleft}
+	\begin{flushleft}
+	Redacción: No se encontraron ENTIDAD VALOR en espera.
+	\par\end{flushleft}
+	\begin{flushleft}
+	Parámetros: El mensaje se muestra con base en los siguientes parámetros:
+	\par\end{flushleft}
+	\begin{description}
+	\item [{ENTIDAD}] Pedidos
+	\item [{VALOR}] Valor de la entidad a la cual se le realiza una operación.
+	\end{description}
+	\begin{flushleft}
+	Ejemplo: No se encontraron pedidos pendientes en espera.\newline
+	No se encontraron pedidos para cambio en espera
+	\par\end{flushleft}	
+
+
+\section{Reglas de Negocio}
+
+
+\subsection{BR1 Elaboración de lotes}
+
+\noindent Tipo: Restricción.
+
+\noindent Nivel: Obligatorio. Debe cumplirse siempre.
+
+\noindent Versión: 1.0
+
+\noindent Estado: Propuesta.
+
+\noindent Descripción: Para poder elaborar un producto las cantidades
+de cada ingrediente indicadas en la receta deben existir en el almacen
+y deben provenir de un mismo proveedor,esto con el fin de facilitar
+el control de calidad.
+
+\noindent Ejemplo: 
+
+\noindent %
+\begin{tabular}{|c|}
+\hline 
+\multicolumn{1}{|c|}{Se necesitan 10 litros de leche}\tabularnewline
+\hline 
+\end{tabular}%
+\begin{tabular}{|c|}
+\hline 
+\multicolumn{1}{|c|}{Se tienen 8 litros del proveedor A y 2 litros del proveedor B}\tabularnewline
+\hline 
+\end{tabular}
+
+\noindent El producto no podría elaborarse porque no existe la cantidad
+de materia prima suficiente proveniente de un mismo proveedor.
+
+
+\subsection{BR2 Forma de pago}
+
+\noindent Tipo: Definición
+
+\noindent Nivel: Obligatorio
+
+\noindent Versión:1.0
+
+\noindent Estado: Propuesta
+
+\noindent Descripción: Se debe indicar en toda venta realizada la
+forma de pago, y en caso de ser necesario, los ultimos cuatro dgitos
+del numero de cuenta/ tarjeta por cuestiones fiscales.
+
+
+\subsection{BR3 Límite de almacén}
+
+\noindent Tipo: Restrictiva.
+
+\noindent Nivel: Obligatorio
+
+\noindent Versión:1.0
+
+\noindent Estado: Propuesta
+
+\noindent Descripción: La cantidad de galletas que se pueden almacenar
+en el almacen estan limitas a 100,000 cajas. Si se llega a esta límite
+debe detenerse la producción.
+
+
+\subsection{BR4 Cliente prioritario}
+
+\noindent Tipo: Definición.
+
+\noindent Nivel: Obligatorio
+
+\noindent Versión:1.0
+
+\noindent Estado: Propuesta
+
+\noindent Descripción: Si un pedido tiene el caracter de compensación
+de producto (por alguna falla reportada por el cliente o problema
+que se presente durante o despues de su elaboración), este debe tener
+prioridad para su entrega, sobre cualquier otra entrega a efectuarse.
+
+
+\subsection{BR5 Formato de los reportes}
+
+\noindent Tipo: Definición.
+
+\noindent Nivel: Obligatorio
+
+\noindent Versión:1.0
+
+\noindent Estado: Propuesta
+
+\noindent Descripción: Todo reporte debe indicar con el membrete de
+la empresa, deberá indicar el área de la que proviene, fecha de elaboración
+, periodo que abarca y nombre de quien lo elaboró.
+
+
+\subsection{BR6 Líneas de producción.}
+
+\noindent Tipo: Restricción.
+
+\noindent Nivel: Obligatorio
+
+\noindent Versión:1.0
+
+\noindent Estado: Propuesta
+
+\noindent Descripción: Existen unicamentes tres líneas de producción,
+las cuales se utilizan alternadamente.
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% REGLA DE NEGOCIO 1
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+	\subsection{BRP1 Pedidos en espera}
+	\begin{flushleft}
+	Regla: BRP1 Pedidos en espera
+	\par\end{flushleft}
+	\begin{flushleft}
+	Tipo: Definición
+	\par\end{flushleft}
+	\begin{flushleft}
+	Nivel: Obligatorio. Debe cumplirse siempre.
+	\par\end{flushleft}
+	\begin{flushleft}
+	Versión: 1.0
+	\par\end{flushleft}
+	\begin{flushleft}
+	Estado: Propuesta
+	\par\end{flushleft}
+	\begin{flushleft}
+	Descripción: Los pedidos en espera se pueden clasificar principalmente en 2 tipos:\newline
+	\begin{itemize}
+	\item Pedidos Pendientes
+	\item Pedidos para cambio
+	\end{itemize}
+	\par\end{flushleft}
+	\begin{flushleft}
+	Siendo los primeros, en relación a producción de nuevos lotes y los segundos pedidos a los cuales se debe hacer un cambio de producto debido a un error de producción y/o control de calidad.
+	\end{flushleft}
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% REGLA DE NEGOCIO 2
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+	\subsection{BRP2 Contenido del pedido}
+	\begin{flushleft}
+	Regla: BRP2 Contenido del pedido
+	\par\end{flushleft}
+	\begin{flushleft}
+	Tipo: Restricción
+	\par\end{flushleft}
+	\begin{flushleft}
+	Nivel: Obligatorio. Debe cumplirse siempre.
+	\par\end{flushleft}
+	\begin{flushleft}
+	Versión: 1.0
+	\par\end{flushleft}
+	\begin{flushleft}
+	Estado: Propuesta
+	\par\end{flushleft}
+	\begin{flushleft}
+	Descripción: El registró de los pedidos principalmente debe estar formado principalmente por los siguientes campos:\newline
+	\begin{itemize}
+	\item Numero de pedido
+	\item Nombre del cliente
+	\item Descripción del pedido
+	\end{itemize}
+	\par\end{flushleft}
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% REGLA DE NEGOCIO 3
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+	\subsection{BRP3 Búsqueda de ingredientes}
+	\begin{flushleft}
+	Regla: BRP3 Búsqueda de ingredientes
+	\par\end{flushleft}
+	\begin{flushleft}
+	Tipo: Restricción
+	\par\end{flushleft}
+	\begin{flushleft}
+	Nivel: Obligatorio. Debe cumplirse siempre.
+	\par\end{flushleft}
+	\begin{flushleft}
+	Versión: 1.0
+	\par\end{flushleft}
+	\begin{flushleft}
+	Estado: Propuesta
+	\par\end{flushleft}
+	\begin{flushleft}
+	Descripción: Tomando en cuenta que para realizar la búsqueda el ingrediente debe estar previamente registrada en el catalogo correspondiente, 
+	el resultado de la búsqueda por ingrediente debe devolver los siguientes datos:
+	\begin{itemize}
+	\item Identificador de producto
+	\item Nombre del producto
+	\item Proveedor
+	\item Disponibilidad	
+	\end{itemize}
+	\par\end{flushleft}
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% REGLA DE NEGOCIO 4
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+	\subsection{BRP4 Información de Lote}
+	\begin{flushleft}
+	Regla: BRP4 Información de Lote
+	\par\end{flushleft}
+	\begin{flushleft}
+	Tipo: Descripción.
+	\par\end{flushleft}
+	\begin{flushleft}
+	Nivel: Obligatorio. Debe cumplirse siempre.
+	\par\end{flushleft}
+	\begin{flushleft}
+	Versión: 1.0
+	\par\end{flushleft}
+	\begin{flushleft}
+	Estado: Propuesta
+	\par\end{flushleft}
+	\begin{flushleft}
+	Descripción: Cuando registramos un lote nos interesa conocer información descriptiva del lote, para lograr esto se toma en cuenta los siguientes campos:
+	\begin{itemize}
+	\item Numero Identificador de lote[Asignado únicamente por el sistema]
+	\item Producto Asociado al numero de Lote
+	\item Fecha de Elaboración
+	\item Linea de Producción asociada
+	\end{itemize}
+	\par\end{flushleft}
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+	%	FIN DEL DOCUMENTO
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\end{document}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DEL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\end{document}

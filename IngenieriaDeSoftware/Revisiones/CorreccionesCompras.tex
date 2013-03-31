@@ -1,0 +1,280 @@
+
+\documentclass[10pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+
+\usepackage{array}
+
+\providecommand{\tabularnewline}{\\}
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+
+\section{Módulo Compras}
+
+\subsection{CUCO02: Gestionar Compras}
+
+Resumen: Si sólo es un actor podría cambiarse eso de ``el actor" por el nombre del actor: ``Administrador de Compras".
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & CUCO02 Gestionar Compras.\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos.}\tabularnewline
+\hline 
+Realizador por:  & Ricardo Jiménez Navarro.\tabularnewline
+\hline 
+Revisado por:  & Carlos Adrian Jiménez López.\tabularnewline
+\hline 
+Próposito:  & Hacerlo un poco más explícito, queda muy abierto y puede generar confusión.\tabularnewline
+\hline 
+Entradas: & Checar redacción dice: ``El actor selecciona la opción de la operación de que desea realizar".
+\tabularnewline
+\hline 
+Salidas:  & Sin observaciones.
+\tabularnewline
+\hline 
+Pre-Condiciones  & Sin observaciones. 
+\tabularnewline
+\hline 
+Pos-Condiciones  & No hay apartado de pos-condiciones. En caso de que no hayan pos-condiciones indicarlo.
+\tabularnewline
+\hline 
+Errores:  & Falta indicar errores que pueden aparecer al momento de cargar los registros para mostrar la pantalla.
+\tabularnewline
+\hline 
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textit{\large Trayectoria Principal.}{\large {} }{\large \par}
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & No hay pantalla del menú PC0.\tabularnewline
+2.  & Ordenar la aparición de las pantallas.\tabularnewline
+3.  & La pantalla PC4 nunca se referencía.\tabularnewline
+4.  & En la pantalla PC5 aparece una tabla con registros; falta indicar el paso en que se llena la tabla.\tabularnewline
+5.  & En el paso 3 dice El actor oprime el botón ``Registrar Compra" pero en la pantalla aparece como ``Nueva Compra". \tabularnewline
+6.  & En el paso 4 dice ``El sistema muestra PC6", y PC6 tiene como título ``Modificar Información de Compra".\tabularnewline
+7.  & Ni en el resumen ni en su diagrama de Casos de Uso se maneja la opción de eliminar, pero la pantalla PC5 cuenta con esta opción.
+\end{longtable}
+
+\textit{Trayectoria Alternativa A.}
+
+Condición: Redactarla de diferente manera, podría ser como el punto 3 de la trayectoria principal.
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & En el paso A1 dice ``El actor oprime el botón 'Modificar Compra'", pero no se ve dónde está.\tabularnewline
+2.  & En el paso A2 dice ``El sistema muestra PC3", y esa pantalla tiene como título ``Modificar Información de Proveedor". \tabularnewline
+\end{longtable}
+
+\newpage{}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\subsection{CUCO02.1: Agregar Compra}
+
+Resumen: Sin observaciones.
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & CUCO02.1: Agregar Compra.\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos.}\tabularnewline
+\hline 
+Realizador por:  & Ricardo Jiménez Navarro.\tabularnewline
+\hline 
+Revisado por:  & Carlos Adrian Jiménez López.\tabularnewline
+\hline 
+Próposito:  & Hacerlo un poco más explícito, queda muy abierto y puede generar confusión. Dice ``Agrear".\tabularnewline
+\hline 
+Entradas: & En el Caso de Uso: CUCO02 indicaba la manera de seleccionar las cosas: ``Con el mouse El actor selecciona...", aquí ¿Por qué ya no?
+\tabularnewline
+\hline 
+Salidas:  & Referenciar los mensajes y especificar a cuál mensaje de error de operación se refiere.
+\tabularnewline
+\hline 
+Pre-Condiciones  & Sin observaciones. 
+\tabularnewline
+\hline 
+Pos-Condiciones  & No hay apartado de pos-condiciones. En caso de que no hayan pos-condiciones indicarlo.
+\tabularnewline
+\hline 
+Errores:  & En el punto 2 dice ``requerdidos".
+\tabularnewline
+\hline 
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textit{\large Trayectoria Principal.}{\large {} }{\large \par}
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & El punto 1 y 2 están de más, porque en la trayectoria principal ya se indicó que se presionó el botón y que se muestra la pantalla.\tabularnewline
+2.  & El título de la pantalla dice ``Modificar Información de Compra".\tabularnewline
+3.  & El punto 3 dice ``El actor teclea la información" pero hay campos que se pueden seleccionar con el mouse.\tabularnewline
+4.  & El punto 8 dice ``OperacióExitosa".\tabularnewline
+5.  & La pantalla PC5 nunca se referencía.\tabularnewline
+\end{longtable}
+
+\textit{Trayectoria Alternativa A.}
+
+Condición: No hay botón CANCELAR.
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & No hay botón CANCELAR.\tabularnewline
+2.  & El MJ7 es ``Fecha de entrega próxima". \tabularnewline
+3.  & Indicar cuál es la pantalla ``GESTION DE COMPRAS"
+\end{longtable}
+
+\textit{Trayectorias Alternativas B, C y D.}
+
+Condición: Sin observaciones.
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & Indicar la redacción del mensaje.
+\end{longtable}
+
+\newpage{}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\subsection{CUCO02.2: Modificar Compra}
+
+Resumen: Sin observaciones.
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & CUCO02.2: Modificar Compra.\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos.}\tabularnewline
+\hline 
+Realizador por:  & Ricardo Jiménez Navarro.\tabularnewline
+\hline 
+Revisado por:  & Carlos Adrian Jiménez López.\tabularnewline
+\hline 
+Próposito:  & Hacerlo un poco más explícito, queda muy abierto y puede generar confusión.\tabularnewline
+\hline 
+Entradas: & Especificar el punto 2, ¿Qué información modifica?
+\tabularnewline
+\hline 
+Salidas:  & Referenciar los mensajes y especificar a cuál mensaje de error de operacion se refiere.
+\tabularnewline
+\hline 
+Pre-Condiciones  & Sin observaciones. 
+\tabularnewline
+\hline 
+Pos-Condiciones  & No hay apartado de pos-condiciones. En caso de que no hayan pos-condiciones indicarlo.
+\tabularnewline
+\hline 
+Errores:  & Sin observaciones.
+\tabularnewline
+\hline 
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textit{\large Trayectoria Principal.}{\large {} }{\large \par}
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & Indicar cuál es la pantalla ``GESTION DE COMPRAS".\tabularnewline
+2.  & Numerar las trayectorias por orden de aparición..\tabularnewline
+3.  & El punto 4 dice ``la opción Modificar Compra" pero no está la opción.\tabularnewline
+4.  & El punto 6 dice ``muestra la información de la Compra en PC7", y PC7 es la pantalla de Generar Reporte.\tabularnewline
+5.  & Redactar el MJ1.\tabularnewline
+6.  & La pantalla PC0 no está.
+\end{longtable}
+
+\textit{Trayectoria Alternativa A.}
+
+Condición: No hay botón CANCELAR.
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & En el punto 2 dice que mostrará tanto el MJ1 y MJ7.\tabularnewline
+2.  & Redactar MJ1 y MJ7. \tabularnewline
+3.  & Indicar cuál es la pantalla ``GESTION DE COMPRAS"
+\end{longtable}
+
+\textit{Trayectorias Alternativas B, C y D.}
+
+Condición: Sin observaciones.
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & Redactar mensajes.
+\end{longtable}
+
+\textit{Trayectoria Alternativa E.}
+
+Condición: Checar redacción.
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & Redactar MJ5.
+\end{longtable}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\end{document}

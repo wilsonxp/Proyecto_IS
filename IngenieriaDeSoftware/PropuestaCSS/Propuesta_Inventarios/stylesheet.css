@@ -1,0 +1,168 @@
+body
+{
+	background-color: #fff6f1;
+	font-family:"Helvetica", Arial;
+}
+
+/* Agregar el formato del id contendio identificado por # */
+#contenido
+{
+	width:960px;
+	margin:0 auto;
+	text-align:center;
+	
+}
+h1
+{
+	color:#190707;
+	font-family: 'Russo One', sans-serif;
+	
+}
+header hgroup h1
+{
+	opacity:0.8;
+	background-color:#04B431;
+	text-shadow: 0px 0px 30px rgba(0,0,0,0.5);
+	border-bottom: solid;
+	padding-bottom: 10px;
+	border-color: #1d1d1d;
+}
+nav ul li
+{
+	position: absolute;
+	/*Alinea a los titulos por bloques*/
+	/*display:inline-block;*/
+	
+	/*Los separa por 20px*/
+	margin-right:20px;
+	color:#1d1d1d;
+	
+	/* Agrega el simbolo de la manita cuando pase por encima*/
+	cursor:pointer;
+	padding: 5px;
+	list-style:none;
+	
+	transition: all 0.5s linear;
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+}
+
+
+/* Agrega format al texto principal por su id*/
+#textoPr
+{
+	background-color:#04B431;
+	width:500px;
+	height:350px;
+
+	color:#FFF;
+	
+	/*Alinea el texto y el div en cuestion*/
+	margin:0 auto;
+	text-align:left;
+	
+	/*El div redondeado y agrega el padding que le da un tamaño extra*/
+	border-radius:20px;
+	padding:20px;
+	
+	/*Agrega una sombra al div*/
+	box-shadow:0px 0px 20px rgba(0,0,0,1);
+}
+a
+{
+	
+	color:#190707;
+	font-weight:bold;
+	
+	
+}
+
+meter
+{
+	margin-left:20px;
+	width:200px;
+	color: #c44e2d;
+	background-color: #CCC;
+	padding:5px;
+	border-radius:5px;
+}
+
+label
+{
+	display: block;
+}
+
+#btnSubmit
+{
+	border: none;
+	background-color: #FFF;
+	color: #190707;
+	padding: 4px;
+	margin: 20px;
+	cursor: pointer;
+	font-family: 'Russo One', sans-serif;
+}
+
+#button {
+	opacity:0.9;
+	position:absolute;
+	width: 9em;
+	border-right: 1px solid #000;
+	padding: 0 0 1em 0;
+	margin-bottom: 1em;
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, sans-serif;
+	background-color: #04B404;
+	color: #333;
+}
+
+#button ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+	
+#button li {
+	border-bottom: 1px solid #90bade;
+	margin: 0;
+	list-style: none;
+	list-style-image: none;
+}
+	
+#button li a {
+	display: block;
+	padding: 5px 5px 5px 0.5em;
+	border-left: 10px solid #088A29;
+	border-right: 10px solid #04B404;
+	background-color: #088A08;
+	color: #fff;
+	text-decoration: none;
+	width: 100%;
+}
+
+html>body #button li a {
+	width: auto;
+}
+
+#button li a:hover {
+	border-left: 10px solid #088A29;
+	border-right: 10px solid #04B404;
+	background-color: #04B404;
+	color: #fff;
+}
+
+ul.sub-level {
+    display: none;  
+}
+li:hover .sub-level {
+    background-color: #0040FF;
+    border-left: #0040FF;
+    background: #999;
+    border: #fff solid;
+    border-width: 1px;
+    display: block;
+    position: absolute;
+    left: 130px;
+    top: 5px;
+    color: Black;
+}

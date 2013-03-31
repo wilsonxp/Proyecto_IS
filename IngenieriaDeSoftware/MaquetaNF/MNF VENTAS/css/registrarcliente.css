@@ -1,0 +1,46 @@
+.tb{
+	height: 10px; 
+	width: 135px; 
+	-webkit-border-radius:10px;
+}
+.ta{
+	
+	height: 90px; 
+	width: 135px; 
+	-webkit-border-radius:10px;
+	border-style:none;
+	font-family: Arial; 
+	font-size: 13px;
+	/*margin-top: 10px;*/
+}
+.divform{
+	margin-top: 10px;
+    font-family: Trebuchet MS;
+	font-size:13pt; 
+	color: white;
+	font-weight:bold;
+    border-radius:10px;
+}
+#dvrfc{
+	margin-top: 20px;
+}
+#Formulario{
+	background-color: #81BEF7;   
+    width: 450px;
+    height: 410px;
+    overflow: auto;
+    margin: 0px auto;
+    border-radius:10px
+}
+#botones{
+	position:absolute;  
+	margin-left: 150px;
+    margin-top: 20px;
+}
+#cab{
+	margin-top:10px;
+}
+#dvdir
+{
+	
+}

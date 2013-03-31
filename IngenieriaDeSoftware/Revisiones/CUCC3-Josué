@@ -1,0 +1,150 @@
+
+\documentclass[10pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+
+\usepackage{array}
+
+\providecommand{\tabularnewline}{\\}
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+
+
+
+\section{Módulo de control de Calidad}
+Errores Detectados: 17
+\tabularnewline
+Resumen: Correcto.
+
+
+\subsection{CUCC3: Evaluar línea de producción (Revisar ortografía en el nombre del C.U.)}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & CUCC3: Evaluar línea de producción\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizador por:  & Efrén Hernández Juárez\tabularnewline
+\hline 
+Revisado por:  & Josué Fernando Ramos Gutiérrez\tabularnewline
+\hline 
+Próposito:  & El propósito es claro.
+\tabularnewline
+\hline 
+Entradas:  & Anotaciones de las entradas 
+\begin{itemize}
+\item Revisar otrografía: 'linea'
+\item Sugiero que se omita la palabra Ingresar.
+\end{itemize}
+
+\tabularnewline
+\hline 
+Salidas:  & Anotaciones de las salidas 
+\begin{itemize}
+\item Sugiero puntualizar sólo el resultado de la trayectoria principal, ya que si se pretenden mencionar todas las excepciones posibles faltaría la trayectoria C y sus mensajes.
+\item Por uniformidad en el documento, sugiero que se use un solo tipo de viñetas, no numeradas o numeradas.
+\end{itemize}
+\tabularnewline
+\hline 
+Pre-Condiciones  & Anotaciones de las precondiciones 
+\begin{itemize}
+\item Considero que una pre-condición faltante es la autenticación del gerente de CC en el sistema"
+\end{itemize}
+\tabularnewline
+\hline 
+Pos-Condiciones  & Anotaciones de las poscondiciones 
+\begin{itemize}
+\item Sugiero una redacción como la siguiente: 'El estado de la línea de producción estará verificado'
+\end{itemize}
+\tabularnewline
+\hline 
+Errores:  & Aquí se podría especificar el mensaje correspondiente.
+\hline 
+Tipo:  & No entiendo bien porque se dice que el tipo es secundario, según el diagrama de casos de uso anexo considero que es un caso de uso de tipo primario.
+\tabularnewline
+\hline 
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\newpage{}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+Observaciones trayectoria principal. 
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & ¿Dónde se encuentra el botón evaluar línea de producción?, no se especifica la pantalla.\tabularnewline
+2.  & Creo que la pantalla PCA03 no corresponde con las entradas puntualizadas en la especificación del caso de uso.\tabularnewline
+3.  & Si los datos relacionados con la línea de producción ya los tienen almacenados en la BD, sugeriría que en lugar de proporcionarlos de nuevo, se hiciera una consulta, de tal manera que sólo sea necesario ingresar los datos relacionados con la calidad del producto, por ejemplo las preguntas propuestas.
+\tabularnewline
+4.  & Creo que aquí va la trayectoria alternativa A.\tabularnewline
+5.  & La redacción podría ser como la siguiente: 'El sistema detecta que los datos ingresados son correctos', de esa manera se puede poner la trayectoria B como alternativa. \tabularnewline
+6.  & Sugiero una redacción como la siguiente: 'El sistema encuentra válida la materia prima según la regla de negocio BRCC01',y de esa manera especificar una trayectoria alternativa. Por otro lado no veo la necesidad de realizar éste paso, porque supongo que de eso se encarga el caso de uso CUCC4: Evaluar Materia Prima.\tabularnewline
+\end{longtable}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: Condición establecida correctamente.
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+A3.  & Creo que la redacción correcta sería 'El sistema oculta la pantalla actual'. Además falta especificar el identificador de la pantalla 'Menú'.\tabularnewline
+
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\textit{Trayectoria Alternativa B}
+
+Condición: Por integridad en el documento recomiendo la misma redacción usada en la trayectoria alternativa B usada en el caso de uso CUCC5.
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+B1.  & Al inicio creo que falta el paso donde se especifica que el usuario inspector de calidad no llenó todos los campos obligatorios.\tabularnewline
+B3.  & Sugiero que se especifique nuevamente la trayectoria alternativa B en éste paso.\tabularnewline
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\textit{Regla de negocio: BRCC01}
+
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & Revisar ortografía: 'Restriccion'.\tabularnewline
+2.  & ¿A que se refiere la integridad de la materia prima?. Creo que sería bueno especificar un catálogo de posibles fallas en la materia prima.\tabularnewline
+
+
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\newpage{} 
+\end{document}

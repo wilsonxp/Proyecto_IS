@@ -1,0 +1,316 @@
+
+\documentclass[10pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+
+\usepackage{array}
+
+\providecommand{\tabularnewline}{\\}
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+
+\section{CUAD1: Gestión de Usuarios}
+
+Resumen: Me parece bien la redacción.
+
+\subsection{CUAD1: Gestión de Usuarios}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & CUAD1: Gestión de Usuarios\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizado por:  & Ortiz Ochoa Irvin\tabularnewline
+\hline 
+Revisado por:  & Rueda López Miguel Angel\tabularnewline
+\hline 
+Próposito:  & Me parece bien, este caso es simple\tabularnewline
+\hline 
+Entradas:  & Bien  \tabularnewline
+\hline
+Salidas:  & Bien\tabularnewline
+\hline
+Pre-Condiciones  & Bien\tabularnewline
+\hline
+Pos-Condiciones  & Bien
+\tabularnewline
+\hline
+Errores:  & ¿Qué error surge al intentar cargar los 5 registros que dice la trayectoria? ¿Y si no hay conexión con BD?.(1)\tabularnewline
+\hline
+\end{longtable}
+
+\par\end{center}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+2.  & Se define que se muestran los primeros 5 registros, pero en base a que criterio? Mas nuevos, mas viejos, etc.(2)\tabularnewline
+4.  & Es una trayectoria!!, sin embargo aquí definen que el usuario puede elegir cualquier opción, en todo caso la trayectoria seria solo mostrar la pantalla relacionada a la gestión.(3)\tabularnewline
+5. & Este paso es totalmente innecesario debido a lo que planteo en el paso anterior.(4)\tabularnewline
+\end{longtable}
+
+\begin{large}
+Sugerencia: Deberían utilizar la siguiente sintaxis para definir las condiciones en sus trayectorias alternativas
+''Condición: [Condición Necesaria para la trayectoria]''.
+Esto debido a que la forma en que lo manejan hace un poco difícil ubicar la condición.\newline
+\newline
+\end{large}
+ \newpage
+\textit{Trayectoria Alternativa A}
+Condición: ¿Error en la BD? ¿Error de que? ¿No hay registros? ¿No se pudo establecer la conexión?(5)
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & El mensaje esta mal definido o el mensaje que se arroja tras esta acción no corresponde ya que el usuario solo hizo un click en el menú gestión de usuarios y me podría arrojar el mensaje:\newline
+No se encontraron resultados que coincidan con BÚSQUEDA.
+Entiendo la idea pero a que se refiere con búsqueda, ya que no solicite buscar nada.\newline
+Creo que te refieres a que no se encuentran los 5 registros que se mencionan en ese caso hay que hacerlo mas claro.(6)\newline
+En la redacción agregar ''el mensaje'' no solo ''mensaje''(7)\tabularnewline
+2.  & [Grave]Si llegue a este paso es por un error en BD según la condición, creo que se refiere a que no se encontraron los 5 registros, pero porque regreso al paso 2 de la trayectoria principal que me muestra la ventana con los 5 registros que no encontré, esto es un ciclo un poco extraño, talves deberías regresar al menú de administración.(8)\tabularnewline
+\end{longtable}
+
+\textit{Trayectoria Alternativa B, C y D}
+Condición: La condición de cada trayectoria alternativa es lo que definen como Paso 1 de cada trayectoria, ej. el paso B.1 es la condición de la trayectoria no un paso.(9)
+\newline\newline
+\textit{Trayectoria Alternativa E}
+Esta trayectoria no me parece que sea una trayectoria, mas bien es un comportamiento de pagina como se nos ha mencionado, pero no tenemos una manera clara de como documentarlo.(10)\newline
+[Redacción] hay un error grave ''regresa al paso 3 de ejecuta el caso de uso''(11)
+\newline\newline
+\textit{Total de Observaciones de CUAD1: 11 observaciones}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\newpage
+\section{CUAD1.1: Registrar Usuario}
+
+Resumen: Me parece bien la redacción.
+
+\subsection{CUAD1.1: Registrar Usuario}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & CUAD1.1: Registrar Usuario\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizado por:  & Ortiz Ochoa Irvin\tabularnewline
+\hline 
+Revisado por:  & Rueda López Miguel Angel\tabularnewline
+\hline 
+Próposito:  & Me parece bien.\tabularnewline
+\hline 
+Entradas:  & ¿De que manera se adquieren estos datos?(1)\tabularnewline
+\hline
+Salidas:  & [Redacción]Creo que sobra ''[Mensajes:MJ1]'' porque a continuación definen que mensaje es.(2)\tabularnewline
+\hline
+Pre-Condiciones  & Debe existir conexión con BD para cargar el catalogo de áreas.(3)\tabularnewline
+\hline
+Post-Condiciones  & Hay que tomar en cuenta que se modifica el registro.(4)\newline
+¿No se genera un identificador del usuario? si no entonces seria innecesario el usuario y la contraseña(5)\newline
+\tabularnewline
+\hline
+Errores:  & ¿Qué error surge al intentar registrar al nuevo usuario? ¿Y si no hay conexion con BD?.(5)\tabularnewline
+\hline
+\end{longtable}
+
+\par\end{center}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & Para llegar a este paso tuve que seleccionar esa opción anteriormente o al menos así lo defines en la trayectoria principal/alternativa de la gestión de usuarios. Innecesario.(6)\tabularnewline
+3.  & ¿De que manera se ingresan los datos? Y aun mas importante que datos si se ingresan? Esto porque el catalogo de áreas se debe cargar automáticamente igualmente el valor rol de la empresa.(7)\tabularnewline
+5. & [Grave] La regla RN2 NO existe, supongo que debe ser BRA02 de ser así como se verifica que se cumple aquí se debe desprender una trayectoria para esta validación, sin embargo, tu trayectoria alternativa B es para validar BRA01??? estamos con RN2 o BRA02.(8)\tabularnewline
+7. & [Grave]No existe MSG2. Si es MJ2 hacer una corrección. (9)\tabularnewline
+8. & Me parece bien pero creo que deberías volver a la pantalla de Gestión de Usuarios(10)\tabularnewline
+
+\end{longtable}
+
+\textit{Trayectoria Alternativa A}
+Condición: Bien
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & El paso 1 es la condición.(11)\tabularnewline
+2.  & Me parece bien pero creo que deberías volver a la pantalla de Gestión de Usuarios(12).\tabularnewline
+\end{longtable}
+
+\textit{Trayectoria Alternativa B}
+Condición: ¿Error en la regla de negocio BRA01? Si para llegar a esta trayectoria es por RN2.
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & [Redacción]''Mestra''(13)\newline
+[Grave]Suponiendo que lo anterior es correcto, me encuentro en un error de datos del formulario, mando MSG3 que no existe, en caso de ser MJ3, porque advertir al usuario con error de conexión a BD si era un error de datos y finalmente no lo es solo es una validación.(14)
+\tabularnewline
+2.  & Porque regreso al inicio del ingreso de datos si solo fue un error de validación, se debería solo informar en que campo se encontró el error o en su defecto una notificación de error en los datos ingresados.(15)\tabularnewline
+\end{longtable}
+
+\textit{Trayectoria Alternativa C}
+Condición: ¿Error? ¿De que tipo?(16)
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & MAD01 no existe! creo que es MJ3(17)
+\tabularnewline
+2.  & Me parece bien pero creo que deberías volver a la pantalla de Gestión de Usuarios(18).\tabularnewline
+\end{longtable}
+\textit{Total de Observaciones de CUAD1.1: 18 observaciones}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% CUA1.2 Modificar Usuario
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\newpage
+\section{CUAD1.2: Modificar Usuario}
+Resumen: Es mas que evidente que voy a modificar un usuario previamente registrado, modificar redacción.(1)
+\subsection{CUAD1.2: Modificar Usuario}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & CUAD1.2: Modificar Usuario\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizado por:  & Ortiz Ochoa Irvin\tabularnewline
+\hline 
+Revisado por:  & Rueda López Miguel Angel\tabularnewline
+\hline 
+Próposito:  & Me parece bien.\tabularnewline
+\hline 
+Entradas:  & ¿Que datos si se pueden modificar?(2)\tabularnewline
+\hline
+Salidas:  & [Redacción]Un poco de redundancia pero esta bien.(3)\tabularnewline
+\hline
+Pre-Condiciones  & Debe existir conexión con BD para cargar el registro del usuario a modificar.(4)\tabularnewline
+\hline
+Post-Condiciones  & ¿No hay?Entonces como aseguro que se modifica el registro del usuario para actualizar su información.(5)\tabularnewline
+\hline
+Errores:  & ¿Ninguno?Conexión a BD, no se encontró el registro, etc.(6)\tabularnewline
+\hline
+\end{longtable}
+
+\par\end{center}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & No existe la opción modificar usuario en la pantalla PAD02, ademas para llegar a este paso tuve que seleccionar esa opción anteriormente o al menos así lo defines en la trayectoria principal/alternativa de la gestión de usuarios. Innecesario.(7)\tabularnewline
+3.  & ¿Se puede modificar absolutamente toda la información?.(8)\tabularnewline
+4.  & No existe ningún botón 'Aceptar' en PAD04.(9)\tabularnewline
+5. & [Grave] Es el mismo problema que se hizo en la observación (5) del CUAD1.1 Registrar Usuario(10)\tabularnewline
+6. & Paso totalmente innecesario porque ya esta identificado si estas modificando su información (11)\tabularnewline
+9. & Esto es lo que debes hacer en CUAD1.1 Registrar Usuario volver a la pantalla mas general.(12)\tabularnewline
+\end{longtable}
+\newpage
+\textit{Trayectoria Alternativa A}
+Condición: Bien
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & El paso 1 es la condición.(13)\tabularnewline
+\end{longtable}
+
+\textit{Trayectoria Alternativa B}
+Checar la misma observación que se hizo en el CUAD1.1 Registrar Usuario(14)
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & [Redacción]''Mestra''.(15)\tabularnewline
+2.  & [Grave]Porque regresar a registrar al usuario si lo estoy o estaba modificando.(16)\tabularnewline
+\end{longtable}
+\textit{Total de Observaciones de CUAD1.2: 16 observaciones}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% CUA1.3 Eliminar Usuario
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\newpage
+\section{CUAD1.3: Eliminar Usuario}
+Resumen: Es mas que evidente que voy a eliminar un usuario previamente registrado, modificar redacción.(1)
+\subsection{CUAD1.3: Eliminar Usuario}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & CUAD1.3: Eliminar Usuario\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizado por:  & Ortiz Ochoa Irvin\tabularnewline
+\hline 
+Revisado por:  & Rueda López Miguel Angel\tabularnewline
+\hline 
+Próposito:  & Me parece bien.\tabularnewline
+\hline 
+Entradas:  & Bien\tabularnewline
+\hline
+Salidas:  & [Redacción]Un poco de redundancia pero esta bien.(2)\tabularnewline
+\hline
+Pre-Condiciones  & Debe existir conexión con BD para cargar el registro del usuario a eliminar.(3)\tabularnewline
+\hline
+Post-Condiciones  & ¿No hay?Entonces como aseguro que se elimina el registro del usuario.(4)\tabularnewline
+\hline
+Errores:  & ¿Ninguno?Conexión a BD, no se encontró el registro, etc.(5)\tabularnewline
+\hline
+\end{longtable}
+
+\par\end{center}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & Para llegar a este paso tuve que seleccionar esa opción anteriormente o al menos así lo defines en la trayectoria principal/alternativa de la gestión de usuarios. Innecesario.(6)\tabularnewline
+4. & Paso totalmente innecesario porque ya esta identificado si lo es eliminando (7)\tabularnewline
+5. & [Redacción]Elimina al usuario? o al registro del usuario(8)\tabularnewline
+7. & [GRAVE]Porque me va a mostrar la pantalla de eliminación de usuario que ya elimine es como un ciclo(9)\tabularnewline
+\end{longtable}
+\newpage
+\textit{Trayectoria Alternativa A}
+Condición: Bien
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & El paso 1 es la condición.(10)\tabularnewline
+3. & [GRAVE]Porque me va a mostrar la pantalla de eliminación de usuario que ya elimine otra vez un ciclo(11)\tabularnewline
+\end{longtable}
+
+
+\textit{Total de Observaciones de CUAD1.3: 11 observaciones}
+
+\newpage{} 
+\end{document}

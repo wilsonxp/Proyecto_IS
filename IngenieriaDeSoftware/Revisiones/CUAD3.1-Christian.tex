@@ -1,0 +1,135 @@
+
+\documentclass[10pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+
+\usepackage{array}
+
+\providecommand{\tabularnewline}{\\}
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+
+
+\section{Revisión de Trayectorias}
+
+Resumen: Deberia ser más especifico con el caso de uso, ya que es una función que no describen cómo es que va a funcionar el Email.
+
+
+\subsection{CUAD3.1: Recordar contraseña}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  &Recordar contrase~na\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizador por:  & Adriana Navarro Maga~na\tabularnewline
+\hline 
+Revisado por:  & Consuelo Mayén Christian Armando\tabularnewline
+\hline 
+Próposito:  & El propósito está claro y bien explicado.\tabularnewline
+\hline 
+Entradas:  & Anotaciones de las entradas 
+\begin{itemize}
+\item Podrían definir como entrada el nombre del usuario, porque "login" no es un valor de entrada. \end{itemize}
+\tabularnewline
+\hline 
+Salidas:  & Anotaciones de las salidas 
+\begin{itemize}
+\item No tengo anotaciones que hacerle las salidas.\end{itemize}
+\tabularnewline
+\hline 
+Pre-Condiciones  & Anotaciones de las precondiciones 
+\begin{itemize}
+\item Podria decirse que una precondición es que el usuario exista, para que tenga una contraseña que recordar. \end{itemize}
+\tabularnewline
+\hline 
+Pos-Condiciones  & Anotaciones de las poscondiciones 
+\begin{itemize}
+\item No tengo anotaciones que hacer a las poscondicion. \end{itemize}
+\tabularnewline
+\hline 
+Errores:  & Anotaciones de los errores 
+\begin{itemize}
+\item No tienen ningún apartado donde defina los errores. \end{itemize}
+\tabularnewline
+\hline 
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\newpage
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+Observaciones trayectoria principal.%
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  &En el caso de uso anterior definen que se entra al CU por errores en ingreso de datos por parte del usuarios, pero aquí definen que se entra a travez de uno botón.\tabularnewline
+8.  &Creo que aquí están definiendo que se valide después de idenficiar al usuario. Creo que deberían validar los datos de entrada antes que nada.\tabularnewline
+\end{longtable}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: Está correctamente explicada la condición.
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & No tengo anotaciones para la trayectoria A.\tabularnewline
+
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\textit{Trayectoria Alternativa B}
+
+Condición: Tiene un error al decir "La contraseña  es inválidos".
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & Nunca definen las razones por las que la contraseña podria ser invalida.\tabularnewline
+
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\textit{Trayectoria Alternativa C}
+
+Condición: Tiene un error al decir "El usuario  es inválidos".
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  &Ésta trayectoria no debería existir, pues el usuario ya debería estar identificado al querer restarurar su contraseña.\tabularnewline
+
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\newpage{} 
+\end{document}

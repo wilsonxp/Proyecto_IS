@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Sistema</title>
+        <link rel="stylesheet" type="text/css" href="css/styleCC.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+        <script type="text/javascript" src="js/jquery-1.5.1.js"></script>
+		<script type="text/javascript" src="js/jquery.ui.core.js"></script>
+		<script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="js/jquery.ui.datepicker.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+
+    </head>    
+    <body>
+	<!-- El header es el mismo para todas las paginas-->
+    	<header>
+            <div id="leftHeader">
+                <img src="img/user.png" class="img-header" alt="Username" />
+                <div id="userName" class="text-header">Usuario de Inventarios</div>
+                <img src="img/noti.png" class="img-header" alt="Notificaciones" />
+                <img src="img/out.png" class="img-header" alt="Salir" />
+            </div>
+            <div id="rightHeader">
+                <img src="img/Banner1.png" class="img-banner" alt="Sistema" />
+            </div>
+        </header>
+        <center>
+        <div id="mainDiv">
+		<!-- Aquí se coloca el menú -->
+            <nav>
+                <a href="gestion_ma.htm">
+                    <div class="button">
+                        <table>
+                        <center>
+                            <tr>
+                                <td>
+                                    <img src="img/archive.png"  alt="Icono" />
+                                </td>
+                                <td>
+                                    Gestión de Materia Prima
+                                </td>
+                            </tr>
+                        </center>
+                        </table>
+                    </div>
+                </a>
+                <a href="gestion_p.htm">
+                    <div class="button">
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="img/archive.png"  alt="Icono" />
+                                </td>
+                                <td>
+                                    Gestión de Productos
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
+                <a href="ingresar_ma.htm">
+                    <div class="selected-button">
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="img/archive.png"  alt="Icono" />
+                                </td>
+                                <td>
+                                    Ingresar Materia Prima
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
+                    <div class="button">
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="img/notepad.png"  alt="Icono" />
+                                </td>
+                                <td>
+                                    Reportes
+                                </td>
+                            </tr>
+                        </table>
+                        <ul class="sub-level">
+                            <li><a href="reportes_ma.htm">Generar Reporte Materias Primas</a></li>
+                            <li><a href="reportes_p.htm">Generar Reporte de Productos</a></li>
+                        </ul>
+                    </div>
+            </nav>			<!-- Divisor del contenido de la pagina -->
+            <div id="all-content">
+				
+                <h2>Ingresar Materia Prima</h2>
+                <div id="content">
+                    <div class="box">
+                       Nombre: <input type="text" id="name" name="name" placeholder="Escriba su nombre"/>
+                    </div>
+
+                    <div class="box">
+                       Nombre: <input type="text" id="provider" name="provider" placeholder="Escriba el proveedor"/>
+                    </div>
+
+                    <div class="box">
+                        Cantidad: <input type="number" id="canditad" name="cantidad" min="0" max="10000">
+                    </div>
+
+                    <div class="box">
+                        Precio: <input type="number" id="precio" name="precio" min="0" max="1000000"> $
+                    </div>
+
+                    <div class="box">
+                       Fecha inicial: <input type="text" id="from" name="from" placeholder="Fecha de Llegada"/>
+                    </div>
+                    <div class="box">
+                       Fecha de caducidad: <input type="text" id="to" name="to" placeholder="Fecha de caducidad"/> 
+                    </div>
+                    <div class="box">
+                        <div class="form-button">Ingresar a Inventario</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </center>
+        <footer>Elaborado por nosotros(C) 2013</footer>
+    </body>   
+</html>

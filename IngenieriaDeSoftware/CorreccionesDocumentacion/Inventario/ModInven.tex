@@ -1,0 +1,834 @@
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[10pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\makeatother
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+\tableofcontents{}
+
+\pagebreak{}
+
+
+\section{Módulo Inventarios.}
+
+
+\subsection{CUI1.0: Generar Lista de compras}
+
+\textbf{\large Resumen}\\
+ {\large {} {} {} {} Este Caso de uso tiene como objetivo el generar
+una lista de las materias primas que estan por agotarse y permitir
+de esta manera adquirir mas}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUI1.0: Generar Lista de Compras\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Mar Escoto Diana}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Personal de Inventarios}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Generar una lista con las materias primas que estan por agotarse}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Reporte enviado al modulo de compras}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{Que el usuario este dado de alta en el área de inventario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{Enviar un reporte al módulo de compras}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG4 Error al conectar con la base de datos. MSG2 'El reporte no se
+realizo correctamente}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Primario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 1.0: Generar Lista de Compras}
+
+
+\label{CUI1.0} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el icono {[}Consultar Existencias{]} en la pantalla PI3}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Carga los datos de las materias primas y la cantidad de existencia
+{[}Trayectoria Alternativa A{]}}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PI3.1}\tabularnewline
+4.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Selecciona las materias primas que estan por terminarse para agregar
+al reporte}\tabularnewline
+5.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Selecciona el icono {[}Realizar reporte{]}}\tabularnewline
+6.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{El sistema envía un mensaje de reporte enviado exitosamente MSG1 {[}Trayectoria
+Alternativa B{]}}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}\\
+ \textit{Trayectoria Alternativa A}
+
+Condición: rNo pudo cargar los datos solicitados
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG4 'No se pudo establecer conexión
+con la base de datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PI3}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}\\
+ \textit{Trayectoria Alternativa B}
+
+Condición: El reporte no se realiza exitosamente
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG2 'El reporte no se realizo correctamente'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PI3}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\newpage
+
+\subsection{CUI2.0: Consultar Existencia de productos}
+
+\textbf{\large Resumen}\\
+ {\large {} {} {} {} {} {}El caso de uso se refiere a la posibilidad
+de que el usuario de inventarior supervise la existencia de algun
+producto.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUI2.0: Existencias de productos\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Consuelo Mayén Christian Armando}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{El personal capacitado para el manejo de inventarios.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Que el usuario pueda consultar la disponibilidad de algún producto en el inventario.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Algún criterio de búsqueda}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Reporte con la información requerida. }\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{Estar identificado como un usuario encargado de inventarios.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{Que los datos de la base de datos se hayan consultado satisfactoriamente}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{Error al ingresar a la base de datos.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Primario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+
+\caption{Caso de Uso2.0: Existencias de productos}
+
+
+\label{CUI4.0} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el ícono {[}Gestión Lotes{]} en la pantalla PI1}\tabularnewline
+2.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el ícono {[}Consulta producto{]} en la pantalla PI3}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PI6 con el boton buscar.}\tabularnewline
+4.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Recibe el reporte y lo muestra en pantalla, especificando asi la información
+necesaria que se ha requerido.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\newpage{}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: No se pudo acceder a los registros de la BD.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG4 'No se pudo establecer conexión
+con la base de datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PI1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa B}
+
+Condición: Los registros tienen mal formato.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG7 'Formato de los datos es incorrecto'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PI3}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa C}
+
+Condición: Datos no encontrados en la consulta que acabamos de realizar.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG3 Datos no encontrados'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PI3}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+
+\newpage
+
+
+
+\subsection{CUI3.0: Reportes Inventario}
+
+\textbf{\large Resumen}{\large }\\
+{\large{} {} {} {} {} Llevar a cabo el llenado y envio de los reportes
+para notificar a las demás instancias algún contratiempo y/o pedido.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUI3.0: Reportes Inventario\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Consuelo Mayén Christian Armando}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Personal de Inventarios.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Notificar a las demás instancias acerca de alguna anomalía o pedido.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Datos del formulario.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Mensaje enviado y notificación a la instancia pertinende.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{Estar registrado como personal de inventario calificado.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{Que el reporte se haya concluido satisfactoriamente}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{Errores al notificar a las demás instancias de la empresa.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Primario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en el funcionamiento etc.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 3.0: Reportes Inventario}
+
+
+\label{CUI5.0} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el ícono {[}Gestión Lotes{]} en la pantalla PI1}\tabularnewline
+2.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el ícono {[}Consulta producto{]} en la pantalla PI3}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Llenar el formulario con toda la información que se necesita.}\tabularnewline
+4.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Se envia el reporte para que el sistema mande las notificaciones a
+la entidadd seleccionada.}\tabularnewline
+5.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Se presenta un mensaje de aprovación MSG1.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\newpage{}
+
+\subsection{CUI4: Gestionar Materias Primas}
+
+\textbf{\large Resumen}{\large }\\
+{\large{} Este Caso de uso tiene como objetivo permitir al usuario registrar, modificar y buscar registros de materias primas}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+%
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUI4.0: Gestionar Materias Primas\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Mar Escoto Diana}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Personal de Inventarios}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Acceder a opciones de crear, modificar,consultar o buscar de materias primas.
+}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Modificación de los registros de materia prima en la base de datos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{Que el usuario este dado de alta en el área de inventario.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{La base de datos debe estar disponible}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG4 Error al conectar con la base de datos.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Primario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en el funcionamiento etc.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso I4.0: Gestionar Materias Primas}
+\label{tab:CasosdeUso:nombredecasodeuso} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el botón {[}Gestión de Materias Primas{]} en la pantalla PI}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Carga los datos de las materias primas registradas en la Base de datos. 		
+{[}Trayectoria Alternativa A{]}}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PI1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: No se pudieron cargar los datos de las Materias Primas
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG4 'No se pudo establecer conexión
+con la base de datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PI}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\newpage{}
+%====================
+%Nuevo caso de uso
+%====================
+
+\subsubsection{CUI4.1:Agregar Materia Prima}
+
+\textbf{\large Resumen}{\large }\\
+{\large{} Este Caso de uso tiene como objetivo permitir al usuario registrar una nueva materia prima}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+%
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUI4.1.1: Agregar Materia Prima\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Mar Escoto Diana}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Personal de Inventario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Registrar una materia prima en el sistema}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Nueva materia prima agregada a la base de datos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{Que el usuario este dado de alta en el área de inventario,. Que la materia prima no este registrada anteriormente}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{La base de datos debe de estar disponible}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{ MSG4 Error al conectar con la base de datos. MSG8 'Falta llenar campos obliglatorios'. MSG7 'Formato Incorrecto de los datos'}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en el funcionamiento etc.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso I4.1: Agregar Materia Prima}
+\label{tab:CasosdeUso:nombredecasodeuso} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el ícono {[}Agregar Materia Prima{]} en la pantalla PI2}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PI1.1 con el formulario a llenar.}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Llena los datos del formulario}\tabularnewline
+4.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Da clic en el botón de aceptar{[}Trayectoria Alternativa A{]}}\tabularnewline
+5.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Verifica si los campos obligatorios se encuentran con datos{[}Trayectoria Alternativa B{]}, verifica si los datos se llenaron correctamente{[}Trayectoria Alternativa C{]}}\tabularnewline
+6. &\includegraphics{sistema} & \multicolumn{1}{p{12cm}}{Envía mensaje de confirmación MSG1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: No se pudieron cargar los datos ingresados a la base de datos
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG4 'No se pudo establecer conexión
+con la base de datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PI2}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+\\
+\textit{Trayectoria Alternativa B}
+
+Condición: Faltan campos obligatorios por llenar
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG8 'Falta llenar campos obliglatorios'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PI2}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa C}
+
+Condición: El formato de los datos es incorrecto
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG7 'Formato Incorrecto de los datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PI2}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+\newpage{}
+
+%====================
+%Nuevo caso de uso
+%====================
+
+\subsubsection{CUI4.2:Modificar Materia Prima}
+
+\textbf{\large Resumen}{\large }\\
+{\large{} Este Caso de uso tiene como objetivo permitir al usuario modificar registros de materias primas}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+%
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUI4.2: Modificar Materia Prima\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Mar Escoto Diana}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Personal de Inventario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Modificar información de una materia prima en el sistema}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Modificación de los registros de materia prima en la base de datos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{Que el usuario este dado de alta en el área de inventario,. Que la materia prima este registrada anteriormente}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{La base de datos debe de estar disponible}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG4 Error al conectar con la base de datos.MSG7 'Formato Incorrecto de los datos'.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en el funcionamiento etc.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso I4.2: Modificar Materia Prima}
+\label{tab:CasosdeUso:nombredecasodeuso} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el ícono {[}Editar Materia Prima{]} en la pantalla PI1}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PI1 con los datos posibles a modificar}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Modifica los registros de la base de datos}\tabularnewline
+4.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Da clic en el botón de aceptar{[}Trayectoria Alternativa A{]}}\tabularnewline
+5.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Verifica verifica si los datos modificados se llenaron correctamente{[}Trayectoria Alternativa B{]}}\tabularnewline
+6. &\includegraphics{sistema} & \multicolumn{1}{p{12cm}}{Envía mensaje de confirmación MSG1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: No se pudieron cargar los datos ingresados a la base de datos
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG4 'No se pudo establecer conexión
+con la base de datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PI2}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+\\
+
+\textit{Trayectoria Alternativa B}
+
+Condición: El formato de los datos es incorrecto
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG7 'Formato Incorrecto de los datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PI2}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+\newpage{}
+
+
+%====================
+%Nuevo caso de uso
+%====================
+
+\subsubsection{CUI4.3:Consultar Materia Prima}
+
+\textbf{\large Resumen}{\large }\\
+{\large{} Este Caso de uso tiene como objetivo permitir al usuario consultar registros de materias primas}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+%
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUI4.3: Buscar Materia Prima\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Mar Escoto Diana}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Personal de Inventario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Buscar información de una materia prima en el sistema}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Búsqueda de los registros de materia prima en la base de datos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{Que el usuario este dado de alta en el área de inventario,. Que la materia prima este registrada anteriormente}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{La base de datos debe de estar disponible}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG4 Error al conectar con la base de datos.MSG3 Datos no encontrados}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en el funcionamiento etc.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso I4.3: Buscar Materia Prima}
+\label{tab:CasosdeUso:nombredecasodeuso} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Ingresa la palabra clave en la caja de texto{[}Buscar...{]} en la pantalla PI1}\tabularnewline
+2.   & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Ingresa la palabra clave de búsqueda y selecciona {[}Aceptar{]}}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Verifica la existencia de la palabra clave en las materias primas registradas en la base de datos{[}Trayectoria Alternativa B {]} {[}Trayectoria Alternativa A{]}}\tabularnewline
+4.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla con la información de la materia prima{[}Trayectoria Alternativa B{]}}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+
+\textit{Trayectoria Alternativa A}
+
+Condición: La materia prima no existe en la base de datos
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG3 'Datos no encontrados'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PI2}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+\\
+
+\textit{Trayectoria Alternativa B}
+
+Condición: No se pudieron cargar los datos de la base de datos
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG4 'No se pudo establecer conexión
+con la base de datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PI2}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+\\
+
+\newpage{}
+\end{document}

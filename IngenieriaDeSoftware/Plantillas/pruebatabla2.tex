@@ -1,0 +1,129 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\begin{document}
+\begin{Large}
+NOTA: AGREGAR MARGENES A LA TABLA, AGREGAR IMAGENES EN LAS TRAYECTORIAS, ALINEAR MENSAJES Y BR
+\end{Large}
+
+\section{Documentacion de Casos de Uso}
+\subsection{CUX\#.\#: Nombre del caso de uso}
+\textbf{\large Resumen}\\
+Este CU tiene como objetivo permitir al usuario blablabla blablabla blablabla blablabla blablabla blablabla
+ blablabla blablabla blablabla blablabla blablabla.\\
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+\begin{table}[!ht]
+\begin{center}
+
+\begin{tabular}{|c|c|c|}
+\hline
+\multicolumn{2}{|c|}{Caso de Uso:} & CU\#.\#: Nombre del Caso de Uso\\
+\hline
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c|}{Resumen de Atributos}\\
+\hline
+\multicolumn{2}{|c|}{Autor} & El nombre de quien lo hizo.\\
+\hline
+\multicolumn{2}{|c|}{Actor} & Usuario\\
+\hline
+\multicolumn{2}{|c|}{Propósito} & Permitir al usuario realizar la acción.\\
+\hline
+\multicolumn{2}{|c|}{Entradas} & Para realizar ACCIÓN el USUARIO deberá capturar etc etc etc:\\
+\hline
+\multicolumn{2}{|c|}{Salidas} & Se mostrara en pantalla el mensaje MSG\# cuando la operación.\\
+\hline
+\multicolumn{2}{|c|}{Pre-condiciones} & Que existan bla bla bla bla bla.\\
+\hline
+\multicolumn{2}{|c|}{Pos-condiciones} & Se realizara bla bla bla bla bla.\\
+\hline
+\multicolumn{2}{|c|}{Errores} & Se mostrara el mensaje bla bla bla.\\
+\hline
+\multicolumn{2}{|c|}{Tipo} & Primario | Secundario | etc.\\
+\hline
+\multicolumn{2}{|c|}{Fuente} & Basado en el funcionamiento etc.\\
+\hline
+\end{tabular}
+
+\end{center}
+\caption{Caso de Uso \#: Nombre del CU}
+\label{tab:CasosdeUso:nombredecasodeuso}
+\end{table}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+\textbf{\large Trayectorias del CU}\\
+\textit{Trayectoria Principal}
+\begin{enumerate}
+  \item ACTOR solicita registrar un idioma presionando el boton [UNBOTON] de la pantalla IU\# NombredePantalla.
+  \item SISTEMA busca los elementos de los catalogos nombredecatalogo.
+  \item SISTEMA realiza otra accion mediante el uso de la pantalla IU\# NombredePantalla. [Trayectoria A].
+  \item ACTOR ingresa los datos del idioma.
+  \item ACTOR selecciona la opcion 'No' en ¿Cuenta con certificacion?. [Trayectoria B].
+  \item SISTEMA realiza otra accion.
+  \item ACTOR realiza otra accion.
+  \item SISTEMA realiza otra accion.\\
+  \ldots \ldots Fin del Caso de Uso\\
+\end{enumerate}
+
+\textit{Trayectoria Alternativa A}\\
+Condición: Especificar condición.\\
+\begin{description}
+\item [A-1]. SISTEMA muestra la pantalla IU\# Nombredepantalla indicando etc.
+\item [A-2]. Fin del Caso de Uso\\
+\end{description}
+\newpage
+\textit{Trayectoria Alternativa B}\\
+Condición: Especificar condición.\\
+\begin{description}
+\item [B-1]. ACTOR selecciona si en la opción.
+\item [B-2]. SISTEMA muestra un formulario y solicita al usuario la información complementaria.
+\item [B-3]. ACTOR realiza otra acción.
+\item [B-N]. ACTOR realiza otra acción.
+\item [- - - -]Fin de la trayectoria.
+\end{description}
+
+\section{Mensajes}
+\subsection{MSG1 Nombre del Mensaje}
+\begin{flushleft}
+Tipo:	Notificación.\\
+Estatus:	Aprobado.\\
+Objetivo:	Indicar al usuario que la acción solicitada sea realizada exitosamente.\\
+Redacción:	ARTICULO ENTIDAD VALOR ha sido OPERACIÓN exitosamente.\\
+Parámetros:	El mensaje se muestra con base en los siguientes 1:\\
+\begin{description}
+\item[ARTICULO] Añadir descripción.
+\item[ENTIDAD] Añadir descripción.
+\item[VALOR] Añadir descripción.
+\item[OPERACIÓN] Añadir descripción.
+\end{description}
+\end{flushleft}
+
+\section{Reglas de Negocio}
+\subsection{BR\# Nombre de la RN}
+\begin{flushleft}
+Regla: BR1 Información Correcta.\\
+Tipo:	Restricción.\\
+Nivel:	Obligatorio. Debe cumplirse siempre.\\
+Versión:	1.0\\
+Estado:		Aprobado.\\
+Descripción:	La información que se proporcione al CVU marcada como obligatoria debe pertenecer al tipo de dato especificado \ldots.
+\end{flushleft}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DEL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\end{document}

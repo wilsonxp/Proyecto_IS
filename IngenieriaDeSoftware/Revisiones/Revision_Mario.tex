@@ -1,0 +1,297 @@
+
+\documentclass[10pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+
+\usepackage{array}
+
+\providecommand{\tabularnewline}{\\}
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+
+
+\section{CUAD2: Identificar usuario}
+
+\subsection{Resumen}
+Pienso que, aunque el resumen debe ser breve, también debe dar una idea más clara y más completa de lo que hace el caso de uso.(1)
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & CUAD2: Identificar usuario\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizador:  & Irvin Ortiz Ochoa\tabularnewline
+\hline 
+Revisado por:  & Durán Pineda Mario Ángel\tabularnewline
+\hline 
+Actor:  & Según lo visto en clases, es muy rara la ocasión en que el actor es el Sistema, usualmente es un usuario. (2)\tabularnewline
+\hline 
+Próposito:  & Sin observaciones\tabularnewline
+\hline 
+Entradas:  & Es necesario especificar cada uno de los 'datos del usuario' a los que te refieres. 'Uno o mas' es muy ambiguo, Hay que saber cuántos y cuáles. (3)
+\tabularnewline
+\hline 
+Salidas:  & Que forma de salida tiene la 'Información del usuario', ¿un mensaje, una pantalla? Falta especificar.(4)
+\tabularnewline
+\hline 
+Pre-Condiciones  & Sin observaciones
+\tabularnewline
+\hline 
+Post-Condiciones  & ¿No hay? (5)
+\tabularnewline
+\hline 
+Errores:  & Falta indicar los posibles errores que se pueden presentar en el caso de uso. (6)
+\tabularnewline
+\hline 
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & ¿A quién le hace la peticion? Supongo que a la BD. De ser así, falta indicar una trayectoria alternativa para cuando no se pueda hacer conexión con la BD. (7)\tabularnewline
+2.  & ¿Obtiene el perfil del usuario y después que sucede? ¿Lo muestra, lo envía a alguna otra parte? (8)\tabularnewline
+
+\end{longtable}
+
+\textit{Trayectoria Alternativa A}
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & Sin observaciones\tabularnewline
+2.  & ¿No debería regresar al paso 1 de ese caso de uso? Pues el usuario no podrá ingresar 'Nombre de usuario' y 'Contraseña' si antes no se le muestra la pantalla correspondiente. (9)\tabularnewline
+
+\end{longtable}
+
+Total de observaciones de este CU: 9
+\\[0.4 cm]
+Nota importante: Existen varios puntos que me llevan a pensar que este caso de uso en realidad no debería existir, los menciono a continuación:
+\begin{itemize}
+	\item{No existe una pantalla para el caso de uso, lo que indica que es una acción que la hace por completo el sistema y, según lo visto en clase, esto sucede en ocasiones muy raras, incluso la profesora mencionaba que cuando esto sucedía debía tratarse de un trigger o algo parecido, de lo contrario era incorrecto. Sugiero que lo consulten con ella para estar más seguros.}
+	\item{El actor del módulo Administración nunca toma parte directa del caso de uso. Para que esto suceda, pienso que las 2 actividades de la Trayectoria principal de este caso de uso pueden incluirse en las Trayectorias principales de los casos de uso que la están aplicando como 'include'. E incluso podría resumirse a un solo paso.}
+	\item{No tienen claras las entradas del caso de uso, lo cual apoya la teoría de que posiblemente el caso de uso esté mal ideado.}
+\end{itemize}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\newpage{} 
+
+%---------------------------------------------------%
+\section{CUCC5: Evaluar productos terminados}
+
+\subsection{Resumen}
+Sin observaciones.
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & CUCC5: Evaluar productos terminados\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizador:  & Cárdenas Pablo Karina\tabularnewline
+\hline 
+Revisado por:  & Durán Pineda Mario Ángel\tabularnewline
+\hline 
+Próposito:  & Redacción: 'está el almacén'. (1)\tabularnewline
+\hline 
+Entradas:  & Es posible que sea necesario especificar cuáles son esos datos y cómo se ingresan. (2)
+\tabularnewline
+\hline 
+Salidas:  & Error en el código del mensaje, me parece que te refieres al MJ1.(3)
+\tabularnewline
+\hline 
+Pre-Condiciones  & Sin observaciones
+\tabularnewline
+\hline 
+Post-Condiciones  & Cuando un lote es acreditado, ¿el sistema lo registra en la BD? Si es así, debería ser una post-condición(4)
+\tabularnewline
+\hline 
+Errores:  & Falta indicar los posibles errores que se pueden presentar en el caso de uso. (5)
+\tabularnewline
+\hline 
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & Falta indicar en qué pantalla se encuentra ese botón. (6)\tabularnewline
+2.  & Es necesario especificar exactamente qué pantalla es la que muestra. (7)\tabularnewline
+5.  & Todas tus trayectorias alternativas van a la Trayectoria A, y sin embargo, en el documento colocas otras trayectorias alternativas (B y C). Pienso que quizá en este punto te referías a la trayectoria B. Revísalo. (8)  \tabularnewline
+6.  & Lo mismo que en el caso anterior, solo que en este punto creo que te referías a la trayectoria alternativa C. (9)\tabularnewline
+7.  & El usuario no muestra la pantalla, es el sistema el que lo hace, además creo que no es una pantalla sino un mensaje y me parece que el código correcto de ese mensaje es MJ1 según tu documento. (10)\tabularnewline
+8.  & Indicar si la acreditación del lote se refleja en la BD, lo cual es muy probable. (11)\tabularnewline
+
+\end{longtable}
+
+\textit{Trayectoria Alternativa A}
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+2.  & Conflicto de códigos de mensajes. El mensaje MJ7 que utilizas no coincide con el mensaje MJ7 de la pag. 119 (12)
+\end{longtable}
+
+\textit{Trayectoria Alternativa B}
+\\[0.2 cm]Sin observaciones
+\\[0.3 cm]
+
+\textit{Trayectoria Alternativa C}
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & No existe tal mensaje en su apartado de Mensajes.(13)\tabularnewline
+3.  & ¿El reporte del fallo se guarda en la BD? ¿Se muestra en formato PDF? ¿O que se hace con el?.(14)\tabularnewline
+
+\end{longtable}
+
+Total de observaciones de este CU: 14
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\newpage{} 
+
+%---------------------------------------------------
+\section{CUCO03: Recibir Materia Prima}
+
+\subsection{Resumen}
+Sin observaciones
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & CUCO03: Recibir Materia Prima\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizador:  & Ricardo Jiménez Navarro\tabularnewline
+\hline 
+Revisado por:  & Durán Pineda Mario Ángel\tabularnewline
+\hline 
+Próposito:  & Sin observaciones\tabularnewline
+\hline 
+Entradas:  & Sin observaciones\tabularnewline
+\hline 
+Salidas:  & Falta indicar el código del mensaje de operación exitosa. Me parece que los mensajes de error van en la parte de Errores. (1)
+\tabularnewline
+\hline 
+Pre-Condiciones  & Sin observaciones
+\tabularnewline
+\hline 
+Post-Condiciones  & ¿No hay? (2)
+\tabularnewline
+\hline 
+Errores:  & Indicar el código del mensaje que informará al usuario acerca del error. (3)
+\tabularnewline
+\hline 
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & ¿Dónde da clic el actor para acceder a la pantalla Recibir Materia Prima? (4)
+Luego, es necesario indicar el código de la pantalla a la que haces referencia. (5) 
+Y es imprescindible que coloques dicha pantalla en el documento para una mejor evaluación del caso de uso. (6)\tabularnewline
+4.  & ¿Cómo hace el actor para modificar el status de la compra? Falta indicar mediante qué botón.(7)\tabularnewline
+
+\end{longtable}
+
+\textit{Trayectoria Alternativa A}
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+
+2.  & Conflicto de códigos de mensajes. El mensaje MJ7 que utilizas no coincide con el mensaje MJ7 de su apartado de mensajes en la pag. 119 de su documento.(8)\tabularnewline
+3.  & Se repite la observación (5) y(6).
+
+\end{longtable}
+
+\textit{Trayectoria Alternativa B}
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+
+2.  & Si no hubo conexión a la BD, ¿Qué indica la notificación que se envía a CC en el punto 7 de tu TP acerca del status de la compra?  ¿no sería mejor regresar al paso 1 de la trayectoria principal (TP) sin enviar la notificación debido que como no se pudo acceder a la BD, el status no se modificó?(9)
+
+\end{longtable}
+
+%\textit{Trayectoria Alternativa C}
+{\it Trayectoria Alternativa C}
+\\[0.2 cm]
+ Error de redacción en el título de la trayectoria: 'No hay registros lo de información' (10)
+\\[0.6 cm]
+Total de observaciones de este CU: 10
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\end{document}
+
+
+
+

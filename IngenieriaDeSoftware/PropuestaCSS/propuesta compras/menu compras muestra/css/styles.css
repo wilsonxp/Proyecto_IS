@@ -1,0 +1,117 @@
+body {
+	min-width: 1000px;
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+#page-header {
+	height: 128px;
+	margin: 0;
+	padding: 0;
+	background-color: black;
+}
+
+#page-header-wrapper {
+	height: 128px;
+	width: 1000px;
+	margin: 0 auto;
+	padding: 0;
+	background-color: #f3c500;
+}
+
+#page-header-content {
+	height: 108px;
+	width: 840px;
+	margin: 0 70px;
+	padding: 10px;
+	background-color: yellow;
+}
+
+#logo {
+	height: 108px;
+	float: right;
+	padding: 0;
+}
+
+#company-name {
+	font-weight: bold;
+	font-size: 20px;
+	margin: 8px 0;
+	padding: 0 0 0 100px;
+	text-shadow: 3px 3px #ddd;
+}
+
+#system-name {
+	font-style: italic;
+	font-size: 16px;
+	margin: 8px 0;
+	padding: 0 0 0 184px;
+}
+
+#page-content {
+	height: 460px;
+	margin: 0;
+	padding: 0;
+	background-color: red;
+}
+
+#page-top-menu {
+	height: 40px;
+	width: 990px;
+	margin: 0 auto;
+	padding: 10px 0 20px 10px;
+	background-color: #F5D0A9;
+	color: #fff;
+	text-align: left;
+	font-size: 21px;
+}
+
+#page-content-wrapper {
+	height: 390px;
+	width: 1000px;
+	margin: 0 auto;
+	padding: 0;
+	background-color: blue;
+}
+
+#page-left-menu {
+	width: 220px;
+	height: 370px;
+	margin: 10px 0 10px 10px;
+	padding: 0 10px;
+	float: left;
+	background-color:green;
+}
+
+#page-main {
+	width: 710px;
+	height: 350px;
+	margin: 10px;
+	background-color: brown;
+	padding: 10px;
+	float:right;
+}
+
+#footer {
+	text-align:center;
+	background-color: orange;
+}
+
+h1 {
+	font-size: 23px;
+	font-weight: normal;
+	font-style: italic;
+	background-image: url(../img/hline.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+
+th {
+	background-color:#F90;
+}
+
+td {
+	text-align:center;
+	background-color:#FFF;
+}

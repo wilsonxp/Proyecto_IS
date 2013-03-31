@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="author" content="Ventas"/>
+        <title>Modificar Cliente</title>
+        <link rel="stylesheet" type="text/css" href="css/styleC.css" />
+       <script language="JavaScript" src="js/valida_RC.js"></script>
+       <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="css/registrarcliente.css">
+        <script type="text/javascript" src="js/valida_RC.js"></script>
+        <script type="text/javascript" src="js/mootools.js"></script>
+		<script type="text/javascript" src="js/textoexpRC.js"></script>
+		<script type="text/javascript" src="js/ajustam.js"></script> 
+    </head>    
+    <body>
+	<!-- El header es el mismo para todas las paginas-->
+    	<header>
+                <div id="user" name="user"> <img src="img/user.png" alt="Username" width="30" height="30"/> </div>
+                <div id="userName" class="text-header">Usuario</div>
+                <div id="msj" name="msj"> 
+    				<img src="img/noti.png" alt="Notificaciones" width="30" height="30" usemap="#map1"/>
+    				<map name="map1" id="map1">
+		            	<area shape="rect" coords="0,0,30,30" alt="shape" title= "Ver Notificaciones" href="#"/>
+		         </map></div>
+                <div id="sesion" name="sesion"> 
+    				<img src="img/out.png" alt="Cerrar sesion" width="30" height="30" usemap="#map"/>
+		            <map name="map" id="map">
+		            	<area shape="rect" coords="0,0,30,30" alt="shape" title= "Cerrar Sesi&oacute;n" href="#"/>
+		        </map></div>
+            <div id="rightHeader">
+                <img src="img/Banner1.png" class="img-banner" alt="Sistema"/>
+            </div>
+        </header>
+       <center>
+        <div id="mainDiv">
+		<!-- Aquí se coloca el menú -->
+          <nav>
+            <div id="MV"><img src="img/ventas.png" alt="Modulo de Ventas" >	</div>
+		            
+               <div id="GV"> 
+    				<img src="img/GV.png" alt="Gesti&oacute;n de Ventas" width="200" height="40" usemap="#map2"/>
+    				<map name="map2" id="map2">
+		            	<area shape="rect" coords="0,0,200,40" alt="shape" title= "Gesti&oacute;n de Ventas" href="Gestión.html"/>
+		            </map></div>
+		            
+    			<div id="GC"> 
+    				<img src="img/GC.png" alt="Gesti&oacute;n de Clientes" width="200" height="40" usemap="#map3"/>
+    				<map name="map3" id="map3">
+		            	<area shape="rect" coords="0,0,200,40" alt="shape" title= "Gesti&oacute;n de Clientes" href="GestiónC.html"/>
+		            </map></div>
+		            
+    			<div id="rep"> 
+    				<img src="img/Rep.png" alt="Reportes" width="200" height="40" usemap="#map4"/>
+    				<map name="map4" id="map4">
+		            	<area shape="rect" coords="0,0,200,40" alt="shape" title= "Reportes" href="Reportes.html"/>
+		         </map></div>
+         </nav>
+			<!-- Divisor del contenido de la pagina -->
+            <div id="all-content">
+				<!--<br/>
+                <div id="ENTRADA"><center>Bienvenido al <br/> Modulo de Ventas</center></div>-->
+               <div id="Formulario">
+                 <form name="Rvalida">
+                <div id="cab" class="titulo">REGISTRAR CLIENTE</div>
+                <div id="dvrfc" class="divform">RFC:<input type="text" id="RFC" class="tb" name="RFC" maxlength="13" readonly="readonly" value="RRR123456QYT" disabled/></div>
+                <div id="dvnom" class="divform">Nombre:<input type="text" id="nom" class="tb" name="nom" value="Cliente 1"/></div>
+                <div id="dvtel" class="divform">Tel&eacute;fono:<input type="text" id="tel" class="tb" name="tel" value="56-78-90-34" maxlength="25"/></div>
+                <div id="dvema" class="divform">E-mail:<input type="text" id="ema" class="tb" name="ema" value="cliente1@gmail.com"/></div>
+                <div id="dvdir" class="divform">Direcci&oacute;n:</br><textarea id="dir" class="ta" name="dir" rows="10" cols="10">Ote 179 Col. Condesa</textarea></div>
+                <div id="botones"><input type="button" value="MODIFICAR" onClick="valida()"><input type="button" value="CANCELAR" onClick="cancelarmv()"></div>
+                </form>
+                </div>
+            </div>  
+   </center>
+    </body>   
+</html>

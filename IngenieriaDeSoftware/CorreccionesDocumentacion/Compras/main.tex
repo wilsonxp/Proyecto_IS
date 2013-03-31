@@ -1,0 +1,885 @@
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[10pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\makeatother
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\subsection{CUC2.0: Gestionar Proveedores}
+
+\textbf{\large Resumen}\\
+ {\large {} {} Este caso de uso tiene como objetivo permitir al
+usuario de compras visualizar los proveedores que existen en el sistema, y le muestra opciones para registrar, modificar, eliminar, desbloquear y filtrar los resultados.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUC2.0: Gestionar Proveedores\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Jiménez López Carlos Adrian}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Usuario de Compras}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Gestionar la información de los proveedores que hay en el sistema}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Pantalla PC1}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{Iniciar sesión como usuario de compras}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG4 Error al conectar con la base de datos.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Primario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso Compras 2.0: Gestionar Proveedores}
+
+
+\label{CUC1.0} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Presiona la opción, del menú, {[}Gestión de Proveedores{]}.}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Carga los datos, de la base de datos, de los proveedores existentes en el sistema {[}Trayectoria A{]}}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PC1}\tabularnewline
+4.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Da clic en el botón {[}Registrar Proveedor{]} {[}Trayectoria B{]} {[}Trayectoria C{]} {[}Trayectoria D{]} {[}Trayectoria E{]}}\tabularnewline
+5.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Extiende al CUC2.1 ``Registrar Proveedor"}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+\\
+
+
+\textit{Trayectoria Alternativa A}
+
+Condición: Ocurrió un error al conectar con la base de datos y no se pudieron cargar los proveedores registrados.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG4 'No se pudo establecer conexión con la base de datos'}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+\\
+
+\textit{Trayectoria Alternativa B}
+
+Condición: El actor escribe algún texto en el campo de búsqueda y presiona enter.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Incluye al CUC2.0.1'}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+\\
+
+
+\textit{Trayectoria Alternativa C}
+
+Condición: El actor pulsa el ícono de {[}Modificar Proveedor{]}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Extiende al CUC2.2: Modificar Proveedor.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+\\
+
+
+\textit{Trayectoria Alternativa D}
+
+Condición: El actor pulsa el ícono de {[}Eliminar Proveedor{]}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Extiende al CUC2.3: Eliminar Proveedor.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+\\
+
+
+\textit{Trayectoria Alternativa E}
+
+Condición: El actor pulsa el ícono de {[}Desbloquear Proveedor{]}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Extiende al CUC2.4: Desbloquear Proveedor.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+\newpage
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\subsubsection{CUC2.0.1: Buscar}
+
+\textbf{\large Resumen}\\
+ {\large {} {} Este caso de uso tiene como objetivo permitir al
+usuario de compras buscar un proveedor por medio palabra(s).}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUC2.0.1: Buscar\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Jiménez López Carlos Adrian}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Usuario de Compras}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Buscar los proveedores que coincidan con un criterio de búsqueda}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Palabra(s) Clave}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Lista de proveedores que coinciden con la entrada}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{Iniciar sesión como usuario de compras}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG3 Datos no encontrados, MSG4 Error al conectar con la base de datos.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Proveniente del CUC2.0.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso Compras 2.0.1: Buscar}
+
+
+\label{CUC1.0} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Verifica si la entrada no es vacía {[}Trayectoria
+A{]}}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Consulta a los proveedores que cumplen con el criterio.{[}Trayectoria B{]}}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra el resultado de la búsqueda{[}Trayectoria C{]}}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+\\
+
+\textit{Trayectoria Alternativa A}
+
+Condición: La entrada es vacía.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Consulta todos los proveedores que existen.}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra el resultado.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa B}
+
+Condición: Ocurrió un error al conectar con la base de datos y no se pudieron cargar los proveedores registrados.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG4 'No se pudo establecer conexión
+con la base de datos'}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+\\
+
+\textit{Trayectoria Alternativa C}
+
+Condición: No arrojó resultados la búsqueda
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG3 'La búsqueda XXXXX no muestra ningún resultado'}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+\\
+
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+\newpage
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+
+\subsubsection{CUC2.1: Registrar Proveedor}
+
+\textbf{\large Resumen}\\
+ {\large {} {} Este caso de uso tiene como objetivo permitir al
+usuario de compras registrar un nuevo proveedor dentro del sistema.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUC2.1: Registrar Proveedor\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Jiménez López Carlos Adrian}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Usuario de Compras}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Registrar un nuevo proveedor }\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{RFC,
+ Telefono, E-mail, Lista de productos.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{MSG1 Mensaje de confirmación.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{El proveedor debe ser agregado a la base de datos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG4 Error al conectar con la base de datos. MSG7 Formato incorrecto
+de los datos. MSG8 Campos obligatorios. MSG11 Datos duplicados.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Proveniente del CUC2.0.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso Compras 2.1: Registrar Proveedor}
+
+
+\label{CUC1.1} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el botón {[}Registrar Proveedor{]} en la pantalla PC1}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Despliega la pantalla PC5 y pide los datos necesarios.}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Llena el formulario y presiona el botón {[}Registrar{]}}.\tabularnewline
+4.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Verifica que no haya campos vacíos {[}Trayectoria A{]}}\tabularnewline
+5.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Verifica que los campos se hayan llenado correctamente {[}Trayectoria B{]}}\tabularnewline
+6.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Verifica que el RFC ingresado no se encuentre ya registrado {[}Trayectoria C{]}}\tabularnewline
+7.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Registra al nuevo proveedor {[}Trayectoria D{]}}\tabularnewline
+8.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Despliega el mensaje MSG 1 'El proveedor ha sido registrado exitosamente'}\tabularnewline
+9.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Despliega la pantalla PC1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}\\
+
+\textit{Trayectoria A}
+
+Condición: Alguno de los campos está vacío y es obligatorio
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG8 'El campo RFC es un campo obligatorio',
+'El campo teléfono es un campo obligatorio', 'El campo lista de productos
+es un campo obligatorio' según corresponda}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PC5}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}\\
+
+
+\textit{Trayectoria B}
+
+Condición: Alguno de los campos fue llenado incorrectamente
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG7 'El RFC sólo acepta letras y números',
+'El teléfono sólo acepta números', 'El email sólo acepta letras, numeros,
+punto(.), guiones(-) y guión bajo(\_)' según corresponda}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PC5}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}\\
+
+\textit{Trayectoria C}
+
+Condición: El RFC ya se encuentra registrado
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG11 'El RFC ABCD910123 ya existe'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PC5}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}\\
+
+
+\textit{Trayectoria D}
+
+Condición: Ocurrió un error al conectar con la base de datos y no se pudo registrar el proveedor en la base de datos
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra el mensaje de error MSG4 'No se pudo establecer conexion con
+la base de datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PC5}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+\newpage
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\subsubsection{CUC2.2: Modificar Proveedor}
+
+\textbf{\large Resumen}\\
+ {\large {} {} Este caso de uso tiene como objetivo permitir al
+usuario de compras modificar los datos de un proveedor.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUC2.2: Modificar Proveedor\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Jiménez López Carlos Adrian}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Usuario de Compras}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Modificar los datos de un proveedor registrado}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{RFC, 
+ Telefono, E-mail, Lista de productos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{MSG1 Mensaje de confirmación.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{Debe seleccionar un proveedor de la pantalla PC1}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{El proveedor debe ser actualizado en la base de datos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG4 Error al conectar con la base de datos. MSG7 Formato incorrecto
+de los datos. MSG8 Campos obligatorios. MSG11 Datos duplicados.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Proveniente del CUC2.0.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso Compras 2.2: Modificar Proveedor}
+
+
+\label{CUC1.2} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el ícono {[}Modificar Proveedor{]} en la pantalla PC1}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Despliega la pantalla PC6 y pide los datos necesarios.}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Cambia los datos que desea modificar y presiona el botón {[}Actualizar{]}}.\tabularnewline
+4.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Verifica que no haya campos vacíos {[}Trayectoria A{]}}\tabularnewline
+5.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Verifica que los campos se hayan llenado correctamente {[}Trayectoria B{]}}\tabularnewline
+6.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Verifica que el RFC ingresado no se encuentre ya registrado {[}Trayectoria C{]}}\tabularnewline
+7.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Actualiza los datos del proveedor {[}Trayectoria D{]}}\tabularnewline
+8.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Despliega el mensaje MSG 1 'El proveedor ha sido modificado exitosamente'}\tabularnewline
+9.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Despliega la pantalla PC1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}\\
+
+
+\textit{Trayectoria A}
+
+Condición: Alguno de los campos está vacío y es obligatorio
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG8 'El campo RFC es un campo obligatorio',
+'El campo teléfono es un campo obligatorio', 'El campo lista de productos
+es un campo obligatorio' según corresponda}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PC6}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}\\
+
+
+\textit{Trayectoria B}
+
+Condición: Alguno de los campos fue llenado incorrectamente
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG7 'El RFC sólo acepta letras y números',
+'El teléfono sólo acepta números', 'El email sólo acepta letras, numeros,
+punto(.), guiones(-) y guión bajo(\_)' según corresponda}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PC6}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}\\
+
+\textit{Trayectoria C}
+
+Condición: El RFC ya se encuentra registrado
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG11 'El RFC ABCD910123 ya existe'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PC6}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}\\
+
+
+\textit{Trayectoria D}
+
+Condición: Ocurrió un error al conectar con la base de datos y no se pudo actualizar el proveedor en la base de datos
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra el mensaje de error MSG4 'No se pudo establecer conexion con
+la base de datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PC6}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+\newpage
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\subsubsection{CUC2.3: Eliminar Proveedor}
+
+\textbf{\large Resumen}\\
+ {\large {} {} Este caso de uso tiene como objetivo permitir al
+usuario de compras eliminar los datos de un proveedor.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUC2.3: Eliminar Proveedor\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Jiménez López Carlos Adrian}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Usuario de Compras}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Eliminar un proveedor de manera permanente}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{MSG1 Mensaje de confirmación.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{Debe seleccionar un proveedor de la pantalla PC1}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{El proveedor debe ser eliminado de la base de datos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG4 Error al conectar con la base de datos.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Proveniente del CUC2.0.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso Compras 2.3: Eliminar Proveedor}
+
+
+\label{CUC1.3} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el ícono {[}Eliminar Proveedor{]} en la pantalla PC1}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega el MSG9 '¿Desea eliminar el proveedor?' pidiendo la confirmación
+para eliminar.}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Presiona el botón {[}Eliminar{]} {[}Trayectoria A{]}}\tabularnewline
+4.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Elimina al proveedor {[}Trayectoria B{]}}\tabularnewline
+5.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Despliega el mensaje MSG 1 'El proveedor ha sido eliminado exitosamente'}\tabularnewline
+6.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Despliega la pantalla PC1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}\\
+
+
+\textit{Trayectoria A}
+
+Condición: El usuario presiona el botón {[}Cancelar{]}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PC1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}\\
+
+
+\textit{Trayectoria B}
+
+Condición: Ocurrió un error al conectar con la base de datos y no se pudo eliminar el proveedor de la base de datos
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra el mensaje de error MSG4 'No se pudo establecer conexion con
+la base de datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PC1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+\newpage
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\subsubsection{CUC2.4: Desbloquear Proveedor}
+
+\textbf{\large Resumen}\\
+ {\large {} {} Este caso de uso tiene como objetivo permitir al
+usuario de compras desbloquear a un proveedor. Ver BR}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUC2.4: Desbloquear Proveedor\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Jiménez López Carlos Adrian}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Usuario de Compras}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Desbloquear un proveedor}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{MSG1 Mensaje de confirmación.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{Debe seleccionar un proveedor de la pantalla PC1.\medskip{}
+ El proveedor debe estar bloqueado}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{El proveedor debe ser desbloqueado de la base de datos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG4 Error al conectar con la base de datos.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Proveniente del CUC2.0.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso Compras 2.4: Desbloquear Proveedor}
+
+
+\label{tab:CasosdeUso:nombredecasodeuso-1-1-1} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el ícono {[}Desbloquear Proveedor{]} en la pantalla PC1}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega el MSG9 '¿Desea desbloquear el proveedor?' pidiendo la confirmación
+para desbloquear.}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Presiona el botón {[}Desbloquear{]} {[}Trayectoria A{]}}\tabularnewline
+4.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Desbloquea al proveedor {[}Trayectoria B{]}}\tabularnewline
+5.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Despliega el mensaje MSG 1 'El proveedor ha sido desbloqueado exitosamente'}\tabularnewline
+6.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Despliega la pantalla PC1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}\\
+
+
+\textit{Trayectoria A}
+
+Condición: El usuario presiona el botón {[}Cancelar{]}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PC1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}\\
+
+
+\textit{Trayectoria B}
+
+Condición: Ocurrió un error al conectar con la base de datos y no se pudo desbloquear el proveedor en la base de datos
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra el mensaje de error MSG4 'No se pudo establecer conexion con
+la base de datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PC1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la trayectoria}\tabularnewline
+\end{tabular}
+
+
+\end{document}

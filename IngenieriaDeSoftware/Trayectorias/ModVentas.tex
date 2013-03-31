@@ -1,0 +1,1459 @@
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[10pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+\makeatother
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+\tableofcontents{}
+
+\pagebreak{}
+
+
+\section{Módulo Ventas.}
+
+
+\subsection{CUV1: Gestionar Ventas}
+
+\textbf{\large Resumen}\\
+ {\large {} {} {} {} {} {} {} Este Caso de uso tiene como objetivo
+permitir al actor registrar, buscar y Cancelar Venta.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUV1: Gestionar Ventas\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Cabrera Alvarez Estefany Viridiana}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Usuario de Ventas}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Acceder a opciones de Agregar, modificar, cancelar y buscar ventas. }\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Interfaz Correspondiente a gestionar Ventas}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{El usuario de ventas debe estar autentificado}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{La base de datos debe estar disponible}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG4 Error al conectar con la base de datos.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Primario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en el funcionamiento.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{CUV 1: Gestionar Ventas}
+
+
+\label{CUV1.0} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el botón {[}Gestionar Ventas{]}}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Carga los datos de las ventas registradas en la Base de   datos. {[}Trayectoria Alternativa A{]}}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PV1 $"$ Gestionar Ventas$"$  }\tabularnewline
+4.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Da clic en el botón {[}Registrar ventas{]}{[}Trayectoria Alternativa B{]}{[}Trayectoria Alternativa C{]}{[}Trayectoria Alternativa D{]}}\tabularnewline
+5.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Extiende a CUV1.1 $"$ Registrar Venta$"$ }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: No se pudo conectar con la base de datos.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG4 'No se pudo establecer conexión con la base de datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PV0 $"$ Inicio de Ventas$"$ }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa B}
+
+Condición: El actor escribe el idventa a buscar en el textbox y da clic en buscar.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema} & \multicolumn{1}{p{12cm}}{ Extiende al CUV1.2 $"$  Consultar Ventas$"$ }\tabularnewline
+ 	
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa C}
+
+Condición: El actor da clic en el ícono de {[}cancelar{]} en una venta.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1. & \includegraphics{sistema} & \multicolumn{1}{p{12cm}}{ Extiende al CUV1.3 $"$ Cancelar Venta$"$ }\tabularnewline
+ 	
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa D}
+
+Condición: El actor da clic en el ícono de {[}modificar{]} en una venta.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema} & \multicolumn{1}{p{12cm}}{ Extiende al CUV1.4 $"$ Modificar Venta$"$ }\tabularnewline
+ 	
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\newpage{} 
+
+%====================
+%Nuevo caso de uso
+%====================
+
+
+
+\subsubsection{CUV1.1:Registrar Venta}
+
+\textbf{\large Resumen}\\
+ {\large {} {} {} {} {} {} {} Este Caso de uso tiene como objetivo
+permitir al usuario agregar una venta al sistema.}\\
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUV1.1: Registrar Venta\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Cabrera Alvarez Estefany Viridiana}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Usuario de Ventas}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Registrar una venta en el sistema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Datos del formulario de Agregar Ventas.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{la base de datos debe estar disponible}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG2 $"$ Mensaje de error$"$ , MSG4 $"$ Error al conectar con la base de datos$"$  ,MSG7 $"$ Formato incorrecto de los datos$"$ .}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en el funcionamiento del CUV1.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 1.1: Registrar Ventas}
+
+
+\label{CUV1.1} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PV1.1 $"$  Registrar Venta$"$   con el formulario a llenar.}\tabularnewline
+2.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Selecciona el cliente del combobox.}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Da clic en el botón de {[}Abrir Venta{]}}\tabularnewline
+4.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Verifica si la información es correcta. {[}Trayectoria Alternativa A{]}{[}Trayectoria Alternativa B{]}}\tabularnewline
+5.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Habilita los controles del apartado de Articulo}\tabularnewline
+6.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Llena el formulario de Articulos}\tabularnewline
+7.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Da clic en el botón de {[}Agregar Articulo{]}}\tabularnewline
+8.   & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Verifica si los campos se llenaron correctamente. {[}Trayectoria Alternativa A{]}{[}Trayectoria Alternativa B{]}{[}Trayectoria Alternativa C{]}}\tabularnewline
+9. & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Guarda el articulo.}\tabularnewline
+10. & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Desplega en la tabla los articulos agregados.} \tabularnewline
+11. & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Visualiza la tabla los articulos agregados. {[}Trayectoria Alternativa D{]}}\tabularnewline
+12. & \includegraphics{actor} &\multicolumn{1}{p{12cm}}{Da clic en {[}Cerrar Venta{]} {[}Trayectoria Alternativa E{]}}\tabularnewline
+13.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG1 Mensaje de confirmación $"$  La venta ha sido Agregada exitosamente.$"$  }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}\newpage{}
+
+
+\textit{Trayectoria Alternativa A}
+
+Condición: Si la base de datos no esta disponible.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG4 $"$ Error al conectar con la base de datos$"$  }\tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PV1.1 $"$  Registrar Venta$"$  }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa B}
+
+Condición: Si el formato de los datos es incorrecto.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el MSG7 $"$  Formato incorrecto de los datos.$"$  }\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Regresa a la trayectoria principal 8}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa C}
+
+Condición: No se llenaron todos los campos del formulario.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG8 $"$  Campos Obligatorios$"$  .}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Continua con el paso 6.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de Trayectoria}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa D}
+
+Condición: Si el actor da clic en el botón eliminar de un articulo
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Elimina de la lista el articulo eliminado}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra MSG1 Mensaje de confirmación $"$ El articulo ha sido eliminado exitosamente.$"$  }\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Regresa al paso 10 de la trayectoria principal$"$  }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa E}
+
+Condición: Si el usuario da clic en el botón de cancelar
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Regresa a la pantalla PV1 $"$  Gestionar Ventas$"$  }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+%================================================
+%nuevo caso de usos
+%================================================
+
+\newpage
+\subsubsection{CUV1.2: Consultar Ventas}
+
+\textbf{\large Resumen}\\
+ {\large {} {} {} {} {} {} {} Este Caso de uso tiene como objetivo
+permitir al usuario de ventas consultar las venta guardadas sistema.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUV1.2: Consultar Venta\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Cabrera Alvarez Estefany Viridiana}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Usuario de Ventas}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Consultar una venta en el sistema}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{idVenta}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Datos de la venta filtrados}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{La venta debe existir en el sistema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG3 Datos no encontrados, MSG4 Error al conectar con la base de datos.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en el funcionamiento}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 1.2: Consultar ventas}
+
+
+\label{CUV1.2} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Verifica si lleno correctamente el textbox. {[}Trayectoria Alternativa A{]}}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Busca los datos correspondientes con la busqueda.{[}Trayectoria Alternativa B{]}{[}Trayectoria Alternativa C{]}}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra la pantalla PV1 $"$  Gestionar Ventas$"$   con los datos filtrados.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: Si el formato de los datos ingresados en el Textbox es incorrecto.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el MSG7 'Formato incorrecto de los datos.'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Regresa al paso PV1 $"$  Gestionar Ventas$"$  }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa B}
+
+Condición: Si los datos no fueron encontrados
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG3 $"$  Datos no encontrados.$"$  }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa C}
+
+Condición: Si la base de datos no esta disponible.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG4 $"$ Error al conectar con la base de datos$"$  }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+%============================================Cancelar
+
+
+
+
+\subsubsection{CUV1.3: Cancelar Venta}
+
+\textbf{\large Resumen}\\
+ {\large {} {} {} {} {} {} {} Este Caso de uso tiene como objetivo
+permitir al actor marcar como canceladas alguna venta guardada en  sistema.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUG1.3: Cancelar Venta\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Cabrera Alvarez Estefany Viridiana}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Usuario de Ventas}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Cancelar una venta en el sistema}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{El usuario de ventas debe estar autentificado, la venta debe existir en el sistema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{ MSG4 Error al conectar con la base de datos.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en el funcionamiento del CUV1}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 1.3: Cancelar Venta}
+
+
+\label{CUV1.3} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Actualiza el estado de la venta a $"$  cancelada$"$   en la base de datos.{[}Trayectoria Alternativa A{]}}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG1 Mensaje de confirmación. $"$  la venta ha sido cancelada$"$  }\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra la pantalla PV1 $"$  Gestionar Ventas$"$  }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+
+\textit{Trayectoria Alternativa A}
+
+Condición: Si la base de datos no esta disponible.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG4 $"$ Error al conectar con la base de datos$"$  }\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG2 Mensaje de error. $"$ Error al intentar cancelar venta 'idVenta'$"$  }\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra la pantalla PV1 $"$  Gestionar Ventas$"$  }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsubsection{CUV1.4: Modificar Venta}
+
+\textbf{\large Resumen}\\
+ {\large {} {} {} {} {} {} {} Este Caso de uso tiene como objetivo
+permitir a los actores Modificar Venta guardadas en el sistema.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUV1.4: Modificar Venta\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Cabrera Alvarez Estefany Viridiana}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Usuario de Ventas}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Modificar una venta en el sistema}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Cambios en el formulario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{ La venta debe existir en el  sistema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{ MSG4 $"$ Error al conectar con la base de datos.$"$   MSG2 Mensaje de error.  $"$ Error al intentar modificar cliente 'idcliente'$"$  }\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en el funcionamiento CUV1}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 1.4: Modificar Venta}
+
+
+\label{tab:CasosdeUso:nombredecasodeuso} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Extrae los datos de la venta a modificar.{[}Trayectoria alternativa A{]}}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra la pantalla  PV1.2 $"$  Modificar Venta$"$   con el formulario de modificación con los datos que ya se encuentran registrados}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Da clic en el ícono de {[}Modificar{]} del articulo a modificar{[}Trayectoria alternativa B{]}}\tabularnewline
+4.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Extrae los datos del articulo a modificar.{[}Trayectoria alternativa A{]}}\tabularnewline
+5.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Coloca los datos en el formulario.}\tabularnewline
+6.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ modifica los datos que desee del formulario}\tabularnewline
+7.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Da clic en el botón de {[}modificar{]}}\tabularnewline
+8.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Procesa los datos que se modificaron{[}Trayectoria alternativa A{]}{[}Trayectoria alternativa D{]}}\tabularnewline
+9. & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Limpia el formulario}\tabularnewline
+10.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra los datos actualizados en la tabla}\tabularnewline
+11.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Presiona botón de aceptar{[}Trayectoria alternativa C {]}{[}Trayectoria alternativa E {]}}\tabularnewline
+12.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG1 Mensaje de confirmación $"$   La venta <<idVenta>> ha sido modificado exitosamente.$"$  }\tabularnewline
+13.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Vuelve a la pantalla PV1 $"$  Gestionar Ventas$"$  }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+\textit{Trayectoria Alternativa A}
+
+Condición: Si la base de datos no esta disponible.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG4 $"$ Error al conectar con la base de datos$"$  }\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG2 Mensaje de error. $"$ Error al intentar modificar venta 'idVenta'$"$  }\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PV1.2}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa B}
+
+Condición: Si el actor preciona el ícono de cancelar
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Marca el articulo como cancelado}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa al paso 10 de la trayectoría principal}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+\textit{Trayectoria Alternativa C}
+
+Condición: Si el usuario da clic en el botón de cancelar
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra PV1 $"$  Gestionar Ventas$"$  }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa D}
+
+Condición: Si el formato de los datos ingresados son incorrectos.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el MSG7 $"$  Formato incorrecto de los datos.$"$  }\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el MSG2 $"$ Error al intentar modificar venta <<numcliente>>$"$  }\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Regresa al paso 2 de la trayectoria principal}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa E}
+
+Condición: Si el usuario desea modificar o eliminar otro articulo de la venta
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Regresa al paso 3 de la trayectoria principal}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+
+%TrayClientes
+%=================================GESTION CLIENTES
+
+
+
+\subsection{CUV2: Gestionar Clientes}
+
+\textbf{\large Resumen}\\
+ {\large {} {} {} {} {} {} {} Este Caso de uso tiene como objetivo
+permitir al actor registrar, modificar y buscar clientes.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUV2.0: Gestionar Clientes\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Cabrera Alvarez Estefany Viridiana}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Usuario de Ventas, Administrador}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Acceder a opciones de crear, modificar,consultar o buscar clientes. }\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Interfaz Correspondiente PV6.0}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{El usuario de ventas debe estar autentificado}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{La base de datos debe estar disponible}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG4 $"$ Error al conectar con la base de datos$"$  .}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Primario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{En base al funcionamiento}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 2.0: Gestionar Clientes}
+
+
+\label{CUV2.0} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el botón {[}Clientes{]} en la pantalla PV0}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Carga los datos de los clientes registrados en la Base de datos. {[}Trayectoria
+Alternativa A{]}}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PV5}\tabularnewline
+4.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Da clic en el botón {[}Registrar cliente{]}{[}Trayectoria Alternativa B{]}{[}Trayectoria Alternativa C{]}{[}Trayectoria Alternativa D{]}}\tabularnewline
+5.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Extiende a CUV2.1 $"$  Registrar Cliente$"$  }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: No se pudieron cargar los datos de los clientes registrados
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG4 $"$  No se pudo establecer conexión con la base de datos$"$  }\tabularnewline
+2.  & \includegraphics{sistema}  &\multicolumn{1}{p{12cm}}{Regresa a la pantalla PV0$"$  Inicio de Ventas$"$  }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}\newpage{}
+
+\textit{Trayectoria Alternativa B}
+
+Condición: El actor escribe el dato a buscar en el textbox y da clic en buscar.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema} & \multicolumn{1}{p{12cm}}{ Extiende al CUV2.2 $"$  Consultar Clientes$"$  }\tabularnewline
+ 	
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa C}
+
+Condición: El actor da clic en el ícono de {[}cancelar{]} en una cliente.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1. & \includegraphics{sistema} & \multicolumn{1}{p{12cm}}{ Extiende al CUV2.3 $"$  Cancelar Cliente$"$  }\tabularnewline
+ 	
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa D}
+
+Condición: El actor da clic en el ícono de {[}modificar{]} en un cliente.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema} & \multicolumn{1}{p{12cm}}{ Extiende al CUV2.4 $"$  Modificar Venta$"$  }\tabularnewline
+ 	
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+
+\subsubsection{CUV2.1:Registrar Cliente}
+
+\textbf{\large Resumen}\\
+ {\large {} {} {} {} {} {} {} Este Caso de uso tiene como objetivo
+permitir a los actores agregar un cliente al sistema.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUV2.1: Registrar Cliente\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Cabrera Alvarez Estefany Viridiana}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Usuario de Ventas}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Registrar un cliente en el sistema}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Datos de formulaario de Registro}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{El cliente no debe existir}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG2 Mensaje de error, MSG4 Error al conectar con la base de datos, MSG7 'Formato incorrecto de los datos.'.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en el funcionamiento del CU 2.0}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 2.1: Registrar Cliente}
+
+
+\label{CUV2.1} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PV2.1$"$  Registrar Cliente$"$  con el formulario a llenar.}\tabularnewline
+2.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Llena los datos del formulario.}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Da clic en el botón de aceptar. {[}Trayectoria Alternativa A{]}}\tabularnewline
+4.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Verifica si los campos se llenaron correctamente. {[}Trayectoria Alternativa B{]}{[}Trayectoria Alternativa C{]} {[}Trayectoria Alternativa D{]}}\tabularnewline
+5.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG1 Mensaje de confirmación 'El cliente ha sido Agregado exitosamente.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}\newpage{}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: Si el usuario da clic en el botón de cancelar
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Regresa a la pantalla PV5.0}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa B}
+
+Condición: Si la base de datos no esta disponible.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG4 Error al conectar con la base de datos}\tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PV45.1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa C}
+
+Condición: Si el formato de los datos es incorrecto.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el MSG7 'Formato incorrecto de los datos.'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Continua en el paso 3 de la trayectoria principal}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa D}
+
+Condición: No se llenaron todos los campos del formulario.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG8.}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Continua con el paso 3 de la trayectoria principal.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de Trayectoria}\tabularnewline
+\end{tabular}
+
+
+%===================================5.2
+
+
+
+\subsubsection{CUV2.2: Buscar Clientes}
+
+\textbf{\large Resumen}\\
+ {\large {} {} {} {} {} {} {} Este Caso de uso tiene como objetivo
+permitir a los actores consultar los clientes guardadas sistema.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUV2.2 Buscar Clientes\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Cabrera Alvarez Estefany Viridiana}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Usuario de Ventas}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Buscar cliente en el sistema}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{idcliente}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Datos del cliente encontrado}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{La base de datos debe de estar disponible}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG3 $"$  Datos no encontrados$"$  , MSG4 $"$  Error al conectar con la base de datos.$"$  }\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en el funcionamiento del CU2.0}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 2.2: Buscar clientes}
+
+
+\label{CUV2.2} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Verifica si se llenaron correctamente el textbox. {[}Trayectoria Alternativa A{]}}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Busca los datos correspondientes con la busqueda.{[}Trayectoria Alternativa B{]}{[}Trayectoria Alternativa C{]}}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra la pantalla PV2 con los datos filtrados.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: Si el formato de los datos ingresados en el Textbox es
+incorrecto.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el MSG7 $"$  Formato incorrecto de los datos.$"$  }\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Permanese en la pantalla PV2 $"$  Gestionar clientes$"$   con los datos anteriores.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa B}
+
+Condición: Si los datos no fueron encontrados
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG3 $"$  Datos no encontrados$"$  .}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Permanese en la pantalla PV2 $"$  Gestionar clientes$"$   con los datos anteriores.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa C}
+
+Condición: Si la base de datos no esta disponible.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG4 $"$ Error al conectar con la base de datos$"$  }\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Permanece a la pantalla PV2 $"$  Gestionar clientes$"$   con los datos anteriores}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+
+%====================================5.3
+
+
+%============================================ELIMINAR
+
+
+
+\subsubsection{CUV2.3: Cancelar Cliente}
+
+\textbf{\large Resumen}\\
+ {\large {} {} {} {} {} {} {} Este Caso de uso tiene como objetivo
+permitir a los actores marcar como cancelado clientes
+guardados en el sistema.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUG2.3: Cancelar Cliente\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Cabrera Alvarez Estefany Viridiana}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Usuario de Ventas}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Marcar como cancelado un cliente en el sistema}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Interfaz corresponiante a modificar cliente PV6}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{El usuario de ventas debe estar autentificado, El cliente debe existir en el sistema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG4 $"$  Error al conectar con la base de datos$"$  , MSG2 Mensaje de error 'Error al intentar eliminar cliente'}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en el funcionamiento del CUV 2.1}\tabularnewline
+\hline 
+\end{tabular}
+\par \end{centering}
+
+\caption{Caso de Uso 2.3: Cancelar Cliente}
+
+
+\label{CUV2.3} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Selecciona el cliente eliminar.}\tabularnewline
+2.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Presionar ícono de {[}Eliminar{]}}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Marca como eliminado al cliente en la base de datos {[}Trayectoria Alternativa A{]}}\tabularnewline
+4.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG1 Mensaje de confirmación. El cliente ha sido eliminado}\tabularnewline
+5.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra pantalla PV2 $"$  Gestionar clientes$"$  }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: Si la base de datos no esta disponible.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG4 $"$ Error al conectar con la base de datos$"$  }\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG2 $"$  Mensaje de error. 'Error al intentar modificar cliente 'rfccliente'$"$  }\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PV2 $"$  Gestionar clientes$"$  }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+
+%====================================5.4
+
+
+%============================================ELIMINAR
+
+
+
+\subsubsection{CUV2.4: Modificar Clientes}
+
+\textbf{\large Resumen}\\
+ {\large {} {} {} {} {} {} {} Este Caso de uso tiene como objetivo
+permitir a los actores modificar los datos de clientes guardados en el sistema.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUV2.4: ModificarCliente\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Cabrera Alvarez Estefany Viridiana}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Usuario de Ventas}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Modificar un cliente en el sistema}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Cambios en el formulario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{El cliente debe existir
+en el sistema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{La base de datos debe de estar disponible}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{ MSG4 $"$ Error al conectar con la base de datos.$"$   MSG2 Mensaje de error $"$ Error al intentar modificar cliente 'idcliente'$"$  }\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en el funcionamiento del CU2}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 2.4: Modificar Cliente}
+
+
+\label{CUV2.4} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Extrae los datos del cliente a modifiar.{[}Trayectoria alternativa A{]}}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra formulario de modificación con los datos que ya se encuentran registrados PV2.2 $"$  Modificar Cliente$"$  }\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Actor modifica los datos correspondientes}\tabularnewline
+4.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Preciona boton de aceptar{[}Trayectoria alternativa K{]}}\tabularnewline
+5.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Procesa los datos que se modificaronr{[}Trayectoria alternativa A{]}{[}Trayectoria
+alternativa L{]}}\tabularnewline
+6.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG1 Mensaje de confirmación $"$   El cliente <<idcliente>>
+ha sido modificado exitosamente.$"$  }\tabularnewline
+7.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Vuelve a la pantalla PV2 $"$  Gestionar Clientes$"$  }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa J}
+
+Condición: Si la base de datos no esta disponible.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG4 $"$  Error al conectar con la base de datos$"$  }\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG2 Mensaje de error. $"$  Error al intentar modificarr cliente 'idcliente'$"$  }\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PV2 $"$  Gestionar Clientes$"$  }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa B}
+
+Condición: Si el usuario da clic en el botón de cancelar
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Regresa a la pantalla PV2 $"$  Gestionar Clientes$"$  }\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa C}
+
+Condición: Si el formato de los datos ingresados en el Textbox es
+incorrecto.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el MSG7 $"$  Formato incorrecto de los datos.$"$  }\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el MSG2 $"$  Error al intentar eliminar cliente <<numcliente>>$"$  }\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Regresa al paso 1 de la trayectoria principal}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+
+%===============ALAN
+\subsection{CUV3: Reportes }
+
+\textbf{\large Resumen}{\large }\\
+{\large{} Este Caso de uso tiene como objetivo permitir al usuario consultar los reportes.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+%
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUV3: Reportes\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Diaz Rodriguez Kevin Alan}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Usuario de Ventas, Administrador}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Acceder a opciones de consultar reportes.
+}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Interfaz Correspondiente a Consultar reportes}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{Sesion Iniciada}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{La base de datos debe estar disponible}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG3 Datos no encontrados, MSG4 Error al conectar con la base de datos, MSG8 Campos del formulario vacios.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Primario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en el funcionamiento etc.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 3: Reportes}
+\label{tab:CasosdeUso:nombredecasodeuso} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+%Solo hay que cambiar el nombre de la imagen dependiendo de si es actor o sistema
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el botón {[}Reportes{]} en la pantalla PV6.}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra la pantalla correspondiente con el formulario.}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Llena el formulario(selecciona la opción PEDIDOS.{[}Trayectoria Alternativa A{]}}\tabularnewline
+4.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra los estados del pedido.}\tabularnewline
+5.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Selecciona un estado.}\tabularnewline
+6.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Presiona el botón {[}Aceptar{]}.{[}Trayectoria Alternativa B{]}}\tabularnewline
+7.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Verifica si los campos se llenaron correctamente.{[}Trayectoria Alternativa C{]}}\tabularnewline
+8.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Manda solicitud a la base de datos.{[}Trayectoria Alternativa D{]}}\tabularnewline
+9.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Filtra peticiones en la Base de Datos.{[}Trayectoria Alternativa E{]}}\tabularnewline
+10.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra los datos correspondientes a la solicitud realizada.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: Selecciona la opción VENTAS.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.   & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra los estados de ventas.}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Continua con el paso 5.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de Trayectoria}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa B}
+
+Condición: Presiona el botón {[}Cancelar{]}.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.   & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PV0.}\tabularnewline
+&  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso }\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa C}
+
+Condición: No se llenaron todos los campos del formulario.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG8.}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Continua con el paso 3.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de Trayectoria}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa D}
+
+Condición: No se pudo establecer conexion con la base de datos.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG4.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa E}
+
+Condición: Datos solicitados no arrojaron resultados.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG3.}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Continua con el paso 2.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de Trayectoria}\tabularnewline
+\end{tabular}
+\end{document}

@@ -1,0 +1,20 @@
+button.selected {
+	background-color: #F90;
+}
+
+button {
+	background-color: #FC9;
+	border: 2px solid #B43104;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #000;
+	font-size: 12px;
+	height: 24px;
+	width: 200px;
+	line-height: 12px;
+	padding: 10px 6px 20px 6px;
+	text-align:center;
+}
+
+button:hover {
+	background-color: #F63;
+}

@@ -1,0 +1,180 @@
+
+\documentclass[10pt,spanish]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\makeatletter
+
+\providecommand{\tabularnewline}{\\}
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\makeatother
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+	\begin{Large} NOTA: Esta es la plantilla para documentar, la tabla
+	de la trayectoria principal se copia en las alternativas, solo es
+	copiar y pegar dependiendo de si se requiere algo del sistema o algo
+	de un actori
+
+	\end{Large}
+
+
+	\section{Documentación de Casos de Uso}
+
+
+		\subsection{CUX\#.\#: Nombre del caso de uso}
+
+		\textbf{\large Resumen}{\large }\\
+		{\large{} Este CU tiene como objetivo permitir al usuario blablabla
+		blablabla blablabla blablabla blablabla blablabla blablabla blablabla
+		blablabla blablabla blablabla.}\\
+		{\large \par}
+
+		% = = = = = = = = = = = = = = = = = = = = = = = = =
+		%	INICIO DE TABLA
+		% = = = = = = = = = = = = = = = = = = = = = = = = = 
+		\begin{table}[!ht]
+		\begin{centering}
+		\begin{tabular}{|c||c|l|}
+		\hline 
+		\multicolumn{2}{|c|}{Caso de Uso:} & CU\#.\#: Nombre del Caso de Uso\tabularnewline
+		\hline 
+		\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Autor} & El nombre de quien lo hizo.\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Actor} & Usuario\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Propósito} & Permitir al usuario realizar la acción.\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Entradas} & Para realizar ACCIÓN el USUARIO deberá capturar etc etc etc:\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Salidas} & Se mostrara en pantalla el mensaje MSG\# cuando la operación.\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Pre-condiciones} & Que existan bla bla bla bla bla.\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Pos-condiciones} & Se realizara bla bla bla bla bla.\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Errores} & Se mostrara el mensaje bla bla bla.\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Tipo} & Primario | Secundario | etc.\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Fuente} & Basado en el funcionamiento etc.\tabularnewline
+		\hline 
+		\end{tabular}
+		\par\end{centering}
+
+	\caption{Caso de Uso \#: Nombre del CU}
+
+
+	\label{tab:CasosdeUso:nombredecasodeuso} 
+	\end{table}
+
+
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+	%	FIN DE TABLA
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+	%	INICIO DE TRAYECTORIA
+	% = = = = = = = = = = = = = = = = = = = = = = = = = 
+	\textbf{\large Trayectorias del CU}{\large \par}
+
+	\textit{\large Trayectoria Principal}{\large{} }{\large \par}
+
+	\begin{tabular}{ccl}
+	 &  & \tabularnewline
+	1. & \includegraphics{actor} & Solicita accion tal presionando boton{[}botonX{]} de la pantalla\#.\#\tabularnewline
+	2. & \includegraphics{sistema} & Despliega formulario\tabularnewline
+	3. & \includegraphics{sistema} & \tabularnewline
+	4. & \includegraphics{actor} & Hace otra accion\tabularnewline
+	 &  & .... Fin del caso de uso\tabularnewline
+	\end{tabular}
+
+	\textit{Trayectoria Alternativa A} 
+
+	Condición: Especificar condición.
+
+	\newpage{}\textit{Trayectoria Alternativa B} 
+
+	Condición: Especificar condición.
+
+
+	\section{Mensajes}
+
+
+	\subsection{MSG1 Nombre del Mensaje}
+
+	\begin{flushleft}
+	Tipo: Notificación.
+	\par\end{flushleft}
+
+	\begin{flushleft}
+	Estatus: Aprobado.
+	\par\end{flushleft}
+
+	\begin{flushleft}
+	Objetivo: Indicar al usuario que la acción solicitada sea realizada
+	exitosamente.
+	\par\end{flushleft}
+
+	\begin{flushleft}
+	Redacción: ARTICULO ENTIDAD VALOR ha sido OPERACIÓN exitosamente.
+	\par\end{flushleft}
+
+	\begin{flushleft}
+	Parámetros: El mensaje se muestra con base en los siguientes 1:
+	\par\end{flushleft}
+	\begin{description}
+	\item [{ARTICULO}] Añadir descripción. 
+	\item [{ENTIDAD}] Añadir descripción. 
+	\item [{VALOR}] Añadir descripción. 
+	\item [{OPERACIÓN}] Añadir descripción. 
+	\end{description}
+
+	\section{Reglas de Negocio}
+
+
+	\subsection{BR\# Nombre de la RN}
+
+	\begin{flushleft}
+	Regla: BR1 Información Correcta.
+	\par\end{flushleft}
+
+	\begin{flushleft}
+	Tipo: Restricción.
+	\par\end{flushleft}
+
+	\begin{flushleft}
+	Nivel: Obligatorio. Debe cumplirse siempre.
+	\par\end{flushleft}
+
+	\begin{flushleft}
+	Versión: 1.0
+	\par\end{flushleft}
+
+	\begin{flushleft}
+	Estado: Aprobado.
+	\par\end{flushleft}
+
+	\begin{flushleft}
+	Descripción: La información que se proporcione al CVU marcada como
+	obligatoria debe pertenecer al tipo de dato especificado \ldots{}. 
+	\par\end{flushleft}
+
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+	%	FIN DEL DOCUMENTO
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\end{document}

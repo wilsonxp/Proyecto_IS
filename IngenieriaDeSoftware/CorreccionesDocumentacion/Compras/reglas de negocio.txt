@@ -1,0 +1,6 @@
+BR X Bloqueo de un proveedor
+Tipo: Restricción
+Nivel: Obligatorio
+Versión:1.0
+Estado: Propuesta
+Descripción: Un proveedor pasa automaticamente a ser bloqueado cuando tiene 3 reportes, y es la única manera que puede entrar en este estado.

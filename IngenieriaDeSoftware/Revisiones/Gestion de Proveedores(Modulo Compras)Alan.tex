@@ -1,0 +1,328 @@
+
+\documentclass[10pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+
+\usepackage{array}
+
+\providecommand{\tabularnewline}{\\}
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+
+\section{Revisión de Trayectorias: Modulo de Compras}
+
+\subsection{CUCO01: Gestionar Proveedores}
+Numero de Errores: 9\tabularnewline
+Resumen: Explica bien que realiza el caso de uso.
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & CUCO01: Gestionar Proveedores\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizador por:  & Ricardo Jimenez Navarro\tabularnewline
+\hline 
+Revisado por:  & Diaz Rodriguez Kevin Alan\tabularnewline
+\hline 
+Próposito:  & Sin Observaciones.\tabularnewline
+\hline 
+Entradas:  & Debe ir 'Sesion Iniciada', no la propuesta.\tabularnewline
+\hline 
+Salidas:  & Sin Observaciones.\tabularnewline
+\hline 
+Pre-Condiciones  & Sin Observaciones.\tabularnewline
+\hline 
+Pos-Condiciones  & No se definio esta Pos-Condicion  
+\begin{itemize}
+\item La base de datos debe estar disponible.\end{itemize}
+\tabularnewline
+\hline 
+Errores:  & No se definio este mensaje de error. (Puede existir, ya que al inicio cargan los 5 primeros proveedores). 
+\begin{itemize}
+\item MJ3: No hay conexion a la base de datos.\end{itemize}
+\tabularnewline
+\hline  
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+Observaciones trayectoria principal. %
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+3. & El boton de la pantalla PC1 dice Agregar Proveedor y el CU dice Registrar Proveedor.\tabularnewline
+....  &  Debe decir 'fin del caso de uso', NO 'fin de trayectoria'.\tabularnewline
+\end{longtable}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: La condicion no es la adecuada.
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & Este paso debe ser la condicion de la trayectoria y comenzar con el paso 2.\tabularnewline
+\end{longtable}
+
+\textit{Trayectoria Alternativa B}
+
+Condición: La condicion no es la adecuada.
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & Este paso debe ser la condicion de la trayectoria y comenzar con el paso 2.\tabularnewline
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\newpage{}
+
+
+\subsection{CUCO01.1: Agregar Proveedores}
+Numero de Errores: 11\tabularnewline
+Resumen: Debe cambiar 'Registrar Proveedores' a ' Agregar Proveedores'.
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & CUCO01.1: Agregar Proveedores\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizador por:  & Ricardo Jimenez Navarro\tabularnewline
+\hline 
+Revisado por:  & Diaz Rodriguez Kevin Alan\tabularnewline
+\hline 
+Próposito:  & Sin Observaciones.\tabularnewline
+\hline 
+Entradas:  & Seria mejor solo poner 'LLenar formulario', en lugar de todos los puntos.\tabularnewline
+\hline 
+Salidas:  & Sin Observaciones.\tabularnewline
+\hline 
+Pre-Condiciones  & No debe ir la Pre-Condicion propuesta.
+\begin{itemize}
+\item El actor debe estar autentifcado como Administrador de Compras.(No debe de ir ya que al entrar a esta opcion el actor previamente se autentifico.
+\item No se definio esta Pre-Condicion: 'El proveedor no debe existir', ya que
+podria intentar registrarlo dos veces.\end{itemize}
+\tabularnewline
+\hline 
+Pos-Condiciones  & No se definio esta Pos-Condicion  
+\begin{itemize}
+\item La base de datos debe estar disponible.\end{itemize}
+\tabularnewline
+\hline 
+Errores:  & En errores se debe de poner el codigo de cada
+mensaje de error, esto solo para su mejor entendimiento.\tabularnewline
+\hline  
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+Observaciones trayectoria principal. %
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1. & Ya se realizo en el CUCO01.\tabularnewline
+2. & Ya se realizo en el CUCO01.\tabularnewline
+3. & Debe comenzar en este paso, ya que es tu continuacion (extends) del caso CUCO01.\tabularnewline
+\end{longtable}
+
+\textit{Trayectoria Alternativa C}
+
+Condición: Sin Observaciones.
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+2.  & Este paso es igual al paso 3.\tabularnewline
+3.  & Este paso es igual al paso 2.\tabularnewline
+\end{longtable}
+
+\textit{Trayectoria Alternativa A,B,D}
+: Sin Observaciones. 
+\newpage{}
+
+
+\subsection{CUCO01.2: Modificar Proveedores}
+Numero de Errores: 10\tabularnewline
+Resumen: Explica bien que realiza el caso de uso.
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & CUCO01.2: Modificar Proveedores\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizador por:  & Ricardo Jimenez Navarro\tabularnewline
+\hline 
+Revisado por:  & Diaz Rodriguez Kevin Alan\tabularnewline
+\hline 
+Próposito:  & Sin Observaciones.\tabularnewline
+\hline 
+Entradas:  & Solo debe ir la primera entrada'El actor teclea el parametro de busqueda del proveedor', la segunda entrada ya se realiza en la trayectoria principal.\tabularnewline
+\hline 
+Salidas:  & Sin Observaciones.\tabularnewline
+\hline 
+Pre-Condiciones  & Solo debe ir la Pre-Condicion 2.
+\begin{itemize}
+\item El proveedor del cual se quiere modifcar la informacion debe
+existir en el sistema.\end{itemize}
+\tabularnewline
+\hline 
+Pos-Condiciones  & No se definio esta Pos-Condicion  
+\begin{itemize}
+\item La base de datos debe estar disponible.\end{itemize}
+\tabularnewline
+\hline 
+Errores:  & 
+\begin{itemize}
+\item En errores se debe de poner el codigo de cada
+mensaje de error, esto solo para su mejor entendimiento.
+\item No se definio el mensaje de error MJ5 'No hay informacion'.\end{itemize}
+\tabularnewline
+\hline
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+Observaciones trayectoria principal. %
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1. & Debe decir el codigo de la pantalla en este caso PC0. Debe contener la Trayectoria alternativa D.\tabularnewline
+5. & La Trayectoria alternativa E no debe ir, ya que previamente lo busco en el paso 2, y si llego al paso 5 quiere decir que si lo encontro. \tabularnewline
+6. & ¿Cual es la PANTALLA2?.\tabularnewline
+\end{longtable}
+
+\textit{Trayectoria Alternativa E}
+
+Condición: Error de redaccion.\tabularnewline
+
+\textit{Trayectoria Alternativa A,B,C,D}: Sin Observaciones. 
+
+\newpage{}
+
+
+\subsection{CUCO01.3: Eliminar Proveedores}
+Numero de Errores: 8\tabularnewline
+Resumen: Explica bien que realiza el caso de uso.
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & CUCO01.3: Eliminar Proveedores\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizador por:  & Ricardo Jimenez Navarro\tabularnewline
+\hline 
+Revisado por:  & Diaz Rodriguez Kevin Alan\tabularnewline
+\hline 
+Próposito:  & Sin Observaciones.\tabularnewline
+\hline 
+Entradas:  & Sin Observaciones.\tabularnewline
+\hline 
+Salidas:  & Sin Observaciones.\tabularnewline
+\hline 
+Pre-Condiciones  & Solo debe ir la Pre-Condicion 2.
+\begin{itemize}
+\item El proveedor que se quiere eliminar debe existir en el sistema.\end{itemize}
+\tabularnewline
+\hline 
+Pos-Condiciones  & No se definio esta Pos-Condicion  
+\begin{itemize}
+\item La base de datos debe estar disponible.\end{itemize}
+\tabularnewline
+\hline 
+Errores:  & 
+\begin{itemize}
+\item En errores se debe de poner el codigo de cada
+mensaje de error, esto solo para su mejor entendimiento.
+\item No se definio el mensaje de error MJ5 'No hay informacion'.\end{itemize}
+\tabularnewline
+\hline
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+Observaciones trayectoria principal. %
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1. & Debe decir el codigo de la pantalla en este caso PC0. Debe contener la Trayectoria alternativa B.\tabularnewline
+5. & La Trayectoria alternativa C no debe ir, ya que previamente lo busco en el paso 2, y si llego al paso 5 quiere decir que si lo encontro. \tabularnewline
+\end{longtable}
+
+\textit{Trayectoria Alternativa C}
+
+Condición: Error de redaccion.\tabularnewline
+
+\textit{Trayectoria Alternativa A,B}
+
+Sin Observaciones.
+\end{document}

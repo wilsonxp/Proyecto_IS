@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.content {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	width: 100%;
+	bottom: 50px;
+	overflow: hidden;
+	-webkit-font-smoothing: subpixel-antialiased;
+}

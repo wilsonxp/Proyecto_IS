@@ -1,0 +1,891 @@
+\documentclass[10pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\makeatletter
+
+\providecommand{\tabularnewline}{\\}
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\makeatother
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+
+	\section{Documentación de Casos de Uso}
+
+		\subsection{CUP1: Consultar estado del almacén}
+
+		\textbf{\large Resumen}{\large }
+		{Este CU tiene como objetivo permitir al usuario de producción consultar el estado del almacén con el fin de saber si empezar o no la producción.}\\
+		{\large \par}
+
+		% = = = = = = = = = = = = = = = = = = = = = = = = =
+		%	INICIO DE TABLA
+		% = = = = = = = = = = = = = = = = = = = = = = = = = 
+		\begin{table}[!ht]
+		\begin{centering}
+		\begin{tabular}{|c||c|l|}
+		\hline 
+		\multicolumn{2}{|c|}{Caso de Uso:} & CUP1: Consultar estado del almacén\tabularnewline
+		\hline 
+		\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Actor} & Usuario de Producción\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Propósito} & Permitir al usuario consultar el estado del almacén.\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Entradas} & Ninguna\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Salidas} & Se mostrara en pantalla el mensaje MSGP1: Disponibilidad en Almacén.\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Pre-condiciones} &  \multicolumn{1}{p{12cm}|}{Que existan registros de nivel de capacidad en el almacén.\newline
+		Debe existir conexion con la BD.}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Pos-condiciones} & Se mostrara en pantalla el mensaje MSGP1: Disponibilidad en Almacén.\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{12cm}|}{Se mostrara el mensaje MSGP2: Información de Almacén no disponible, cuando no se tengan registros del almacén.\newline
+		MSG4 Error al obtener conexión con la base de datos}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Tipo} & Principal\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Fuente} & -\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{RN Relacionada} & Este CU satisface la BR3 Limite de almacén\tabularnewline
+		\hline 		
+		\multicolumn{2}{|c|}{Autor} & Rueda López Miguel Angel\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Fecha} & 26 de febrero de 2013\tabularnewline
+		\hline 				
+		\end{tabular}
+		\par\end{centering}
+		
+	\caption{CUP1 Consultar estado del almacén}
+	\label{tab:CasosdeUso:nombredecasodeuso} 
+	\end{table}
+
+
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+	%	FIN DE TABLA
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+	%	INICIO DE TRAYECTORIA
+	% = = = = = = = = = = = = = = = = = = = = = = = = = 
+	\textbf{\large Trayectorias del CU}{\large \par}
+
+	\textit{\large Trayectoria Principal}{\large{} }{\large \par}
+
+	\begin{tabular}{ccl}
+	&  & \tabularnewline
+	1. & \includegraphics{actor} & solicita consultar el estado del almacén mediante el botón [Consultar estado del\tabularnewline
+	& & Almacén] de la pantalla PP2 Consultar estado del almacén.\tabularnewline
+	2. & \includegraphics{sistema} &  busca los registros correspondientes del estado del almacén más reciente. \tabularnewline
+	& & [Trayectoria A][Trayectoria B]\tabularnewline
+	3. & \includegraphics{sistema} & muestra el mensaje MSGP1: Disponibilidad en el almacén.\tabularnewline
+	 &  & .... Fin del caso de uso\tabularnewline \\
+	\end{tabular}
+	\newpage
+	\textit{Trayectoria Alternativa A}\\
+	Condición: No se encuentra la información de disponibilidad del almacén.\\
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	A-1 & \includegraphics{sistema} & Muestra el mensaje MSGP2: Información de Almacén no disponible en la pantalla \tabularnewline
+	& & PP1 Menú principal de producción.\tabularnewline
+	A-2 & & Fin del Caso de Uso\tabularnewline
+	\end{tabular}
+	\newline
+	\textit{Trayectoria Alternativa B}\\
+	Condición: No se pudo establecer conexión con la BD.\\
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	B-1 & \includegraphics{sistema} & Muestra el mensaje de error MSG4 'No se pudo establecer conexión con la base\tabularnewline
+	& & de datos.\tabularnewline
+	B-2 & \includegraphics{sistema} & Regresa a la pantalla PP1 Menú principal de producción.\tabularnewline
+	B-3 & & Fin del Caso de Uso\tabularnewline	
+	\end{tabular}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% Consultar pedidos en espera
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+		\newpage
+		\subsection{CUP2: Consultar pedidos en espera.}
+
+		\textbf{\large Resumen}{\large }\\
+		{Este CU tiene como objetivo permitir al usuario de producción consultar los pedidos que se tienen pendientes.}\\
+		{\large \par}
+
+		% = = = = = = = = = = = = = = = = = = = = = = = = =
+		%	INICIO DE TABLA
+		% = = = = = = = = = = = = = = = = = = = = = = = = = 
+		\begin{table}[!ht]
+		\begin{centering}
+		\begin{tabular}{|c||c|l|}
+		\hline 
+		\multicolumn{2}{|c|}{Caso de Uso:} & CUP2: Consultar pedidos en espera.\tabularnewline
+		\hline 
+		\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Actor} & Usuario de Producción\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{12cm}|}{Permitir al usuario consultar los pedidos que se tienen en espera por falta de producción o por motivo de cambio.}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{12cm}|}{Para llevar a cabo esta consulta, el usuario debe seleccionar el parámetro de búsqueda, que podría ser:\newline
+•	Pedidos pendientes\newline
+•	Pedidos para cambio\newline
+En caso de seleccionar Pedidos para cambio, el usuario ingresara la fecha en que se realizó esa venta, para comprobar la congruencia del pedido en espera.
+}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{12cm}|}{Se mostrara en pantalla una tabla que contenga información del pedido, acorde a la BRP2 Contenido del pedido:\newline
+•	Numero de pedido\newline
+•	Nombre del cliente\newline
+•	Descripción del pedido\newline
+Cuando no se cuente con pedidos pendientes se desplegara el mensaje MSGP3: No existen pedidos pendientes.
+}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{12cm}|}{Que existan registros de pedidos pendientes.\newline
+Que exista dentro del catálogo de parámetros, el parámetro solicitado.\newline
+		Debe existir conexion con la BD.}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Pos-condiciones} & Se mostrara en pantalla el mensaje MSGP3: No existen pedidos pendientes.\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{12cm}|}{Se mostrara el mensaje MSG3: Datos no encontrados, cuando no existan registros sobre pedidos.\newline
+		MSG4 Error al obtener conexión con la base de datos}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Tipo} & Principal\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Fuente} & Basado en el funcionamiento del CUV1.1 Registrar Venta\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{RN Relacionada} & \multicolumn{1}{p{12cm}|}{Este CU satisface la BR4 Cliente de prioritario, en relación con los cambios en los pedidos.}\tabularnewline
+		\hline 		
+		\multicolumn{2}{|c|}{Autor} & Rueda López Miguel Angel\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Fecha} & 26 de febrero de 2013\tabularnewline
+		\hline 				
+		\end{tabular}
+		\par\end{centering}
+		
+	\caption{CUP2 Consultar pedidos en espera}
+	\label{tab:CasosdeUso:nombredecasodeuso} 
+	\end{table}
+
+
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+	%	FIN DE TABLA
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+	%	INICIO DE TRAYECTORIA
+	% = = = = = = = = = = = = = = = = = = = = = = = = = 
+	\newpage
+	\textbf{\large Trayectorias del CU}{\large \par}
+	\textit{\large Trayectoria Principal}{\large{} }{\large \par}
+	\begin{tabular}{ccl}
+	 &  & \tabularnewline
+	1. & \includegraphics{actor} & selecciona la opción ‘Pedidos pendientes’ de la lista ‘Seleccionar un parámetro de\tabularnewline
+	& &  búsqueda’ de la pantalla PP3 Consultar pedidos en espera. [Trayectoria A]\tabularnewline
+\tabularnewline
+	2. & \includegraphics{actor} &  solicita consultar pedidos en espera mediante el botón [Consultar Pedidos]\tabularnewline
+	3. & \includegraphics{sistema} & verifica que el parámetro seleccionado sea válido según lo especificado en la BRP1\tabularnewline 
+	& & Pedidos en espera. [Trayectoria B]\tabularnewline
+	4. & \includegraphics{sistema} & busca los registros correspondientes al parámetro de búsqueda seleccionado. \tabularnewline
+	& &  [Trayectoria C][Trayectoria D]\tabularnewline
+	5. & \includegraphics{sistema} & despliega una tabla mostrando los datos correspondientes de los pedidos según lo\tabularnewline
+	& & especificado en la BRP2 Contenido del Pedido.\tabularnewline
+	 &  & .... Fin del caso de uso\tabularnewline \\
+	\end{tabular}
+
+	\textit{Trayectoria Alternativa A}\\
+	Condición: El usuario selecciona la opción ‘Pedidos para cambio’ de la lista ‘Seleccionar parámetro de búsqueda.\\
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	A-1 & \includegraphics{actor} & Ingresa la fecha de Venta en el campo ‘Seleccionar fecha de Venta’ en la pantalla\tabularnewline
+	& & PP3 Consultar pedidos en espera. [Trayectoria A.1] \tabularnewline
+	A-2 & \includegraphics{sistema} & Continúa en el paso 2 de la trayectoria principal.\tabularnewline	
+	 & & .... Fin del Caso de Uso\tabularnewline
+	\end{tabular}
+
+	\textit{Trayectoria Alternativa A.1}\\
+	Condición: La fecha ingresada de venta no es valida.\\
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	A.1-1 & \includegraphics{sistema} & Muestra en la pantalla PP3 Consultar pedidos en espera el MSG8 Fecha\tabularnewline
+	& & Incorrecta.\tabularnewline 
+	A.1-2 & \includegraphics{sistema} & Solicita verificar la fecha ingresada por el usuario.\tabularnewline	
+	 & & .... Fin del Caso de Uso\tabularnewline
+	\end{tabular}
+
+	\textit{Trayectoria Alternativa B}\\
+	Condición: No existen elementos en el catálogo de parámetros ‘Seleccionar parámetro de búsqueda.\\
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	B-1 & \includegraphics{sistema} & Muestra en la pantalla PP3 Consultar pedidos en espera el MSG3 Datos no\tabularnewline
+	& &  encontrados\tabularnewline
+	B-2 & & .... Fin del Caso de Uso\tabularnewline
+	\end{tabular}
+\newpage
+	\textit{Trayectoria Alternativa C}\\
+	Condición: No existen registros de pedidos pendientes en espera.\\
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	C-1 & \includegraphics{sistema} & Muestra en la pantalla PP3 Consultar pedidos en espera el MSGP3 No existen\tabularnewline
+	& & pedidos pendientes.\tabularnewline
+	C-2 & & .... Fin del Caso de Uso\tabularnewline
+	\end{tabular}
+	
+	\textit{Trayectoria Alternativa D}\\
+	Condición: No se pudo establecer conexión con la BD.\\
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	D-1 & \includegraphics{sistema} & Muestra el mensaje de error MSG4 'No se pudo establecer conexión con la base\tabularnewline
+	& & de datos.\tabularnewline
+	D-2 & \includegraphics{sistema} & Regresa a la pantalla PP1 Menú principal de producción.\tabularnewline
+	D-3 & & Fin del Caso de Uso\tabularnewline	
+	\end{tabular}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% Consultar disponibilidad de Ingredientes
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+\newpage
+		\subsection{CUP3: Consultar disponibilidad de ingredientes.}
+
+		\textbf{\large Resumen}{\large }\\
+		{Este CU tiene como objetivo permitir al usuario de producción consultar la disponibilidad de los ingredientes utilizados en la producción.}\\
+		{\large \par}
+		\begin{table}[!ht]
+		\begin{centering}
+		\begin{tabular}{|c||c|l|}
+		\hline 
+		\multicolumn{2}{|c|}{Caso de Uso:} & CUP3: Consultar disponibilidad de ingredientes.\tabularnewline
+		\hline 
+		\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Actor} & Usuario de Producción\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{12cm}|}{Permitir al usuario consultar la disponibilidad de un cierto ingrediente utilizado en la producción.}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{12cm}|}{El usuario seleccionara mediante un elemento checkbox el criterio de consulta que puede ser de 2 tipos:\newline
+\begin{itemize}
+\item Consulta por producto
+\item Consulta por búsqueda
+\end{itemize}
+Al seleccionar el criterio por producto seleccionara en 1 catalogo el ingrediente deseado.\newline
+Al seleccionar el criterio de búsqueda ingresara mediante el teclado el nombre del ingrediente a consultar.}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{12cm}|}{Se mostrara una tabla con resultados de acuerdo a la BRP3 Búsqueda de ingredientes.\newline
+}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{12cm}|}{Debe existir un catalogo de ingredientes.\newline
+		Debe existir el ingrediente a buscar.\newline
+		Debe existir conexión con la BD.}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{12cm}|}{Se desplegara una tabla con los resultados de la consulta ajustándose a la BRP3 Búsqueda de ingredientes}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{12cm}|}{Se mostrara el mensaje MSG3 Datos no encontrados.\newline
+		MSG4 Error al obtener conexión con la base de datos}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Tipo} & Principal\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{12cm}|}{-}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{RN Relacionada} & \multicolumn{1}{p{12cm}|}{-}\tabularnewline
+		\hline 		
+		\multicolumn{2}{|c|}{Autor} & Rueda López Miguel Angel\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Fecha} & 26 de febrero de 2013\tabularnewline
+		\hline 				
+		\end{tabular}
+		\par\end{centering}
+		
+	\caption{CUP3 Consultar disponibilidad de ingredientes}
+	\label{tab:CasosdeUso:nombredecasodeuso} 
+	\end{table}
+	\newpage
+	\textbf{\large Trayectorias del CU}{\large \par}
+	\textit{\large Trayectoria Principal}{\large{} }{\large \par}
+	\begin{tabular}{ccl}
+	 &  & \tabularnewline
+	1. & \includegraphics{actor} & selecciona la opción ‘Consulta por ingrediente’ del campo 'Tipo de consulta' \tabularnewline
+	& &  de la pantalla PP4 Consultar disponibilidad de ingredientes. [Trayectoria A]\tabularnewline
+\tabularnewline
+	2. & \includegraphics{sistema} &  carga el catalogo de ingredientes de acuerdo al registro mas reciente.[Trayectoria B]\tabularnewline
+	3. & \includegraphics{actor} &  selecciona un ingrediente del catalogo de ingredientes.\tabularnewline
+	4. & \includegraphics{actor} & solicita consultar disponibilidad mediante el botón [Consultar disponibilidad]\tabularnewline 
+	5. & \includegraphics{sistema} & busca los registros correspondientes al parámetro de búsqueda seleccionado. \tabularnewline
+	6. & \includegraphics{sistema} & despliega una tabla mostrando los datos correspondientes del ingrediente según lo\tabularnewline
+	& & especificado en la BRP3 Búsqueda de ingrediente. [Trayectoria C]\tabularnewline
+	 &  & .... Fin del caso de uso\tabularnewline \\
+	\end{tabular}
+
+	\textit{Trayectoria Alternativa A}\\
+	Condición: El usuario selecciona la opción 'Consulta por búsqueda' en la pantalla PP4 Consultar disponibilidad de ingredientes.\\
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	A-1 & \includegraphics{actor} & Ingresa el nombre del ingrediente a buscar en el campo 'Ingresa el nombre del ingrediente'\tabularnewline
+	& & [Trayectoria A.1]\tabularnewline
+	A-2 & \includegraphics{sistema} & Continúa en el paso 3 de la trayectoria principal.\tabularnewline	
+	 & & .... Fin del Caso de Uso\tabularnewline
+	\end{tabular}
+	
+	\textit{Trayectoria Alternativa A.1}\\
+	Condición: El nombre de producto ingresado no existe.\\
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	A.1-1 & \includegraphics{sistema} & Muestra en la pantalla PP4 Consultar disponibilidad de ingredientes el MSG3\tabularnewline
+	& &  Datos no encontrados\tabularnewline 
+	A.1-2 & \includegraphics{sistema} & Solicita ingresar nuevamente el nombre del ingrediente.\tabularnewline	
+	 & & .... Fin del Caso de Uso\tabularnewline
+	\end{tabular}
+	
+	\textit{Trayectoria Alternativa B}\\
+	Condición: No se pudo establecer conexión con la BD.\\
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	B-1 & \includegraphics{sistema} & Muestra el mensaje de error MSG4 'No se pudo establecer conexión con la base\tabularnewline
+	& & de datos.\tabularnewline
+	B-2 & \includegraphics{sistema} & Regresa a la pantalla PP1 Menú principal de producción.\tabularnewline
+	B-3 & & Fin del Caso de Uso\tabularnewline	
+	\end{tabular}
+	
+	\textit{Trayectoria Alternativa C}\\
+	Condición: No existen registros del ingrediente solicitado.\\
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	C-1 & \includegraphics{sistema} & Muestra en la pantalla PP4 Consultar disponibilidad de ingredientes el MSG3\tabularnewline
+	& &  Datos no encontrados.\tabularnewline
+	C-2 & & .... Fin del Caso de Uso\tabularnewline
+	\end{tabular}
+	
+
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% ASIGNAR LINEAS DE PRODUCCION
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+\newpage
+\subsection{CUP4: Asignar Linea de Producción.}
+
+	\textbf{\large Resumen}{\large }\\
+	{Este CU tiene como objetivo asociar una linea de producción directamente con las unidades de un producto a realizar.}\\
+	{\large \par}
+	\begin{table}[!ht]
+		\begin{centering}
+		\begin{tabular}{|c||c|l|}
+		\hline 
+		\multicolumn{2}{|c|}{Caso de Uso:} & CUP4: Asignar Linea de Producción.\tabularnewline
+		\hline 
+		\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Actor} & Usuario de Producción, Administrador\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{12cm}|}{Asociar una linea de producción a un producto especifico.}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{12cm}|}{Para llevar a cabo la asignación de lineas de producción es necesario llenar un formulario que debe solicitar la siguiente información:\newline
+		\begin{itemize}
+		\item Fecha de elaboración
+		\item Linea de Producción
+		\item Producto Asociado
+		\item Cantidad de producto
+		\item Encargado de producción
+		\end{itemize}}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{12cm}|}{Se mostrara el MSG1 Mensaje de confirmación.}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{12cm}|}{La linea de producción debe esta habilitada.\newline
+		Debe haber espacio en el almacén para la producción.\newline
+		El encargado a seleccionar debe estar disponible.\newline
+		Debe existir conexión con la BD.}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{12cm}|}{Actualizar el registro de producción. \newline
+		Establecer la producción en la linea especificada.}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{12cm}|}{MSG2 Mensaje de Error\newline
+		MSG4 Error al obtener conexión con la base de datos}\tabularnewline		
+		\hline 
+		\multicolumn{2}{|c|}{Tipo} & Primario\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{12cm}|}{-}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{RN Relacionada} & \multicolumn{1}{p{12cm}|}{Relacionado con las BR1 y BR3}\tabularnewline
+		\hline 		
+		\multicolumn{2}{|c|}{Autor} & Rueda López Miguel Angel\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Fecha} & 26 de febrero de 2013\tabularnewline
+		\hline 				
+		\end{tabular}
+		\par\end{centering}
+		
+	\caption{CUP4 Asignar linea de producción}
+	\label{tab:CasosdeUso:nombredecasodeuso} 
+	\end{table}
+	
+	\newpage
+	\textbf{\large Trayectorias del CU}{\large \par}
+	\textit{\large Trayectoria Principal}{\large{} }{\large \par}
+	\begin{tabular}{ccl}
+	 &  & \tabularnewline
+	1. & \includegraphics{actor} & selecciona la fecha de asignación en el campo 'Ingresa la fecha de elaboración'\tabularnewline
+	& &   de la pantalla PP5 Asignar Linea de Producción. \tabularnewline
+	2. & \includegraphics{actor} & selecciona la linea de producción a asignar en el catalogo 'Selecciona la linea\tabularnewline 
+	& &  de producción asociada' [Trayectoria A] \tabularnewline
+	3. & \includegraphics{sistema} & realiza una carga del catalogo de Encargados de la linea de producción.\tabularnewline
+	& & [Trayectoria B]\tabularnewline
+	4. & \includegraphics{actor} & selecciona al encargado de la linea en el catalogo 'Selecciona el encargado de\tabularnewline
+	& &  producción'.\tabularnewline		
+	5. & \includegraphics{actor} & selecciona el producto que se va a asociar en el catalogo 'Selecciona el producto\tabularnewline
+	& &  asociado' \tabularnewline
+	6. & \includegraphics{sistema} & realiza una carga del catalogo de unidades de producción por producto.\tabularnewline
+	& & [Trayectoria B]\tabularnewline
+	7. & \includegraphics{actor} & selecciona la cantidad de unidades de producto en el catalogo 'Selecciona la cantidad\tabularnewline
+	& & de producto'\tabularnewline
+	8. & \includegraphics{sistema} & verifica que se hayan ingresado todos los datos solicitados en los campos requeridos.\tabularnewline
+	& & [Trayectoria C]\tabularnewline
+	9. & \includegraphics{sistema} & regresa a la pantalla PP1 Menú Principal de Producción y muestra el mensaje MSG1\tabularnewline
+	& &  Mensaje de Confirmación. [Trayectoria D]\tabularnewline	 
+	 &  & .... Fin del caso de uso\tabularnewline \\
+	\end{tabular}			
+	
+	\textit{Trayectoria Alternativa A}\\
+	Condición: No se encontraron elementos registrados en el catalogo de lineas de producción.\\
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	A-1 & \includegraphics{sistema} & Muestra el mensaje MSG3 Datos no encontrados en la pantalla PP1 Menú  \tabularnewline
+	& & principal de Producción.\tabularnewline	
+	A-2 & & .... Fin del Caso de Uso\tabularnewline
+	\end{tabular}	
+	\newpage
+	\textit{Trayectoria Alternativa B}\\
+	Condición: No se pudo establecer conexión con la BD.\\
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	B-1 & \includegraphics{sistema} & Muestra el mensaje de error MSG4 'No se pudo establecer conexión con la base\tabularnewline
+	& & de datos.\tabularnewline
+	B-2 & \includegraphics{sistema} & Regresa a la pantalla PP1 Menú principal de producción.\tabularnewline
+	B-3 & & Fin del Caso de Uso\tabularnewline	
+	\end{tabular}	
+
+	
+	\textit{Trayectoria Alternativa C}\\
+	Condición: El usuario no selecciono una opción en un campo solicitado.\\
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	C-1 & \includegraphics{sistema} & muestra el mensaje MSGP4 Campo Requerido.\tabularnewline	
+	C-2 & \includegraphics{sistema} & solicita ingresar el o los campo(s) faltante(s).\tabularnewline		
+	C-3 & & continua en el paso 2 de la trayectoria principal\tabularnewline
+	\end{tabular}	
+	
+	\textit{Trayectoria Alternativa D}\\
+	Condición: No se pudo asignar la linea de producción.\\
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	D-1 & \includegraphics{sistema} & muestra el mensaje MSG2 Mensaje de Error.\tabularnewline	
+	D-2 & \includegraphics{sistema} & regresa a la pantalla PP1 Menú principal de Producción.\tabularnewline		
+	D-3 & & .... Fin del Caso de Uso\tabularnewline
+	\end{tabular}				
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% GESTIONAR LOTES 5
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+\newpage
+\subsection{CUP5: Gestionar Lotes}
+
+	\textbf{\large Resumen}{\large }\\
+	{Este CU tiene como objetivo permitir al usuario de producción o administrador mostrar un menú con opciones para consultar o registrar un lote.}\\
+	{\large \par}
+	\begin{table}[!ht]
+		\begin{centering}
+		\begin{tabular}{|c||c|l|}
+		\hline 
+		\multicolumn{2}{|c|}{Caso de Uso:} & CUP5: Gestionar Lotes.\tabularnewline
+		\hline 
+		\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Actor} & Usuario de Producción, Administrador\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{12cm}|}{Mostrar al usuario un menú para consultar o registrar un lote.}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{12cm}|}{Ninguna}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{12cm}|}{Ninguna}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{12cm}|}{Ninguna}
+\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{12cm}|}{Realizar cambios en el registro de lotes}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{12cm}|}{-}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Tipo} & Primario\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{12cm}|}{-}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{RN Relacionada} & \multicolumn{1}{p{12cm}|}{Relacionado con las BR1, BR3 y BRP4}\tabularnewline
+		\hline 		
+		\multicolumn{2}{|c|}{Autor} & Rueda López Miguel Angel\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Fecha} & 26 de febrero de 2013\tabularnewline
+		\hline 				
+		\end{tabular}
+		\par\end{centering}
+		
+	\caption{CUP5 Gestionar Lotes}
+	\label{tab:CasosdeUso:nombredecasodeuso} 
+	\end{table}
+	\textbf{\large Trayectorias del CU}{\large \par}
+	\textit{\large Trayectoria Principal}{\large{} }{\large \par}
+	\begin{tabular}{ccl}
+	 &  & \tabularnewline
+	1. & \includegraphics{sistema} & Muestra la pantalla PP6 Gestionar Lotes \tabularnewline
+	 &  & .... Fin del caso de uso\tabularnewline \\
+	\end{tabular}		
+	\newpage
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% REGISTRAR LOTE 5.1
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+	\subsection{CUP5.1: Registrar Lote.}
+
+	\textbf{\large Resumen}{\large }\\
+	{Este CU tiene como objetivo permitir al usuario de producción o administrador registrar la producción de un nuevo lote.}\\
+	{\large \par}
+	\begin{table}[!ht]
+		\begin{centering}
+		\begin{tabular}{|c||c|l|}
+		\hline 
+		\multicolumn{2}{|c|}{Caso de Uso:} & CUP5.1: Registrar Lote.\tabularnewline
+		\hline 
+		\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Actor} & Usuario de Producción, Administrador\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{12cm}|}{Permitir al usuario registrar un nuevo lote.}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{12cm}|}{Para llevar a cabo el registro de un nuevo lote el usuario deberá ingresar la siguiente información:\newline
+		\begin{itemize}
+		\item Producto asociado al Lote
+		\item Fecha de elaboración del Lote
+		\item Linea de producción asociada
+		\end{itemize}
+		}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{12cm}|}{Se mostrara el MSG1 Mensaje de Confirmación cuando se haya completado el registro.
+}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{12cm}|}{Debe haber terminado completamente la producción del lote.}
+\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{12cm}|}{Se agregara un nuevo registro con la información del lote creado.\newline
+		Se mostrara el MSG1 Mensaje de Confirmación.\newline
+		Se generara un numero identificador único para el lote.\newline
+		Se actualizara la información de los lotes.}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{12cm}|}{Se mostrara el mensaje MSG2 Mensaje de Error.}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Tipo} & Secundario\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{12cm}|}{Basado en el funcionamiento del CUP5 Gestionar Lotes.}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{RN Relacionada} & \multicolumn{1}{p{12cm}|}{Relacionado con las BR1, BR3 y BRP4}\tabularnewline
+		\hline 		
+		\multicolumn{2}{|c|}{Autor} & Rueda López Miguel Angel\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Fecha} & 26 de febrero de 2013\tabularnewline
+		\hline 				
+		\end{tabular}
+		\par\end{centering}
+		
+	\caption{CUP5.1 Registrar Lote}
+	\label{tab:CasosdeUso:nombredecasodeuso} 
+	\end{table}
+	\newpage
+	\textbf{\large Trayectorias del CU}{\large \par}
+	\textit{\large Trayectoria Principal}{\large{} }{\large \par}
+	\begin{tabular}{ccl}
+	 &  & \tabularnewline
+	1. & \includegraphics{actor} & selecciona el producto asociado al lote en el catalogo 'Selecciona el producto asociado'\tabularnewline
+	& &   de la pantalla PP7 Registrar Lote [Trayectoria A] \tabularnewline
+	2. & \includegraphics{actor} & ingresa la fecha mediante el campo 'Ingresa la fecha de elaboración'.\tabularnewline
+	3. & \includegraphics{actor} & selecciona la linea de producción en el catalogo 'Selecciona la linea de producción asociada' \tabularnewline
+	4. & \includegraphics{actor} & solicita registrar el lote mediante el botón [Registrar Lote]\tabularnewline
+	5. & \includegraphics{sistema} & verifica que se hayan ingresado todos los datos solicitados en los campos requeridos.\tabularnewline
+	& & [Trayectoria B]\tabularnewline
+	6. & \includegraphics{sistema} & regresa a la pantalla PP6 Gestionar Lotes y muestra el mensaje MSG1 Mensaje de \tabularnewline
+	& & Confirmación. [Trayectoria C]\tabularnewline
+	 &  & .... Fin del caso de uso\tabularnewline \\
+	\end{tabular}		
+	
+	\textit{Trayectoria Alternativa A}\\
+	Condición: No se encontraron elementos registrados en el catalogo de productos.\\
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	A-1 & \includegraphics{sistema} & Muestra el mensaje MSG3 Datos no encontrados en la pantalla PP6 Gestionar Lotes\tabularnewline	
+	A-2 & & .... Fin del Caso de Uso\tabularnewline
+	\end{tabular}	
+	
+	\textit{Trayectoria Alternativa B}\\
+	Condición: El usuario no selecciono una opción en un campo solicitado.\\
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	B-1 & \includegraphics{sistema} & muestra el mensaje MSGP4 Campo Requerido.\tabularnewline	
+	B-2 & \includegraphics{sistema} & solicita ingresar el o los campo(s) faltante(s).\tabularnewline		
+	B-3 & & continua en el paso 1 de la trayectoria principal\tabularnewline
+	\end{tabular}	
+	
+	\textit{Trayectoria Alternativa C}\\
+	Condición: No se pudo registrar el nuevo lote.\\
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	C-1 & \includegraphics{sistema} & muestra el mensaje MSG2 Mensaje de Error.\tabularnewline	
+	C-2 & \includegraphics{sistema} & regresa a la pantalla PP6 Gestionar Lotes.\tabularnewline		
+	C-3 & & .... Fin del Caso de Uso\tabularnewline
+	\end{tabular}			
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% CONSULTAR LOTE 5.2
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+	\newpage
+	\subsection{CUP5.2: Consultar Lote.}
+
+	\textbf{\large Resumen}{\large }\\
+	{Este CU tiene como objetivo permitir al usuario de producción o administrador consultar la información relacionada con un determinado lote.}\\
+	{\large \par}
+	\begin{table}[!ht]
+		\begin{centering}
+		\begin{tabular}{|c||c|l|}
+		\hline 
+		\multicolumn{2}{|c|}{Caso de Uso:} & CUP5.2: Consultar Lote.\tabularnewline
+		\hline 
+		\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Actor} & Usuario de Producción, Administrador\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{12cm}|}{Permitir al usuario consultar la información de un lote a través del identificador único de cada lote según se especifica en la BRP4 Información de lote.}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{12cm}|}{El usuario ingresara en un campo de texto el identificador asociado al lote del cual se desea conocer información.}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{12cm}|}{Se mostrara una tabla con resultados de acuerdo a la BRP4 Información de lote.
+}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{12cm}|}{Debe haber sido registrado previamente el lote.\newline
+		Debe existir conexión con la BD.}\tabularnewline		
+		\hline 
+		\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{12cm}|}{Se desplegara una tabla con los resultados de la consulta ajustándose a la BRP4 Información de lote}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{12cm}|}{Se mostrara el mensaje MSG3 Datos no encontrados.\newline
+		MSG4 Error al obtener conexión con la base de datos}\tabularnewline		
+		\hline 
+		\multicolumn{2}{|c|}{Tipo} & Secundario\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{12cm}|}{Basado en el funcionamiento del CUP5 Gestionar Lotes.}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{RN Relacionada} & \multicolumn{1}{p{12cm}|}{Relacionado con las BR1, BR3 y BRP4}\tabularnewline
+		\hline 		
+		\multicolumn{2}{|c|}{Autor} & Rueda López Miguel Angel\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Fecha} & 26 de febrero de 2013\tabularnewline
+		\hline 				
+		\end{tabular}
+		\par\end{centering}
+		
+	\caption{CUP5.2 Consultar Lote}
+	\label{tab:CasosdeUso:nombredecasodeuso} 
+	\end{table}
+	
+	\textbf{\large Trayectorias del CU}{\large \par}
+	\textit{\large Trayectoria Principal}{\large{} }{\large \par}
+	\begin{tabular}{ccl}
+	 &  & \tabularnewline
+	1. & \includegraphics{actor} & ingresa el numero de lote en el campo 'Ingresa el \# de lote' de la pantalla PP8\tabularnewline
+	& &  Consultar Lote \tabularnewline
+	2. & \includegraphics{actor} & selecciona consultar lote mediante el botón [Consultar Lote]\tabularnewline 
+	3. & \includegraphics{sistema} & busca los registros correspondientes al parámetro de búsqueda ingresado. \tabularnewline
+	& & [Trayectoria A][Trayectoria B]\tabularnewline
+	4. & \includegraphics{sistema} & despliega una tabla mostrando los datos correspondientes del lote solicitado según lo\tabularnewline
+	& & especificado en la BRP4 Información de lote. [Trayectoria C]\tabularnewline
+	 &  & .... Fin del caso de uso\tabularnewline \\
+	\end{tabular}	
+	\newpage
+	\textit{Trayectoria Alternativa A}\\
+	Condición: El numero de lote ingresado no cumple con el formato especificado en la BRP4 Información de lote.\\
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	A-1 & \includegraphics{sistema} & Muestra el mensaje MSG7 Formato incorrecto de los datos\tabularnewline	
+	A-2 & & .... Fin del Caso de Uso\tabularnewline
+	\end{tabular}	
+
+	\textit{Trayectoria Alternativa B}\\
+	Condición: No se pudo establecer conexión con la BD.\\
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	B-1 & \includegraphics{sistema} & Muestra el mensaje de error MSG4 'No se pudo establecer conexión con la base\tabularnewline
+	& & de datos.\tabularnewline
+	B-2 & \includegraphics{sistema} & Regresa a la pantalla PP1 Menú principal de producción.\tabularnewline
+	B-3 & & Fin del Caso de Uso\tabularnewline	
+	\end{tabular}	
+	
+	\textit{Trayectoria Alternativa C}\\
+	Condición: El numero de lote no coincide con ningún otro registrado.\\
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	C-1 & \includegraphics{sistema} & Muestra el mensaje MSG3 Datos no encontrados\tabularnewline	
+	C-2 & & .... Fin del Caso de Uso\tabularnewline
+	\end{tabular}	
+
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% CUP6. Crear Reporte
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+\newpage
+		\subsection{CUP6: Crear Reporte de Producción.}
+
+		\textbf{\large Resumen}{\large }\\
+		{Este caso de uso tiene como objetivo permitir al usuario del área de Producción generar reportes personalizados de los Lotes producidos  y de la Materia Prima utilizada en la elaboración de los mismos. La personalización incluye la posibilidad de indicar el lapso de tiempo que abarcará el reporte y la forma en que se ordenará la información dentro del mismo. }\\
+		{\large \par}
+
+		% = = = = = = = = = = = = = = = = = = = = = = = = =
+		%	INICIO DE TABLA
+		% = = = = = = = = = = = = = = = = = = = = = = = = = 
+		\begin{table}[!ht]
+		\begin{centering}
+		\begin{tabular}{|c||c|l|}
+		\hline 
+		\multicolumn{2}{|c|}{Caso de Uso:} & CUP6 Crear Reporte de Producción   \tabularnewline
+		\hline 
+		\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Actor} & Usuario de Producción\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{12cm}|}{Permitir al usuario crear reportes personalizados referentes al área de Producción}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{12cm}|}{
+		Para generar un reporte, el usuario deberá:\newline		
+	- Seleccionar con el mouse el tipo de reporte\newline
+	- Seleccionar con el mouse por medio de un Datepicker la fecha desde la cual empezará el 		 reporte\newline
+	- Seleccionar con el mouse por medio de un Datepicker la fecha hasta la cual abarcará el reporte\newline
+	- Seleccionar con el mouse la forma en que se ordenarán los datos del reporte
+}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{12cm}|}{
+
+    - Se mostrará en pantalla el mensaje MSG1: Mensaje de Confirmación.\newline
+	- Además, se mostrará el reporte correspondiente en formato PDF según la estructura
+	especificada en la regla de negocio BR5: Formato de Reportes.
+}\tabularnewline
+\hline 
+		\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{12cm}|}{
+
+    - Deben existir lotes registrados en la base de datos.\newline
+	- El usuario debe haber iniciado sesión previamente como usuario de Producción.
+}\tabularnewline				
+		\hline 
+		\multicolumn{2}{|c|}{Post-condiciones} & Se limpia el formulario para permitir la generación de un nuevo reporte.\tabularnewline
+\hline 
+		\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{12cm}|}{
+
+    - El sistema muestra en pantalla los mensajes de error MSG11 o MSG12 referentes a errores
+    en las fechas cuando el usuario ingrese datos erróneos en los campos de fecha.\newline
+	- El sistema muestra en pantalla el mensaje de error MSG3: Datos no encontrados, cuando al acceder a la base de datos, ésta se encuentre vacía o no contenga los datos requeridos por el usuario.			
+}\tabularnewline						
+		
+		\hline 		
+		\multicolumn{2}{|c|}{Autor} & Durán Pineda Mario Ángel\tabularnewline
+		\hline 
+		\end{tabular}
+		\par\end{centering}
+		
+	
+	\label{tab:CasosdeUso:nombredecasodeuso} 
+	\end{table}
+
+
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+	%	FIN DE TABLA
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+	%	INICIO DE TRAYECTORIA
+	% = = = = = = = = = = = = = = = = = = = = = = = = = 
+	\newpage
+	\textbf{\large Trayectorias del CU\\}{\large \par}
+	\textit{\large Trayectoria Principal}{\large{} }{\large \par}
+	\begin{tabular}{ccl}
+	 &  & \tabularnewline
+	1. & \includegraphics{actor} & El usuario selecciona la opción Crear Reporte dando clic al botón [Crear Reporte] \tabularnewline
+	& &  de la pantalla PP1: Menú Principal de Producción.\tabularnewline
+\tabularnewline
+
+	2. & \includegraphics{sistema} &  El sistema despliega la pantalla PP9: Crear Reporte de Producción.\tabularnewline
+	
+	3. & \includegraphics{actor} & El usuario selecciona la opción de reporte 'Reporte de Lotes'. [Trayectoria A] \tabularnewline 
+
+	4. & \includegraphics{sistema} & El sistema carga las opciones con las que se puede ordenar un 'Reporte de Lotes', \tabularnewline
+	& & como se muestra en la pantalla PP9.1: Opciones del Reporte de Lotes \tabularnewline
+	
+	5. & \includegraphics{actor} & El usuario ingresa la fecha a partir de la cual abarcará el reporte y la fecha de término \tabularnewline
+	&  & del mismo.\tabularnewline
+	
+	6. & \includegraphics{actor} & El usuario selecciona la forma en que estará ordenado su reporte (Por Fecha de \tabularnewline
+	& & producción, Línea de Producción o Producto). \tabularnewline
+	
+	7. & \includegraphics{actor} & El usuario da clic en el botón [Generar Reporte]. \tabularnewline 
+	
+	8. & \includegraphics{sistema} & El sistema valida los datos ingresados por el usuario. [Trayectoria B] \tabularnewline
+	
+	9. & \includegraphics{sistema} & El sistema genera el reporte correspondiente y lo muestra en pantalla al usuario. \tabularnewline
+	
+	
+	\tabularnewline
+	 &  & - - - - Fin del caso de uso\tabularnewline \\
+	\end{tabular}
+
+\newpage
+	\textit{\large \\Trayectoria Alternativa A: Reporte de Materia Prima.}
+	
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+	
+	A.1 & \includegraphics{actor} & El usuario selecciona la opción de reporte 'Reporte de Materia Prima'.\tabularnewline
+		
+	A.2 & \includegraphics{sistema} & El sistema carga las opciones con las que se puede ordenar un 'Reporte de Materia Prima', \tabularnewline
+	& & como se muestra en la pantalla PP9.2: Opciones del Reporte de Materia Prima. \tabularnewline
+	
+	A.3 & \includegraphics{actor} & El usuario ingresa la fecha a partir de la cual abarcará el reporte y la fecha de \tabularnewline
+& &	término del mismo.\tabularnewline
+
+    A.4 & \includegraphics{actor} & El usuario selecciona la forma en que estará ordenado su reporte (Por Materia Prima,  	\tabularnewline
+	& &  por Proveedor o por Línea de Producción).\tabularnewline\tabularnewline
+	
+	A.5 & & Regresar a la trayectoria principal en el punto 7.\tabularnewline
+
+	
+	\tabularnewline\tabularnewline	
+	\end{tabular}
+
+\textit{\large \\Trayectoria Alternativa B: Datos incorrectos.}
+
+\begin{tabular}{ccl}
+	& & \tabularnewline
+	
+	A.1 & \includegraphics{sistema} & El sistema detecta incongruencias en las fechas indicadas para el reporte\tabularnewline
+		
+	A.2 & \includegraphics{sistema} & El sistema despliega en pantalla el mensaje MSG11 o MSG12 relacionados \tabularnewline
+	& & con los errores de fechas según el error encontrado. 	\tabularnewline	
+	
+	A.3 & \includegraphics{actor} & El usuario ingresa nuevamente la fecha a partir de la cual abarcará el reporte   \tabularnewline
+& &	y la fecha de término del mismo.\tabularnewline    \tabularnewline    
+	
+	A.4 & & Regresar a la trayectoria principal en el punto 7.\tabularnewline
+
+	
+	\tabularnewline\tabularnewline	
+	\end{tabular}
+
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+	%	FIN DEL DOCUMENTO
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\end{document}

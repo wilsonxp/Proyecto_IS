@@ -1,0 +1,221 @@
+\documentclass[10pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\makeatletter
+
+\providecommand{\tabularnewline}{\\}
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\makeatother
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+
+
+	\section{Documentación de Casos de Uso}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% Consultar pedidos en espera
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+		\subsection{CUCC3: Crear Reporte General}
+
+		\textbf{\large Resumen}{\large }\\
+		{Este caso de uso tiene como objetivo permitir al usuario crear reportes generales de los problemas que se han presentado en un determinado periodo de tiempo. Los reportes podrán contener
+		datos acerca de los problemas registrados en áreas específicas o bien, en todas las áreas  
+		y podrán ser ordenados en base a varios criterios con la finalidad de entregar a los
+		usuarios reportes personalizados.}\\
+		{\large \par}
+
+		% = = = = = = = = = = = = = = = = = = = = = = = = =
+		%	INICIO DE TABLA
+		% = = = = = = = = = = = = = = = = = = = = = = = = = 
+		\begin{table}[!ht]
+		\begin{centering}
+		\begin{tabular}{|c||c|l|}
+		\hline 
+		\multicolumn{2}{|c|}{Caso de Uso:} & CUCC3: Crear Reporte General   \tabularnewline
+		\hline 
+		\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Actor} & Usuario de Control de Calidad\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{12cm}|}{Permitir al usuario crear reportes de los problemas de calidad presentados en diversas áreas de la empresa durante un lapso de tiempo determinado.}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{12cm}|}{
+		Para crear un reporte general de problemas, el usuario deberá:\newline		
+		- Seleccionar con el mouse por medio de un Datepicker la fecha desde la cual empezará el 		 	reporte\newline
+		- Seleccionar con el mouse por medio de un Datepicker la fecha hasta la cual abarcará el reporte\newline
+		- Seleccionar por medio de los controles CheckBox las áreas que abarcará el reporte. \newline
+		- Seleccionar por medio de un ComboBox la forma en que se ordenarán los datos resultantes.  
+}\tabularnewline
+		\hline 
+		\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{12cm}|}{
+
+    - Se mostrará en pantalla el mensaje MSG1: Mensaje de Confirmación.\newline
+	- Además, se mostrará el reporte correspondiente en formato PDF según la estructura
+	especificada en la regla de negocio BR5: Formato de Reportes.
+}\tabularnewline
+\hline 
+		\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{12cm}|}{
+
+    - El usuario debe haber iniciado sesión previamente como usuario de Control de Calidad. \newline
+	- Deben existir registros de problemas en la base de datos.
+}\tabularnewline				
+
+\hline 
+		\multicolumn{2}{|c|}{Post-condiciones} & \multicolumn{1}{p{12cm}|}{
+
+    - El formulario es limpiado para permitir la generación de un nuevo reporte.    
+}\tabularnewline				
+		
+\hline 
+		\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{12cm}|}{
+
+    - El sistema muestra en pantalla el mensaje de error MSG3: Datos no encontrados, cuando a pesar de tener acceso a la base de datos, ésta no contenga registros sobre la información solicitada.\newline    
+	- El sistema muestra en pantalla el mensaje de error MSG4: Error al conectar con la base de datos, cuando al intentar acceder a los datos necesarios para el reporte, no se logre hacer conexión con la base de datos.\newline
+	- El sistema muestra en pantalla el mensaje de error MSG8: Campos obligatorios, cuando al dar clic en el botón [Crear reporte] no se haya llenado alguno de los campos.\newline
+	- El sistema muestra en pantalla los mensajes de error MSG11 o MSG12 referentes a errores en las fechas cuando el usuario ingrese datos erróneos en los campos de fecha.
+}\tabularnewline						
+		
+		\hline 		
+		\multicolumn{2}{|c|}{Autor} & Durán Pineda Mario Ángel\tabularnewline
+		
+		\hline 				
+		\end{tabular}
+		\par\end{centering}
+		
+	
+	\label{tab:CasosdeUso:nombredecasodeuso} 
+	\end{table}
+
+
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+	%	FIN DE TABLA
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+	% = = = = = = = = = = = = = = = = = = = = = = = = =
+	%	INICIO DE TRAYECTORIA
+	% = = = = = = = = = = = = = = = = = = = = = = = = = 
+	\newpage
+	\textbf{\large Trayectorias del CU\\}{\large \par}
+	\textit{\large Trayectoria Principal}{\large{} }{\large \par}
+	\begin{tabular}{ccl}
+	 &  & \tabularnewline
+	1. & \includegraphics{actor} & El usuario solicita Crear un Reporte General de Problemas dando clic al botón   \tabularnewline
+	& &  [Crear Reporte General] de la pantalla PCC1: Menú Principal de Control de Calidad.\tabularnewline
+
+	2. & \includegraphics{sistema} &  El sistema despliega la pantalla PCC5: Creación de Reportes Generales.\tabularnewline
+	
+	3. & \includegraphics{actor} & El usuario selecciona la fecha a partir de la cual abarcará el reporte y la fecha de término \tabularnewline
+	&  & del mismo.\tabularnewline
+	
+	4. & \includegraphics{actor} & El usuario selecciona las áreas que abarcará el reporte de problemas.\tabularnewline 
+
+	5. & \includegraphics{actor} & El usuario selecciona la forma en que se ordenarán los datos de su reporte.  \tabularnewline
+	
+	6. & \includegraphics{actor} & El usuario da clic al botón [Crear reporte]. \tabularnewline	
+	
+	7. & \includegraphics{sistema} & El sistema valida que se hayan llenado todos los campos. [Trayectoria A] \tabularnewline
+	
+	8. & \includegraphics{sistema} & El sistema valida que se hayan ingresado correctamente las fechas. [Trayectoria B] \tabularnewline	
+
+    9. & \includegraphics{sistema} & El sistema accede a la base de datos [Trayectoria C] y obtiene la información solicitada \tabularnewline
+    & & por el usuario [Trayectoria D] para ubicarla en el reporte.   \tabularnewline
+	
+	11. & \includegraphics{sistema} & El sistema accede a la Fecha y Hora actuales del sistema y los agrega al reporte     \tabularnewline
+	& &  para indicar la hora en que se creó.\tabularnewline
+	
+	12. & \includegraphics{sistema} & Por medio de la sesión, el sistema obtiene el nombre de la persona que está creando       \tabularnewline
+	& &  el reporte y lo incluye como parte del mismo.\tabularnewline
+
+    13. & \includegraphics{sistema} & El sistema despliega en pantalla el reporte de problemas personalizado en formato PDF.       \tabularnewline
+	
+	\tabularnewline
+	 &  & - - - - Fin del caso de uso\tabularnewline \\
+	\end{tabular}
+
+\newpage
+	\textit{\large \\Trayectoria Alternativa A: Campos obligatorios sin llenar.}
+	
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+			
+	A.1 & \includegraphics{sistema} & El sistema detecta que existen campos obligatorios sin llenar\tabularnewline
+	
+	A.2 & \includegraphics{sistema} & El sistema despliega el mensaje de error MSG8: Campos obligatorios sin llenar, e \tabularnewline
+	& & indica al usuario los campos que faltan por llenar. \tabularnewline
+
+    A.3 & \includegraphics{actor} & El usuario llena los campos que estaban vacíos.\tabularnewline
+	\tabularnewline
+	
+	A.4 & &	Regresa a la trayectoria principal en el punto 6.\tabularnewline
+
+	
+	\tabularnewline\tabularnewline	
+	\end{tabular}
+	
+	\textit{\large \\Trayectoria Alternativa B: Error de fechas.}
+	
+	\begin{tabular}{ccl}
+	& & \tabularnewline
+			
+	B.1 & \includegraphics{sistema} & El sistema detecta inconsistencias en las fechas de inicio y/o fin del reporte.\tabularnewline
+	
+	B.2 & \includegraphics{sistema} & El sistema despliega el mensaje de error MSG11: Fecha de inicio posterior a Fecha fin,  \tabularnewline
+	& & o MSG12: Fecha posterior al dia actual según el problema que se presente \tabularnewline
+
+    B.3. & \includegraphics{actor} & El usuario selecciona nuevamente una fecha de inicio y una fecha de término \tabularnewline
+	&  & para el reporte.\tabularnewline\tabularnewline
+	
+	B.4 & &	Regresa a la trayectoria principal en el punto 6.\tabularnewline
+
+	
+	\tabularnewline\tabularnewline	
+	\end{tabular}
+
+\textit{\large \\Trayectoria Alternativa C: Error de acceso a la BD.}
+
+\begin{tabular}{ccl}
+	& & \tabularnewline
+	
+	C.1 & \includegraphics{sistema} & El sistema sufre un error de conexión a la base de datos.\tabularnewline
+		
+	C.2 & \includegraphics{sistema} & El sistema despliega en pantalla el mensaje MSG4: Error al conectar con la Base de Datos. 	\tabularnewline	\tabularnewline	
+		
+	C.3 & & Regresar a la trayectoria principal en el punto 2.\tabularnewline
+
+	
+	\tabularnewline\tabularnewline	
+	\end{tabular}
+
+\newpage
+\textit{\large \\Trayectoria Alternativa D: No se encontraron datos.}
+
+\begin{tabular}{ccl}
+	& & \tabularnewline
+	
+	D.1 & \includegraphics{sistema} & El sistema encuentra que la base de datos no contiene registros de la información buscada.\tabularnewline
+		
+	D.2 & \includegraphics{sistema} & El sistema despliega en pantalla el mensaje MSG3: Datos no encontrados. 	\tabularnewline	
+	
+	D.3 & \includegraphics{actor} & El usuario llena el formulario con nuevos datos. 	\tabularnewline	\tabularnewline	
+		
+	D.4 & & Regresar a la trayectoria principal en el punto 6.\tabularnewline
+
+	
+	\tabularnewline\tabularnewline	
+	\end{tabular}
+
+
+\end{document}

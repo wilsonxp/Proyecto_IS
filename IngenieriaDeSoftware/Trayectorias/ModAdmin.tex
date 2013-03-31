@@ -1,0 +1,1663 @@
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[10pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\makeatother
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+\tableofcontents{}
+
+\pagebreak{}
+
+
+\section{Módulo General.}
+
+\label{sec:MG}
+
+%TrayGenerales
+
+
+
+\subsection{CUG0.1: Iniciar Sesión}
+
+\textbf{\large Resumen}{\large }\\
+{\large{} {} Este Caso de uso tiene como objetivo permitir al usuario
+ingresar al sistema.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUG1: Iniciar Sesión\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Diaz Rodriguez Kevin Alan}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Todos los usuarios}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Permitir el acceso al sistema. }\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Usuario y contraseña}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Interfaz correspondiente al usuario y contraseña ingresados}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{Debe existir conexion con la base de datos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG5 Error al iniciar sesion.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Primario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en las acciones generales de un usuario.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 1: Iniciar sesión}
+
+
+\label{tab:CasosdeUso:nombredecasodeuso} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\pagebreak{}
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra pantalla de inicio de sesion PG1}\tabularnewline
+2.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Ingresa Usuario y contraseña.}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Verifica que el usuario y contraseña sean correctos.{[}Trayectoria
+Alternativa A{]}}\tabularnewline
+4.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega interfaz correspondiente al usuario y contraseña.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: Usuario o Contraseña incorrecta
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG5}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Continua con el paso 2}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de la Trayectoria}\tabularnewline
+\end{tabular}
+
+
+\subsection{CUG0.2: Cerrar sesión.}
+
+\textbf{\large Resumen}{\large }\\
+{\large{} {} {} {} {} {} {} {} {} Este Caso de uso tiene como
+objetivo permitir al usuario cerrar su sesión en el sistema}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUG0.1: Cerrar sesión\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Arcos Reyes Larissa}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Todos los usuarios del sistema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Cerrar la sesión del usuario.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Pantalla PG0 Autenticación}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{El usuario debe haber iniciado sesión. }\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{El usario sale del sistema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{Ninguno}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Primario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en las funcionalidades de cualquier usuario}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 0.2: Cerrar Sesión.}
+
+
+\label{CUG0.2} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el icono {[}Salir{]}}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra el mensaje de confirmación MSG8 '¿Desea cerrar su sesión?'{[}Trayectoria
+Alternativa A{]}}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PG0 Autenticación}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: Presiona el botón {[}Cancelar{]}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PG1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+
+\subsection{CUG1.0: Gestionar Notificaciones}
+
+\textbf{\large Resumen}{\large }\\
+{\large{} {} {} {} {} {} {} {} {} Este Caso de uso tiene como
+objetivo permitir al usuario enviar, recibir y eliminar notificaciones
+a otras áreas de la empresa.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUG1.0: Gestionar Notificaciones\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Arcos Reyes Larissa}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Todos los usuarios del sistema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Acceder a las opciones Ver nota, Crear nota y eliminar nota}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Pantalla PG2 Gestionar notificaciones}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{El usuario debe autentificarse en el sistema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG4 Error al obtener conexión con la base de datos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Primario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en las funcionalidades de todos los usuarios}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 1.0: Gestionar Notificaciones}
+
+
+\label{CUG1.0} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el icono {[}notificaciones{]} en la pantalla PG1}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Carga los datos de las notificaciones correspondientes al usuario
+{[}Trayectoria Alternativa A{]}}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PG2}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: No se pudieron cargar los datos de las notificaciones anteriores
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG4 'No se pudo establecer conexión
+con la base de datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PG1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+
+\subsubsection{CUG1.1: Enviar Notificaciones}
+
+\textbf{\large Resumen}{\large }\\
+{\large{} {} {} {} {} {} {} {} {} Este Caso de uso tiene como
+objetivo permitir al usuario enviar notificaciones a otras áreas de
+la empresa.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUG1.1: Enviar Notificaciones\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Arcos Reyes Larissa}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Todos los usuarios del sistema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Enviar una notificación a otra área de la empresa}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Nombre del área a la que se enviara la notificación. Título o asunto
+de la notificación.Cuerpo de la notificiación o explicación del problema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Mensaje de confirmación MSG1 'La notificación ha sido enviada exitosamente'}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{El usuario debe estar autentificado. Deben haberse cargado los catálogos
+de las áreas con las cuales puede comunicarse.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{La notificación aparecerá en la lista de notificaciones del área correspondiente.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG4 Error al intentar enviar la notificación.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{proveniente del CUG1.0}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 1.2: Eliminar Notificaciones}
+
+
+\label{CUG1.1} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large \pagebreak{}}{\large \par}
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el icono {[}Enviar{]} en la pantalla PG2}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Carga los datos de las áreas con las cuales es posible establecer
+comunicación{[}Trayectoria Alternativa A{]}}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega el formulario de la pantalla PG3.}\tabularnewline
+4.  & \includegraphics{actor}  & \multicolumn{1}{p{10cm}}{Selecciona con el mouse el área a la cual se enviará la notificación.{[}Trayectoria
+Alternativa B{]}}\tabularnewline
+5.  & \includegraphics{actor}  & \multicolumn{1}{p{10cm}}{Ingresa desde el teclado el asunto de la notificación.}\tabularnewline
+6.  & \includegraphics{actor}  & \multicolumn{1}{p{10cm}}{Ingresa desde el teclado el detalle del problema presentado.}\tabularnewline
+7.  & \includegraphics{actor}  & Presiona el botón {[}Enviar{]} de la pantalla PG3\tabularnewline
+8.  & \includegraphics{sistema}  & Valida el formato de los datos ingresados.{[}Trayectoria Alternativa
+C{]}\tabularnewline
+9.  & \includegraphics{sistema}  & \multicolumn{1}{p{10cm}}{Muestra al usuario el mensaje de confirmación MSG1'La notificación
+ha sido enviada exitosamente'}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: No se pudieron cargar los datos de las áreas con las cuales
+es posible comunicarse.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG4 'No se pudo establecer conexión
+con la base de datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PG2}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{\medskip{}
+ }
+
+\textit{Trayectoria Alternativa B}
+
+Condición: No se selecciono ningún área
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG9 'El área es un campo obligatorio'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Continua en el paso 4 de la trayectoria principal.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{\medskip{}
+ }
+
+\textit{Trayectoria Alternativa C}
+
+Condición: Formato invalido de los datos
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG3 'Formato incorrecto de los datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Continua en el paso 4 de la trayectoria principal.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+
+\subsubsection{CUG1.2: Eliminar Notificaciones}
+
+\textbf{\large Resumen}{\large }\\
+{\large{} {} {} {} {} {} {} {} {} Este Caso de uso tiene como
+objetivo permitir al usuario eliminar una notificación del sistema.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUG1.2: Eliminar Notificaciones\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Arcos Reyes Larissa}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Todos los usuarios del sistema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Eliminar una notificación definitivamente.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Notificación que se desea eliminar.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Mensaje de confirmación MSG1 'La notificación ha sido eliminada exitosamente'}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{El usuario debe estar autentificado. Deben haberse elegido una notificación.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{La notificación dejará de existir en la base de datos.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG4 Error al intentar eliminar la notificación.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Proveniente del CUG1.0}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 1.2: Eliminar Notificaciones}
+
+
+\label{CUG1.2} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large \pagebreak{}}{\large \par}
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el icono {[}Eliminar{]} en la pantalla PG2}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra el mensaje MSG9 '¿Desea eliminar esta notificación?'}\tabularnewline
+4.  & \includegraphics{actor}  & \multicolumn{1}{p{10cm}}{Presiona el botón {[}Aceptar{]}.{[}Trayectoria Alternativa A{]}}\tabularnewline
+5.  & \includegraphics{sistema}  & Muestra el mensaje MSG1'La notificación ha sido eliminada exitosamente'\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{\medskip{}
+ Trayectoria Alternativa A}
+
+Condición: Selecciona la opción {[}Cancelar{]}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PG2}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+
+\subsubsection{CUG1.3 Ver Notificaciones}
+
+\textbf{\large Resumen}{\large }\\
+{\large{} {} {} {} {} {} {} {} {} Este Caso de uso tiene como
+objetivo permitir al usuario visualizar el detalle de una notificción.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUG1.3: Ver Notificaciones\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Arcos Reyes Larissa}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Todos los usuarios del sistema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Ver una notificación.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Notificación que se desea visualizar.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Pantalla PG4 Detalle de la notificación}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{Debe haberse elegido una notificación.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{{*}{*}}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG3 Datos no encontrados}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario }\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Proveniente del CU1.0}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 1.3: Ver Notificaciones}
+
+
+\label{CUG1.3} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large \pagebreak{}}{\large \par}
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Da clic sobre alguna notificación en la pantalla PG2}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra la pantalla PG4 Detalle de la notificación{[}Trayectoria Alternativa
+A{]}}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{\medskip{}
+ Trayectoria Alternativa A}
+
+Condición: Datos no encontrados
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra el mensaje MSG3 'Datos de la notificación no encontrados'}\tabularnewline
+2.  & \includegraphics{sistema}  & Regresa a la pantalla PG2 \tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+
+\section{Módulo Administración}
+
+
+\subsection{CUAD1.0: Gestionar Productos}
+
+\textbf{\large Resumen}{\large }\\
+{\large \par}
+
+{\large {} Este Caso de uso tiene como objetivo permitir al administrador del sistema tener acceso a las opciones de
+registrar, consultar, modificar y eliminar productos.}{\large \par}
+
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUAD1.0: Gestionar Producto\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Ramos Gutiérrez Josué Fernando}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Administrador}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Acceder a opciones de registrar , modifcar o eliminar productos. }\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Se muestra la tabla de todos los productos registrados en la base de datos conforme a la pantala PA1}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{El administrador del sistema debe estar autentificado}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{El administrador podrá interactuar con CUAD1.1, CUAD1.2 o CUAD1.3
+según sea el caso.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{Error al conectarse con la base de datos MSG4.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Primario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en las funcionalidades del perfil de Administrador.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso CUAD1.0: Gestionar Productos}
+
+
+\label{CUA1.0} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\newpage{}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el botón {[}Productos{]} en el menú de la pantalla PA0}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Carga los datos de los productos registrados en la Base de datos.{[}Trayectoria Alternativa A{]}}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PA1}\tabularnewline
+4.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Presiona el botón {[}Cancelar{]} en la pantalla PA1 {[}Trayectoria Alternativa B{]} {[}Trayectoria Alternativa C{]} {[}Trayectoria Alternativa D{]}}\tabularnewline
+5.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PA0}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline 
+\end{tabular}
+\tabularnewline
+\textit{Trayectoria Alternativa A}
+
+Condición: Se detectó la desconexión o no respuesta de la base de
+datos.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG4 'No se pudo establecer conexión
+con la base de datos }\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PA0}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+\tabularnewline
+\textit{Trayectoria Alternativa B}
+
+Condición: El administrador presionó el botón de {[}Agregar Producto{]}.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Presiona el botón de {[}Agregar Producto{]} en la pantalla PA1. }\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Ejecuta la trayectoria del caso de uso CUAD1.1 Registrar Productos}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+\tabularnewline
+\textit{Trayectoria Alternativa C}
+\tabularnewline
+Condición: El administrador presionó icono de {[}modificar{]}.
+\tabularnewline
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Presiona el icono de {[}modificar{]} en la pantalla PA1. }\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Ejecuta la trayectoria del caso de uso CUAD1.2 Modificar Producto}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+\tabularnewline
+\textit{Trayectoria Alternativa D}
+\tabularnewline
+Condición: El administrador presionó icono de {[}eliminar{]} en la pantalla PA1.
+\tabularnewline
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Presiona el icono de {[}eliminar{]} en la pantalla PA1. }\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Ejecuta la trayectoria del caso de uso CUAD1.3 Eliminar Producto}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+\tabularnewline
+
+
+\newpage{}
+
+
+\subsubsection{CUAD1.1: Registrar Productos}
+
+\textbf{\large Resumen}{\large }\\
+{\large \par}
+
+{\large {} Este Caso de uso tiene como objetivo permitir al usuario
+agregar un producto al sistema.}{\large \par}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUAD1.1: Agregar Producto\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Ramos Gutiérrez Josué Fernando}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Administrador}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Registrar un producto en el sistema }\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Ingreso de los datos del producto a través del teclado conforme a la pantalla PA2. }\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Mensaje de confirmación de registro de producto MSG1 a través del
+monitor o pantalla.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{El administrador del sistema debe estar autentificado}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{Habrá un nuevo registro de producto en la base de datos.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG2 'Error al conectar con la base de datos'. MSG7 'Formato incorrecto
+de los datos'. }\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en las funcionalidades del perfil de Administrador.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso CUAD1.1: Registrar Productos}
+
+
+\label{CUA1.1} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el botón {[}Agregar producto{]} en la pantalla PA1}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PA2 con formulario a llenar}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Llena los datos nombre y precio del formulario.}\tabularnewline
+4.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Selecciona ingredientes ya existentes dando clic en el combobox de
+la pantalla PA2. {[}Trayectoria Alternativa B{]}}\tabularnewline
+5.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Llena la columna de cantidad a utilizar en la tabla de la figura PA2
+para cada ingrediente seleccionado.}\tabularnewline
+6.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Da clic en el botón de aceptar. {[}Trayectoria Alternativa A{]}}\tabularnewline
+7.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Verifica que todos los campos obligatorios tengan algún valor según la regla de negocio BRP5. [{]Trayectoria Alternativa C[}]}\tabularnewline 
+8.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Verifica que los campos se llenaron correctamente. {[}Trayectoria Alternativa E{]}}\tabularnewline
+9.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Agrega el registro a la base de datos. {[}Trayectoria Alternativa D{]}}\tabularnewline
+10.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG1 Mensaje de confirmación 'El producto ha sido agregado
+exitosamente'.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: El usuario selecciona el botón cancelar de la pantalla
+PA2.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Selecciona el botón {[}Cancelar{]} de la pantalla PA2. }\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PA1.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa B}
+
+Condición: El administrador necesita crear una materia prima para
+poder agregar el nuevo producto.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Selecciona {[}Otros{]} en el campo requerido de ingredientes. }\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla correspondiente para el llenado del formulario
+de nueva materia prima PI5.}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Interactua con el caso de uso CUI1.1}\tabularnewline
+5.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Devuelve al paso 4 de la trayectoria principal.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa C}
+
+Condición: Alguno(s) de los campos obligatorios está(n) vacio(s).
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Detecta que alguno(s) de los campos obligatorios está(n) vacio(s)}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG8 pasando como parámetros el nombre de el/los campos obligatorios vacios.}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Da clic en el botón aceptar del mensaje MSG8.}\tabularnewline
+4.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Regresa al punto 3 de la trayectoria principal.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa D}
+
+Condición: La base de datos no esta disponible.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG4 Error al conectar con la base de datos}\tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PA1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa E}
+
+Condición: El formato de los datos es incorrecto.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el MSG7 'Formato incorrecto de los datos.'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Regresa al paso 3 de la trayectoria principal}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+
+
+\subsubsection{CUAD1.2: Modificar Productos}
+
+\textbf{\large Resumen}{\large }\\
+{\large{} {} {} Este Caso de uso tiene como objetivo permitir a los
+actores modificar los datos de los productos guardados en el sistema.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUAD1.2: Modificar Productos\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Ramos Gutiérrez Josué Fernando}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Administrador}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Modificar los datos de un producto en el sistema}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Datos del formulario de productos ingresados a través del teclado}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Mensaje MSG1 de operación exitosa.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{El usuario de ventas debe estar autentificado, El producto debe existir
+en el sistema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{Se habrán modificado los datos de un producto}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{ MSG4 Error al conectar con la base de datos.MSG2 Mensaje de error.
+'Error al intentar modificar cliente 'idcliente'}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en las funcionalidades del perfil del cliente.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso CUAD1.2: Modificar Producto}
+
+
+\label{CUA1.2} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Da clic en el ícono {[}Modificar{]}de la pantalla PA1 {[}Trayectoria
+Alternativa D{]}}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Obtiene los datos del producto seleccionado desde la base de datos
+del sistema.{[}Trayectoria alternativa C{]}}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra formulario de modificación con los datos que ya se encuentran
+registrados PA3}\tabularnewline
+4.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Modifica los datos correspondientes}\tabularnewline
+5.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Presiona botón de aceptar{[}Trayectoria alternativa A{]}}\tabularnewline
+6.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Verifica que todos los campos obligatorios tengan algún valor según la regla de negocio BRP5. [{]Trayectoria Alternativa E[}]}\tabularnewline 
+7.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Verifica la validez del formato de datos. {[}Trayectoria alternativa
+B{]}}\tabularnewline
+8.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Guarda los cambios realizados en la base de datos {[}Trayectoria alternativa
+C{}{]}}\tabularnewline
+9.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG1 Mensaje de confirmación ' El producto <<idProducto>>
+ha sido modificado exitosamente.'}\tabularnewline
+10.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Vuelve a la pantalla PA1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: El usuario da clic en el botón de cancelar de la pantalla PA3.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Regresa a la pantalla PA2}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa B}
+
+Condición: El formato de los datos ingresados es incorrecto.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el MSG7 'Formato incorrecto de los datos.'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el MSG2 ' Error al intentar modificar producto <<numProducto>>'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra la pantalla PA1.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa C}
+
+Condición: La base de datos no esta disponible.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG4 Error al conectar con la base de datos}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG2 Mensaje de error. 'Error al intentar modificar producto
+'idProducto''}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PA1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa D}
+
+Condición: El usuario selecciona el botón cancelar de la pantalla
+PA1.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Selecciona el botón {[}Cancelar{]} de la pantalla PA1. }\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PA1.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+\tabularnewline
+\textit{Trayectoria Alternativa E}
+
+Condición: Alguno(s) de los campos obligatorios está(n) vacio(s).
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Detecta que alguno(s) de los campos obligatorios está(n) vacio(s)}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG8 pasando como parámetros el nombre de el/los campos obligatorios vacios.}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Da clic en el botón aceptar del mensaje MSG8.}\tabularnewline
+4.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Regresa al punto 3 de la trayectoria principal.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\subsubsection{CUAD1.3: Eliminar Productos}
+
+\textbf{\large Resumen}{\large }\\
+{\large{} {} {} Este Caso de uso tiene como objetivo permitir al
+actor eliminar el registro de un producto existente en la base de
+datos.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUAD1.3: Eliminar Producto\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Ramos Gutiérrez Josué Fernando}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Administrador}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Eliminar un producto del sistema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Mensaje MSG1 de operación exitosa.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{El usuario debe estar autentificado, el producto debe existir en el
+sistema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{Se habrá eliminado un producto de la base de datos.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{ MSG4 Error al conectar con la base de datos.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en las funcionalidades del perfil de administrador.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 1.3: Eliminar Producto}
+
+
+\label{CUA1.3} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Selecciona el producto a eliminar.}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Da clic en el icono{[}Eliminar{]} de la pantalla PA1 {[}Trayectoria
+Alternativa C{]}.}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra el mensaje MSG9 para solicitar la confirmación de la acción.}\tabularnewline
+4.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Selecciona la opción Aceptar del mensaje de confirmación{[}Trayectoria
+Alternativa A{]}.}\tabularnewline
+5.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Eliminar el registro del producto de la base de datos {[}Trayectoria
+Alternativa B{]}}\tabularnewline
+6.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra pantalla PA1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: El usuario seleccionó la opción cancelar del mensaje de
+confirmación de acción.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG4 Error al conectar con la base de datos}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG2 Mensaje de error. 'Error al intentar eliminar producto'
+idProducto'}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PA1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa B}
+
+Condición: La base de datos no esta disponible.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG4 Error al conectar con la base de datos}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG2 Mensaje de error. 'Error al intentar eliminar producto'
+idProducto'}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PA2}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}\textit{Trayectoria Alternativa C}
+
+Condición: El usuario selecciona el botón cancelar de la pantalla
+PA1.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Selecciona el botón {[}Cancelar{]} de la pantalla PA1. }\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PA1.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+
+\subsection{CUA2.0: Gestionar Empleado}
+
+\textbf{\large Resumen}{\large }\\
+{\large{} {} {} Este caso de uso tiene como objetivo permitir al
+administrador visualizar los empleados que existen en el sistema,
+y le muestra opciones para agregar, modificar y eliminar.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUA1.0: Gestionar Empledos\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Jiménez López Carlos Adrian}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Administrador}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Gestionar la información de los empleados dentro del sistema}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Pantalla PA4}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{Deben haber proveedores registrados en el sistema}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{Ninguna}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG4 Error al conectar con la base de datos.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Primario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en las funcionalidades del administrador.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso Compras 1.0: Gestionar Proveedores}
+
+
+\label{CUA2.0} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el menú {{[}Gestionar Proveedores{]}}.}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Carga los datos de los empleados existentes en el sistema {[}Trayectoria
+Alternativa A{]}}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PA4}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}\\
+
+
+\textit{Trayectoria Alternativa A}
+
+Condición: No se pudieron cargar los datos
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el mensaje de error MSG4 'No se pudo establecer conexión
+con la base de datos'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PA1}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+
+\subsubsection{CUAD2.1: Agregar Empleado}
+
+\textbf{\large Resumen}{\large }\\
+{\large \par}
+
+{\large {} Este caso de uso tiene como objetivo permitir al usuario
+agregar un empleado al sistema.}{\large \par}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUAD2.1: Agregar Empleado\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Arcos Reyes Larissa}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Administrador}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Registrar un nuevo empleado en el sistema }\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Ingreso de los datos del empleado a tráves del teclado, selección
+con el mouse del área del empleado}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Mensaje de confirmación de registro de empleado MSG1.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{El administrador del sistema debe estar autentificado, el empleado
+no debe existir.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{Habrá un nuevo registro de producto en la base de datos.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{MSG2 'Error al conectar con la base de datos'. MSG7 'Formato incorrecto
+de los datos'. '}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en las funcionalidades del caso de uso Gestión de empleado.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso CUAD2.1: Agregar empleado}
+
+
+\label{CUAD2.1} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el botón {[}Agregar empleado{]} en la pantalla PA4}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PA5 con formulario a llenar}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Llena los datos del empleado}\tabularnewline
+4.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Selecciona el área que se le asignará al empleado. {[}Trayectoria
+Alternativa B{]}}\tabularnewline
+6.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Da clic en el botón de aceptar. {[}Trayectoria Alternativa A{]}}\tabularnewline
+7.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Verifica si los campos se llenaron correctamente. {[}Trayectoria Alternativa
+E{]}}\tabularnewline
+8.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG1 Mensaje de confirmación 'El empleado ha sido agregado
+exitosamente'.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: El usuario selecciona el botón cancelar de la pantalla
+PA5
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Selecciona el botón {[}Cancelar{]} de la pantalla PA5 }\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PA4.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa B}
+
+Condición: No se pudo cargar el catálogo de las áreas existentes.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega el MSG4:No se pudo establecer conexión con la base de datos.}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PA1.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa E}
+
+Condición: El formato de los datos es incorrecto.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el MSG7 'Formato incorrecto de los datos.'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Regresa al paso 3 de la trayectoria principal}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+
+
+\subsubsection{CUAD2.2: Modificar Empleado}
+
+\textbf{\large Resumen}{\large }\\
+{\large{} {} {} Este Caso de uso tiene como objetivo permitir a los
+actores modificar los datos de los productos guardados en el sistema.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUAD2.2: Modificar Empleado\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Arcos Reyes Larissa}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Administrador}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Modificar los datos de un empleado en el sistema}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Datos del formulario de empleados ingresados a través del teclado}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Mensaje MSG1 de operación exitosa.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{El administrador debe estar autentificado, el empleado debe existir
+en el sistema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{Se habrán modificado los datos del empleado.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{ MSG4 Error al conectar con la base de datos.MSG2 Mensaje de error.
+'Error al intentar modificar el empleado'}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en las funcionalidades del Caso de uso Gestionar Empleado}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso CUAD1.2: Modificar Empleado}
+
+
+\label{CUA2.1} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Selecciona el empleado a modificar}\tabularnewline
+2.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Da clic en el ícono {[}Modificar{]}de la pantalla PA4 {[}Trayectoria
+Alternativa D{]}}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Obtiene los datos del producto seleccionado desde la base de datos
+del sistema.{[}Trayectoria alternativa I{]}}\tabularnewline
+4.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra formulario de modificación con los datos que ya se encuentran
+registrados PA6}\tabularnewline
+5.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Modifica los datos correspondientes}\tabularnewline
+6.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Preciona boton de aceptar{[}Trayectoria alternativa A{]}}\tabularnewline
+7.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Verifica la validez del formato de datos. {[}Trayectoria alternativa
+B{]}}\tabularnewline
+8.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Guarda los cambios realizados en la base de datos {[}Trayectoria alternativa
+C{}{]}}\tabularnewline
+9.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG1 Mensaje de confirmación ' El empleado ha sido modificado
+exitosamente.'}\tabularnewline
+10.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Vuelve a la pantalla PA4}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: El usuario da clic en el botón de cancelar
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Regresa a la pantalla PA4}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa B}
+
+Condición: El formato de los datos ingresados en el Textbox es incorrecto.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra el MSG7 'Formato incorrecto de los datos.'}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{ Muestra la pantalla PA6}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Regresa al paso 3 de la Trayectoria principal.}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa C}
+
+Condición: La base de datos no esta disponible.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG4 Error al conectar con la base de datos}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG2 Mensaje de error. 'Error al intentar modificar producto
+'idProducto''}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PA4}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa D}
+
+Condición: El usuario selecciona el botón cancelar de la pantalla
+PA6.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Selecciona el botón {[}Cancelar{]} de la pantalla PA6. }\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PA4.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+
+\subsubsection{CUAD2.3: Eliminar Empleado}
+
+\textbf{\large Resumen}{\large }\\
+{\large{} {} {} Este Caso de uso tiene como objetivo permitir al
+actor eliminar el registro de un producto existente en la base de
+datos.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l|}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & CUAD2.3: Eliminar Producto\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}||}{Jimenez López Carlos Adrián}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}||}{Administrador}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}||}{Eliminar un empleado del sistema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}||}{Selección con el mouse del producto a eliminar.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}||}{Mensaje MSG1 de operación exitosa.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}||}{El usuario debe estar autentificado, el empleado debe existir en el
+sistema.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}||}{Se habrá eliminado un empleado de la base de datos.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}||}{ MSG4 Error al conectar con la base de datos.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}||}{Secundario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}||}{Basado en las funcionalidades del caso de uso Gestionar empleados}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso 1.3: Eliminar Producto}
+
+
+\label{CUA1.3-1} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Selecciona el empleado a eliminar.{[}Trayectoria Alternativa D{]}}\tabularnewline
+2.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Da clic en el icono{[}Eliminar{]} de la pantalla PA4 {[}Trayectoria
+Alternativa C{]}.}\tabularnewline
+3.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra el mensaje MSG9 para solicitar la confirmación de la acción.}\tabularnewline
+4.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Selecciona la opción Aceptar del mensaje de confirmación{[}Trayectoria
+Alternativa A{]}.}\tabularnewline
+5.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Eliminar el registro del producto de la base de datos {[}Trayectoria
+Alternativa B{]}}\tabularnewline
+6.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra pantalla PA4}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: El usuario seleccionó la opción cancelar del mensaje de
+confirmación de acción.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PA4}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa C}
+
+Condición: La base de datos no esta disponible.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra MSG4 Error al conectar con la base de datos}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PA4}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin de trayectoria}\tabularnewline
+\end{tabular}
+
+\textit{Trayectoria Alternativa D}
+
+Condición: El usuario selecciona el botón cancelar de la pantalla
+PA4.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PA0.}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}
+
+
+\subsection{CUAD6.0: Solicitar Reporte}
+
+\textbf{\large Resumen}\\
+ {\large {} {} {} {} {} Este caso de uso tiene como objetivo
+permitir al administrador tener acceso a las pantallas de alguno de
+los siguientes reportes: ventas totales por periodo, errores en el
+proceso de producción o adquisición de materia prima, la lista de
+proveedores con mejores precios y los clientes frecuentes.}\\
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+% Se utiliza para que no se salga la tabla de la hoja, porque sino se autodimensiona
+%\multicolumn{1}{p{10cm}||}{Contenido}
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabular}{|c||c|l}
+\hline 
+\multicolumn{2}{|c|}{Caso de Uso:} & \multicolumn{1}{l|}{CUAD6.0: Solicitar Reporte}\tabularnewline
+\hline 
+\multicolumn{3}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Autor} & \multicolumn{1}{p{10cm}}{Ramos Gutiérrez Josué Fernando}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Actor} & \multicolumn{1}{p{10cm}}{Administrador}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Propósito} & \multicolumn{1}{p{10cm}}{Acceder a las pantallas de los reportes de cada área de la empresa.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Entradas} & \multicolumn{1}{p{10cm}}{Selección del tipo de reporte con el mouse mediante un Combobox.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Salidas} & \multicolumn{1}{p{10cm}}{Pantalla de reportes de ventas, compras, proveedores o lista de errores.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pre-condiciones} & \multicolumn{1}{p{10cm}}{El administrador del sistema debe estar autentificado}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Pos-condiciones} & \multicolumn{1}{p{10cm}}{El administrador podrá visualizar alguno de los siguientes reportes:
+ventas, compras, proveedores o lista de errores.}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Errores} & \multicolumn{1}{p{10cm}}{El administrador no ha seleccionado el tipo de reporte que desea consultar.
+MSG8}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Tipo} & \multicolumn{1}{p{10cm}}{Primario}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{Fuente} & \multicolumn{1}{p{10cm}}{Basado en las funcionalidades del perfil de Administrador.}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Caso de Uso CUAD6.0: Solcitar Reporte}
+
+
+\label{CUA3.0} 
+\end{table}
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\newpage{}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%    INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\textbf{\large Trayectorias del CU}{\large \par}
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{ Presiona el botón {[}Solicitar Reporte{]} en el menú de la pantalla
+PA0}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Despliega la pantalla PA7}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Selecciona un tipo de reporte en el combobox de la pantalla PA7. {[}Trayectoria
+Alternativa A{]}}\tabularnewline
+4.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Muestra la pantalla correspondiente al tipo de reporte solicitado. }\tabularnewline
+5.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Interactúa con el caso de uso correspondiente al reporte solicitado. {[}CUV3. Reportes de Ventas{]}, {[}CUCC3: Crear reporte General{]}, {[}CUC2.0: Reportes Compras{]}}\tabularnewline
+6.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Da clic en el botón {[}Aceptar{]} de la pantalla PA7}\tabularnewline
+7.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Regresa a la pantalla PA0}\tabularnewline
+ &  & \multicolumn{1}{p{12cm}}{.... Fin del caso de uso}\tabularnewline
+\end{tabular}\newpage{} \textit{Trayectoria Alternativa A}
+
+Condición: El administrador dió clic en el combobox de la pantalla
+PA2 pero no seleccionó alguna opción.
+
+\begin{tabular}{ccl}
+ &  & \tabularnewline
+1.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Da clic en el combobox de la pantalla PA7 y no selecciona alguna opción.}\tabularnewline
+2.  & \includegraphics{sistema}  & \multicolumn{1}{p{12cm}}{Notifica al usuario que debe seleccionar un tipo de reporte mediante
+el mensaje MSG8.}\tabularnewline
+3.  & \includegraphics{actor}  & \multicolumn{1}{p{12cm}}{Regresa al punto 3 de la trayectoria principal.}\tabularnewline
+\end{tabular}\newpage{}
+\end{document}
+
+
+
+

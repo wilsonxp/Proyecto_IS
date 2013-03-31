@@ -1,0 +1,123 @@
+
+\documentclass[10pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+
+\usepackage{array}
+
+\providecommand{\tabularnewline}{\\}
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+\begin{Large} NOTA: Esta es la plantilla para documentar los errores
+de las trayectorias del otro equipo.
+
+\end{Large}
+
+
+\section{Revisión de Trayectorias}
+
+Resumen: se entiende que hace el cu leyendo el resumen o si esta bien
+redactado
+
+
+\subsection{CUX\#.\#: Nombre del caso de uso}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & Nombre del CU\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizador por:  & Nombre del otro equipo\tabularnewline
+\hline 
+Revisado por:  & Nombre de nuestro equipo\tabularnewline
+\hline 
+Próposito:  & Observaciones de si el proposito es claro o si se entiende que hace
+el cu\tabularnewline
+\hline 
+Entradas:  & Anotaciones de las entradas 
+\begin{itemize}
+\item Anotacion 1 
+\item anotacion 2\end{itemize}
+\tabularnewline
+\hline 
+Salidas:  & Anotaciones de las salidas 
+\begin{itemize}
+\item Anotacion 1 
+\item anotacion 2\end{itemize}
+\tabularnewline
+\hline 
+Pre-Condiciones  & Anotaciones de las precondiciones 
+\begin{itemize}
+\item Anotacion 1\end{itemize}
+\tabularnewline
+\hline 
+Pos-Condiciones  & Anotaciones de las poscondiciones 
+\begin{itemize}
+\item Anotacion 1\end{itemize}
+\tabularnewline
+\hline 
+Errores:  & Anotaciones de los errores 
+\begin{itemize}
+\item Anotacion 1\end{itemize}
+\tabularnewline
+\hline 
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+Observaciones trayectoria principal. ( no es necesario escribir toda
+la trayectoria solo las obsersavaciones y el numero donde se hace%
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & Falta validacioón de base de tados\tabularnewline
+8.  & La pantalla no coincide\tabularnewline
+11.  & Falta boton\tabularnewline
+13.  & Este paso es inecesario\tabularnewline
+\end{longtable}
+
+\textit{Trayectoria Alternativa A}
+
+Condición: ¿Esta bien la condición?
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & Falta validacioón de base de tados\tabularnewline
+8.  & La pantalla no coincide\tabularnewline
+11.  & Falta boton\tabularnewline
+13.  & Este paso es inecesario\tabularnewline
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\newpage{} 
+\end{document}

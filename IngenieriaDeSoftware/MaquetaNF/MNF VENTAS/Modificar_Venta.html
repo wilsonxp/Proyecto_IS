@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="author" content="Ventas"/>
+        <title>Modificar Venta</title>
+        <link rel="stylesheet" type="text/css" href="css/styleMV.css" />
+       <script language="JavaScript" src="js/valida_MV.js"></script>
+       <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+        <script type="text/javascript" src="js/jquery-1.5.1.js"></script>
+		<script type="text/javascript" src="js/jquery.ui.core.js"></script>
+		<script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="js/jquery.ui.datepicker.js"></script>
+		<script type="text/javascript" src="js/ajustam.js"></script>
+		<script type="text/javascript" src="js/datepicker.js"></script>		
+    </head>    
+    <body>
+	<!-- El header es el mismo para todas las paginas-->
+    	<header>
+                <div id="user" name="user"> <img src="img/user.png" alt="Username" width="30" height="30"/> </div>
+                <div id="userName" class="text-header">Usuario</div>
+                <div id="msj" name="msj"> 
+    				<img src="img/noti.png" alt="Notificaciones" width="30" height="30" usemap="#map1"/>
+    				<map name="map1" id="map1">
+		            	<area shape="rect" coords="0,0,30,30" alt="shape" title= "Ver Notificaciones" href="#"/>
+		         </map></div>
+                <div id="sesion" name="sesion"> 
+    				<img src="img/out.png" alt="Cerrar sesion" width="30" height="30" usemap="#map"/>
+		            <map name="map" id="map">
+		            	<area shape="rect" coords="0,0,30,30" alt="shape" title= "Cerrar Sesi&oacute;n" href="#"/>
+		        </map></div>
+            <div id="rightHeader">
+                <img src="img/Banner1.png" class="img-banner" alt="Sistema"/>
+            </div>
+        </header>
+        
+        <div id="mainDiv">
+		<!-- Aquí se coloca el menú -->
+            <nav>
+            <div id="MV"><img src="img/ventas.png" alt="Modulo de Ventas" ></div>
+              <div id="GV"> 
+    				<img src="img/GV.png" alt="Gesti&oacute;n de Ventas" width="200" height="40" usemap="#map2"/>
+    				<map name="map2" id="map2">
+		            	<area shape="rect" coords="0,0,200,40" alt="shape" title= "Gesti&oacute;n de Ventas" href="Gestión.html"/>
+		            </map></div>
+		            
+    			<div id="GC"> 
+    				<img src="img/GC.png" alt="Gesti&oacute;n de Clientes" width="200" height="40" usemap="#map3"/>
+    				<map name="map3" id="map3">
+		            	<area shape="rect" coords="0,0,200,40" alt="shape" title= "Gesti&oacute;n de Clientes" href="GestiónC.html"/>
+		            </map></div>
+		            
+    			<div id="rep"> 
+    				<img src="img/Rep.png" alt="Reportes" width="200" height="40" usemap="#map4"/>
+    				<map name="map4" id="map4">
+		            	<area shape="rect" coords="0,0,200,40" alt="shape" title= "Reportes" href="Reportes.html"/>
+		            </map></div>
+            </nav>
+			<!-- Divisor del contenido de la pagina -->
+            <div id="all-content">
+				<br/>
+                <div id="ti" class="titulo">MODIFICAR VENTA</div>
+                <form name="Rvalida">
+                	<div id="foli" class="texto">FOLIO</div>
+                    <div id="fol">
+                       <input type="text" name="folio" size="4" maxlength="7" disabled/>
+                    </div>
+                	<div id="periodo" class="texto">FECHA</div>
+                    <div id="fech" class="box">
+                       <input type="text" id="from" name="from" placeholder="Fecha de Registro" disabled/>
+                    </div>
+                    <div id="cliente" class="texto">CLIENTE</div>
+                    <div id="cliente1"class="box">
+                       <select name="cliente" disabled> <option value="null">-</option><option value="C1">Cliente1</option></select>
+                    </div> 
+                    
+                    
+                    <!---Aqui va la tabla--> 
+                    
+                    <div id="articulos" class="texto">ARTICULOS</div>
+                    <div id="linea"></div>
+                    <div id="producto" class="texto">PRODUCTO</div>
+                    <div id="producto1"class="box">
+                       <select name="producto"><option value="null">-</option><option value="G1">Galleta1</option></select>
+                    </div> 
+                    <div id="canti" class="texto">CANTIDAD</div>
+                    <div id="cant">
+                       <input type="text" name="cantidad" size="5" maxlength="7"/>
+                    </div>
+                    <div id="ex" class="texto">EXISTENCIA</div>
+                    <div id="exi">
+                       <input type="text" name="existencia" size="5" maxlength="7" disabled/>
+                    </div>
+                    <div id="entrega" class="texto">FECHA DE ENTREGA</div>
+                    <div id="fechent" class="box">
+                       <input type="text" id="to" name="to" placeholder="Fecha de Entrega"/> 
+                    </div> 
+                    <div id="edo" class="texto">ESTADO</div>
+                    <div id="edo1"class="box">
+                       <select name="estados"><option>-</option><option>Todo</option><option>Devuelto</option><option>Reportado</option></select>
+                    </div> 
+                    <div id="agregar"><input type="button" name="agregar" value="AGREGAR ARTICULO" onClick="valida_articulo()"></div>
+                    
+                          
+                    <div id="boton"><input type="button" name="cerrar" value="ACEPTAR" onClick="valida_venta()"></div>
+                    <div id="boton2"><input type="button"  value="CANCELAR" onClick="cancelar()"></div>  
+                  </form>
+                </div>
+            </div>
+			
+        
+        
+    </body>   
+</html>

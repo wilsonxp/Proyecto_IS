@@ -1,0 +1,400 @@
+
+\documentclass[10pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+
+\usepackage{array}
+
+\providecommand{\tabularnewline}{\\}
+
+\usepackage{ucs}\usepackage[spanish]{babel}
+\usepackage{amsfonts}\usepackage{colortbl}
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% INICIO EL DOCUMENTO
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+
+
+
+\section{Revisión de Trayectorias}
+
+Resumen: El Actor realizara un control de los {[}Pedidos*{]} de Galletas a la Empresa
+*¿son pedidos o ventas el control que se tiene?
+
+
+\subsection{CUVE2: Gestionar Ventas}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & Gestionar Ventas\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizador por:  & Carlos Antonio Macías Duarte\tabularnewline
+\hline 
+Revisado por:  & Cabrera Alvarez Estefany Viridiana\tabularnewline
+\hline 
+Próposito:  & inconsistencia con el resumen del cu ¿control de ventas o pedidos?, El actor se marca como "administrador de pedidos" y en la pantalla se observa el actor como "administrador de ventas" en\tabularnewline
+\hline 
+Entradas:  & Anotaciones de las entradas 
+\begin{itemize}
+\item Las entradas estan definidas como (presionar un botón) pero una entrada es ingreso de datos
+\end{itemize}
+\tabularnewline
+\hline 
+Salidas:  & sin observaciones
+\tabularnewline
+\hline 
+Pre-Condiciones  & Sin observaciones
+\tabularnewline
+\hline 
+Pos-Condiciones  & ¿No tiene ninguna pos-condicion?
+\tabularnewline
+\hline 
+Errores:  & Los errores estan muy explicitos, bastaría solo con escribir el codigo del mensaje y la descripcion breve o nombre.
+\tabularnewline
+\hline 
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+\textit{\large Trayectoria Principal}{\large {} }{\large \par}
+
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+1.  & Sería selecciona el botón {[}Ventas{]} o ¿Dónde se encuentra el botón de gestión de Gestionar Venta?\tabularnewline
+3.  & ¿Gestión de Ventas es el botón?\tabularnewline
+\end{longtable}
+
+Trayectorias : Para hacer más entendible el cu la condición debería venir separada de el nombre de la trayectoria\tabularnewline
+\textit{Trayectoria Alternativa A}\tabularnewline
+Condición: Si su condición es la parte que se encuentra al lado del nombre, esta parese más una descripción.\tabularnewline
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+A.1  & Esta opción ya estaba definida en la trayectoría principal, es la misma\tabularnewline
+\end{longtable}
+\textit{Trayectoria Alternativa B}\tabularnewline
+Condición: ¿Que ícono o que boton es modificar venta?¿Selecciona o presiona?
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+B.1  & Esta opción ya estaba definida en la trayectoría principal, es la misma\tabularnewline
+B.2  & ¿Como se que tengo que ejecutar este CU si la opcion que seleccione es la misma que en la trayectoria principal y ahí me manda al cu de agregar ventas?\tabularnewline
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\textit{Trayectoria Alternativa C}
+Condición:¿Que ícono selecciono o que boton es eliminar venta?¿Selecciona o presiona?
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+C.1  &Esta opción ya estaba definida en la trayectoría principal\tabularnewline
+C.2  & Si elijo la opción de gestión de ventas de nuevo, ¿Cómo es que se a que opción me dirije?
+\end{longtable}
+¿Y la trayectoria para poder ver alguna venta?\tabularnewline
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+Total de Observaciones : 18\tabularnewline
+\newpage{} 
+\subsection{CUVE2.1: Agregar Ventas}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & Agregar Ventas\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizador por:  & Carlos Antonio Macías Duarte\tabularnewline
+\hline 
+Revisado por:  & Cabrera Alvarez Estefany Viridiana\tabularnewline
+\hline 
+Próposito: & Sin Observaciones\tabularnewline
+\hline 
+Entradas:  & Anotaciones de las entradas 
+\begin{itemize}
+\item Las entradas estan definidas como (seleccionar) pero una entrada es ingreso de datos en mi opinion en todo caso seria los datos ingresados del formulario. (la explicación iría en la trayectoria)
+\end{itemize}
+\tabularnewline
+\hline 
+Salidas:  & sin observaciones
+\tabularnewline
+\hline 
+Pre-Condiciones  & Sin observaciones
+\tabularnewline
+\hline 
+Pos-Condiciones  & ¿No tiene ninguna pos-condicion?
+\tabularnewline
+\hline 
+Errores:  & Los errores estan muy explicitos, bastaría solo con escribir el codigo del mensaje y la descripcion breve o nombre.
+\tabularnewline
+\hline 
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\textit{Trayectoria Principal}\tabularnewline
+\tabularnewline
+\begin{longtable}{rp{8cm}}
+No.        & Observación\tabularnewline
+{[}5-8{]}  & Estas opciones podrían agruparse en una sola no es necesario describirlas una por una\tabularnewline
+{[}10-12{]}  & Estas opciones podrían agruparse en una sola y poner la condicion en las trayectorias respectivas\tabularnewline
+\end{longtable}
+
+\textit{Trayectoria Alternativa B}\tabularnewline
+Condición: Siento que su condición no se entiende bien. $"$ El Actor Selecciona como "devolución" el campo {[}Tipo de Pedido{]}"
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+B.1  & Esto ya esta marcada en la condición\tabularnewline
+{[}B.2-B.5{]}  & Estas opciones podrían agruparse en una sola\tabularnewline
+Falto mensionar el fin de la trayectoria \tabularnewline
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\textit{Trayectoria Alternativa C}\tabularnewline
+Condición: Sin observacion
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+C.1  & Esta opción ya estaba marcada en la condición\tabularnewline
+\end{longtable}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\textit{Trayectoria Alternativa D} \tabularnewline
+Condición: Sin observacion
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+D.1  & Si se supone que la condicion es que  el actor no halla seleccionado productos es por que ya se sabe que no los eligio entonces ¿por que en este paso lo verifico?\tabularnewline
+\end{longtable}
+Falto mensionar el final de la trayectoria \tabularnewline
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\textit{Trayectoria Alternativa E}\tabularnewline
+La trayectoria quedo sin el formato de subsección que le dan a las anteriores
+Condición: Sin observacion
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+E.1  & Si se supone que la condicion es que  el actor no introdujo cantidades es por que ya se sabe que no lo hizo entonces ¿por que en este paso lo verifico?\tabularnewline
+\end{longtable}
+Falto mensionar el final de la trayectoria \tabularnewline
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\textit{Trayectoria Alternativa F}\tabularnewline
+Condición:Sin observacion
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+F.1  & Si se supone que la condicion es que  el actor no no Introduce Valores Validos es por que ya se sabe que no lo hizo entonces ¿por que en este paso lo verifico?\tabularnewline
+\end{longtable}
+Falto mensionar el final de la trayectoria \tabularnewline
+Total de Observaciones : 20\tabularnewline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\subsection{CUVE2.2: Modificar Ventas}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+Resumen: Sin observaciones
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & Modificar Ventas\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizador por:  & Carlos Antonio Macías Duarte\tabularnewline
+\hline 
+Revisado por:  & Cabrera Alvarez Estefany Viridiana\tabularnewline
+\hline 
+Próposito: & Sin Observaciones\tabularnewline
+\hline 
+Entradas:  & Anotaciones de las entradas 
+\begin{itemize}
+\item Las entradas estan definidas como (seleccionar) pero una entrada es ingreso de datos en mi opinion en todo caso seria los datos ingresados del formulario. (la explicación iría en la trayectoria), el borrar algún articulo no es una entrada
+\end{itemize}
+\tabularnewline
+\hline 
+Salidas:  & sin observaciones
+\tabularnewline
+\hline 
+Pre-Condiciones  & Sin observaciones
+\tabularnewline
+\hline 
+Pos-Condiciones  & ¿No tiene ninguna pos-condicion?
+\tabularnewline
+\hline 
+Errores:  & Los errores estan muy explicitos, bastaría solo con escribir el codigo del mensaje y la descripcion breve o nombre.
+\tabularnewline
+\hline 
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\textit{Trayectoria Principal}\tabularnewline
+\tabularnewline
+\begin{longtable}{rp{8cm}}
+No.   & Observación\tabularnewline
+1  & En mi opinon esta seria parte de la trayectoria que nos conduce a este caso de uso\tabularnewline
+{[}3-6{]}  & Estas opciones podrían agruparse en una sola.\tabularnewline
+{[}8-10{]}  & Estas opciones podrían agruparse en una sola y ponerse la condiciones en las trayectorias alternativas.\tabularnewline
+\end{longtable}
+
+\textit{Trayectoria Alternativa B}\tabularnewline
+Condición: Sin Observaciones\tabularnewline
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+B.3  & escribio mal Gestión de Ventas\tabularnewline
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\textit{Trayectoria Alternativa C}\tabularnewline
+Condición: Sin Observaciones\tabularnewline
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+C.1  & Este paso es implicita en la condición\tabularnewline
+\end{longtable}
+Falto marcar el final de la trayectoria\tabularnewline
+
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\textit{Trayectoria Alternativa D} \tabularnewline
+Condición: Sin Observaciones\tabularnewline
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+D.1  & Este paso esta implicito en la condición\tabularnewline
+\end{longtable}
+Falto mensionar el final de la trayectoria \tabularnewline
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+\textit{Trayectoria Alternativa E}\tabularnewline
+Condición: Sin Observaciones\tabularnewline
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+E.1  & Este paso esta implicito en la condición\tabularnewline
+\end{longtable}
+Falto mensionar el final de la trayectoria \tabularnewline
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = =\subsection{CUVE2.3: Eliminar Ventas}
+Total de Observaciones : 13\tabularnewline
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = = 
+%%%%%%%%%%
+\subsection{CUVE2.3: Eliminar Ventas}
+
+\begin{center}
+\begin{longtable}{|rp{8cm}|}
+\hline 
+\textbf{Caso de uso:}  & Eliminar Ventas\tabularnewline
+\hline 
+\multicolumn{2}{|>{\columncolor[gray]{0.7}}c}{Resumen de Atributos}\tabularnewline
+\hline 
+Realizador por:  & Carlos Antonio Macías Duarte\tabularnewline
+\hline 
+Revisado por:  & Cabrera Alvarez Estefany Viridiana\tabularnewline
+\hline 
+Próposito: & Si el CU se llama eliminar ventas ¿por que dice elimina pedidos?\tabularnewline
+\hline 
+Entradas:  & Anotaciones de las entradas 
+\begin{itemize}
+\item Las entradas estan definidas como (seleccionar) pero una entrada tengo entendido es ingreso de datos.
+\end{itemize}
+\tabularnewline
+\hline 
+Salidas:  & sin observaciones
+\tabularnewline
+\hline 
+Pre-Condiciones  & Sin observaciones
+\tabularnewline
+\hline 
+Pos-Condiciones  & ¿No tiene ninguna pos-condicion?
+\tabularnewline
+\hline 
+Errores:  & Los errores estan muy explicitos, bastaría solo con escribir el codigo del mensaje y la descripcion breve o nombre.
+\tabularnewline
+\hline 
+\end{longtable}
+\par\end{center}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TABLA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	INICIO DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+\textit{Trayectoria Principal}\tabularnewline
+\tabularnewline
+\begin{longtable}{rp{8cm}}
+No.   & Observación\tabularnewline
+1  & En mi opinon esta seria parte de la trayectoria que nos conduce a este caso de uso\tabularnewline
+\end{longtable}
+
+\textit{Trayectoria Alternativa A}\tabularnewline
+Condición: Sin Observaciones\tabularnewline
+\begin{longtable}{rp{8cm}}
+No.  & Observación\tabularnewline
+B.3  & escribio mal la ventana, sería {[}PVE02: Gestio de Ventas{]}\tabularnewline
+\end{longtable}% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+
+¿Que pasa si no hay conexión con la base de datos??\tabularnewline
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+%	FIN DE TRAYECTORIA
+% = = = = = = = = = = = = = = = = = = = = = = = = =
+Total de Observaciones : 7\tabularnewline
+%%%
+Total de Observaciones en el modulo: 58\tabularnewline
+\end{document}
